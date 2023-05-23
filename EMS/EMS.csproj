@@ -44,8 +44,17 @@
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +77,21 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MEMS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MEMS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MEMS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MEMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MEMS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MEMS.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EmployeesPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,6 +106,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TB_Employees.cs">
+      <DependentUpon>MEMS.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddPages\AddEmployeePage.resx">
       <DependentUpon>AddEmployeePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +133,14 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
+    <EntityDeploy Include="MEMS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MEMS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MEMS.edmx.diagram">
+      <DependentUpon>MEMS.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,7 +151,18 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="MEMS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MEMS.Context.cs</LastGenOutput>
+      <DependentUpon>MEMS.edmx</DependentUpon>
+    </Content>
+    <Content Include="MEMS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MEMS.edmx</DependentUpon>
+      <LastGenOutput>MEMS.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Add_Male_User_Group_32px_5.png" />
   </ItemGroup>
@@ -179,6 +225,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_souvenirs_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
