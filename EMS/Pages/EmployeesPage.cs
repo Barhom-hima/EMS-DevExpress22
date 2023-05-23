@@ -98,7 +98,33 @@ namespace EMS.Pages
         // button Delete
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-
+            var rs = MessageBox.Show("هل انت متأكد من هذا الاجراء, لن تتمكن من استعادة البيانات", "اجراء حذف",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(rs == DialogResult.Yes)
+            {
+                try
+                {
+                    id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
+                    if (id > 0)
+                    {
+                        AddEmployeePage addPage = new AddEmployeePage();
+                        db = new DBEMSEntities();
+                        tbAdd = db.TB_Employees.Where(x => x.Id == id).FirstOrDefault();
+                        db.Entry(tbAdd).State = EntityState.Deleted;
+                        db.SaveChanges();
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("لا يوجد بيانات لحذفها", "خطأ",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         // button Refresh
@@ -110,7 +136,7 @@ namespace EMS.Pages
         // button Print
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-
+            gridControl1.ShowPrintPreview();
         }
         #endregion
     }
