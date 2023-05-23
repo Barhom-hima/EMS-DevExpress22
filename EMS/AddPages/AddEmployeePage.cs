@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EMS.Pages;
 
 namespace EMS.AddPages
 {
@@ -16,6 +17,7 @@ namespace EMS.AddPages
         // DataBase And Tables
         DBEMSEntities db;
         TB_Employees tbAdd;
+        public EmployeesPage page = new EmployeesPage();
 
         // Other Var
         public int id;
@@ -52,6 +54,9 @@ namespace EMS.AddPages
                     // Edit
                     EditData();
                 }
+
+                // Update Data
+                page.LoadData();
             }
         }
 

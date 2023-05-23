@@ -38,6 +38,7 @@ namespace EMS.Pages
             addPage.id = 0;
             addPage.buttonAdd.Text = "اضافة";
             addPage.buttonAddAndClose.Text = "اضافة + غلق";
+            addPage.page = this;
             addPage.Show();
         }
 
