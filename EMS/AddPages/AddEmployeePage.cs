@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EMS.Pages;
+using System.Data.Entity.Migrations;
 
 namespace EMS.AddPages
 {
@@ -48,6 +49,7 @@ namespace EMS.AddPages
                 {
                     // Add
                     AddData();
+                    ClearData();
                 }
                 else
                 {
@@ -90,8 +92,6 @@ namespace EMS.AddPages
 
                 MessageBox.Show("تمت اضافة موظف جديد بنجاح", "نجاح",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                ClearData();
             }
             catch (Exception ex)
             {
@@ -101,7 +101,41 @@ namespace EMS.AddPages
         //Edit Data
         private void EditData()
         {
+            try
+            {
+                db = new DBEMSEntities();
+                tbAdd = new TB_Employees
+                {
+                    Id = id,
+                    Name = txtName.Text,
+                    JobId = txtJobId.Text,
+                    JobName = txtJobName.Text,
+                    Dob = txtDob.Value,
+                    Phone = txtPhone.Text,
+                    Email = txtEmail.Text,
+                    Salary = txtSalary.Text,
+                    Salaries = txtSalaries.Text,
+                    WorkTime = txtWorkTime.Text,
+                    VacationTime = txtVacationTime.Text,
+                    IdNum = txtIdNum.Text,
+                    PassportNum = txtPassportNum.Text,
+                    Doj = txtDoj.Value,
+                    DateEndId = txtDateEndId.Value,
+                    DateEndPassport = txtDateEndPassport.Value,
+                    Details = txtDetails.Text
+                };
+                db.Set<TB_Employees>().AddOrUpdate(tbAdd);
+                db.SaveChanges();
 
+                MessageBox.Show("تم تعديل بيانات الموظف بنجاح", "نجاح",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                ClearData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         // Button Save

@@ -15,6 +15,13 @@ namespace EMS.Pages
 {
     public partial class EmployeesPage : DevExpress.XtraEditors.XtraUserControl
     {
+        // DataBase And Tables
+        DBEMSEntities db;
+        TB_Employees tbAdd;
+
+        // Other Var
+        int id;
+
         public EmployeesPage()
         {
             InitializeComponent();
@@ -45,7 +52,47 @@ namespace EMS.Pages
         // button Edit
         private void buttonEdit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
+                if(id > 0)
+                {
+                    AddEmployeePage addPage = new AddEmployeePage();
+                    db = new DBEMSEntities();
+                    tbAdd = db.TB_Employees.Where(x => x.Id == id).FirstOrDefault();
 
+                    addPage.id = id;
+                    addPage.buttonAdd.Text = "تعديل";
+                    addPage.buttonAddAndClose.Text = "تعديل + غلق";
+                    addPage.txtName.Text = tbAdd.Name;
+                    addPage.txtJobId.Text = tbAdd.JobId;
+                    addPage.txtJobName.Text = tbAdd.JobName;
+                    addPage.txtDob.Value = tbAdd.Dob.Value;
+                    addPage.txtPhone.Text = tbAdd.Phone;
+                    addPage.txtEmail.Text = tbAdd.Email;
+                    addPage.txtSalary.Text = tbAdd.Salary;
+                    addPage.txtSalaries.Text = tbAdd.Salaries;
+                    addPage.txtWorkTime.Text = tbAdd.WorkTime;
+                    addPage.txtVacationTime.Text = tbAdd.VacationTime;
+                    addPage.txtIdNum.Text = tbAdd.IdNum;
+                    addPage.txtPassportNum.Text = tbAdd.PassportNum;
+                    addPage.txtDoj.Value = tbAdd.Doj.Value;
+                    addPage.txtDateEndId.Value = tbAdd.DateEndId.Value;
+                    addPage.txtDateEndPassport.Value = tbAdd.DateEndPassport.Value;
+                    addPage.txtDetails.Text = tbAdd.Details;
+                    addPage.page = this;
+                    addPage.Show();
+                }
+                else
+                {
+                    MessageBox.Show("لا يوجد بيانات لتعديلها", "خطأ", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         // button Delete
