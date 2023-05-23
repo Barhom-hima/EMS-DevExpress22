@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace EMS.Pages
 {
@@ -16,6 +17,16 @@ namespace EMS.Pages
         public EmployeesPage()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        public void LoadData()
+        {
+            EMS.DBEMSEntities dbContext = new EMS.DBEMSEntities();
+            dbContext.TB_Employees.LoadAsync().ContinueWith(loadTask =>
+            {
+                gridControl1.DataSource = dbContext.TB_Employees.Local.ToBindingList();
+            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
         #region Events

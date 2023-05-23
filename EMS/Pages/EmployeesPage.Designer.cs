@@ -37,6 +37,22 @@ namespace EMS.Pages
             this.buttonAdd = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colJobId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colJobName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDob = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalary = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalaries = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colWorkTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVacationTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdNum = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPassportNum = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoj = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDateEndId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDateEndPassport = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDetails = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -130,11 +146,13 @@ namespace EMS.Pages
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = typeof(EMS.TB_Employees);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Font = new System.Drawing.Font("PT Simple Bold Ruled", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.gridControl1.Size = new System.Drawing.Size(1239, 588);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -336,11 +354,172 @@ namespace EMS.Pages
             this.gridView1.AppearancePrint.Row.Options.UseTextOptions = true;
             this.gridView1.AppearancePrint.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.AppearancePrint.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colName,
+            this.colJobId,
+            this.colJobName,
+            this.colDob,
+            this.colPhone,
+            this.colEmail,
+            this.colSalary,
+            this.colSalaries,
+            this.colWorkTime,
+            this.colVacationTime,
+            this.colIdNum,
+            this.colPassportNum,
+            this.colDoj,
+            this.colDateEndId,
+            this.colDateEndPassport,
+            this.colDetails});
             this.gridView1.DetailHeight = 315;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsPrint.EnableAppearanceEvenRow = true;
             this.gridView1.OptionsPrint.EnableAppearanceOddRow = true;
+            // 
+            // colName
+            // 
+            this.colName.Caption = "الأسم";
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.OptionsColumn.AllowEdit = false;
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 0;
+            // 
+            // colJobId
+            // 
+            this.colJobId.Caption = "الرقم الوظيفي";
+            this.colJobId.FieldName = "JobId";
+            this.colJobId.Name = "colJobId";
+            this.colJobId.OptionsColumn.AllowEdit = false;
+            this.colJobId.Visible = true;
+            this.colJobId.VisibleIndex = 1;
+            // 
+            // colJobName
+            // 
+            this.colJobName.Caption = "المسمى الوظيفي";
+            this.colJobName.FieldName = "JobName";
+            this.colJobName.Name = "colJobName";
+            this.colJobName.OptionsColumn.AllowEdit = false;
+            this.colJobName.Visible = true;
+            this.colJobName.VisibleIndex = 2;
+            // 
+            // colDob
+            // 
+            this.colDob.Caption = "تاريخ الميلاد";
+            this.colDob.FieldName = "Dob";
+            this.colDob.Name = "colDob";
+            this.colDob.OptionsColumn.AllowEdit = false;
+            this.colDob.Visible = true;
+            this.colDob.VisibleIndex = 3;
+            // 
+            // colPhone
+            // 
+            this.colPhone.Caption = "رقم الهاتف";
+            this.colPhone.FieldName = "Phone";
+            this.colPhone.Name = "colPhone";
+            this.colPhone.OptionsColumn.AllowEdit = false;
+            this.colPhone.Visible = true;
+            this.colPhone.VisibleIndex = 4;
+            // 
+            // colEmail
+            // 
+            this.colEmail.Caption = "البريد الإلكتروني";
+            this.colEmail.FieldName = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.OptionsColumn.AllowEdit = false;
+            this.colEmail.Visible = true;
+            this.colEmail.VisibleIndex = 5;
+            // 
+            // colSalary
+            // 
+            this.colSalary.Caption = "الراتب";
+            this.colSalary.FieldName = "Salary";
+            this.colSalary.Name = "colSalary";
+            this.colSalary.OptionsColumn.AllowEdit = false;
+            this.colSalary.Visible = true;
+            this.colSalary.VisibleIndex = 6;
+            // 
+            // colSalaries
+            // 
+            this.colSalaries.Caption = "المرتبات";
+            this.colSalaries.FieldName = "Salaries";
+            this.colSalaries.Name = "colSalaries";
+            this.colSalaries.OptionsColumn.AllowEdit = false;
+            this.colSalaries.Visible = true;
+            this.colSalaries.VisibleIndex = 7;
+            // 
+            // colWorkTime
+            // 
+            this.colWorkTime.Caption = "ساعات العمل";
+            this.colWorkTime.FieldName = "WorkTime";
+            this.colWorkTime.Name = "colWorkTime";
+            this.colWorkTime.OptionsColumn.AllowEdit = false;
+            this.colWorkTime.Visible = true;
+            this.colWorkTime.VisibleIndex = 8;
+            // 
+            // colVacationTime
+            // 
+            this.colVacationTime.Caption = "ايام الإجازة";
+            this.colVacationTime.FieldName = "VacationTime";
+            this.colVacationTime.Name = "colVacationTime";
+            this.colVacationTime.OptionsColumn.AllowEdit = false;
+            this.colVacationTime.Visible = true;
+            this.colVacationTime.VisibleIndex = 9;
+            // 
+            // colIdNum
+            // 
+            this.colIdNum.Caption = "رقم الهوية";
+            this.colIdNum.FieldName = "IdNum";
+            this.colIdNum.Name = "colIdNum";
+            this.colIdNum.OptionsColumn.AllowEdit = false;
+            this.colIdNum.Visible = true;
+            this.colIdNum.VisibleIndex = 10;
+            // 
+            // colPassportNum
+            // 
+            this.colPassportNum.Caption = "رقم جواز السفر";
+            this.colPassportNum.FieldName = "PassportNum";
+            this.colPassportNum.Name = "colPassportNum";
+            this.colPassportNum.OptionsColumn.AllowEdit = false;
+            this.colPassportNum.Visible = true;
+            this.colPassportNum.VisibleIndex = 11;
+            // 
+            // colDoj
+            // 
+            this.colDoj.Caption = "تاريخ التوظيف";
+            this.colDoj.FieldName = "Doj";
+            this.colDoj.Name = "colDoj";
+            this.colDoj.OptionsColumn.AllowEdit = false;
+            this.colDoj.Visible = true;
+            this.colDoj.VisibleIndex = 12;
+            // 
+            // colDateEndId
+            // 
+            this.colDateEndId.Caption = "تاريخ انتههاء الهوية";
+            this.colDateEndId.FieldName = "DateEndId";
+            this.colDateEndId.Name = "colDateEndId";
+            this.colDateEndId.OptionsColumn.AllowEdit = false;
+            this.colDateEndId.Visible = true;
+            this.colDateEndId.VisibleIndex = 13;
+            // 
+            // colDateEndPassport
+            // 
+            this.colDateEndPassport.Caption = "تاريخ انتهاء جواز السفر";
+            this.colDateEndPassport.FieldName = "DateEndPassport";
+            this.colDateEndPassport.Name = "colDateEndPassport";
+            this.colDateEndPassport.OptionsColumn.AllowEdit = false;
+            this.colDateEndPassport.Visible = true;
+            this.colDateEndPassport.VisibleIndex = 14;
+            // 
+            // colDetails
+            // 
+            this.colDetails.Caption = "التفاصيل";
+            this.colDetails.FieldName = "Details";
+            this.colDetails.Name = "colDetails";
+            this.colDetails.OptionsColumn.AllowEdit = false;
+            this.colDetails.Visible = true;
+            this.colDetails.VisibleIndex = 15;
             // 
             // EmployeesPage
             // 
@@ -372,5 +551,21 @@ namespace EMS.Pages
         private DevExpress.XtraEditors.SimpleButton buttonDelete;
         private DevExpress.XtraEditors.SimpleButton buttonEdit;
         private DevExpress.XtraEditors.SimpleButton buttonPrint;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
+        private DevExpress.XtraGrid.Columns.GridColumn colJobId;
+        private DevExpress.XtraGrid.Columns.GridColumn colJobName;
+        private DevExpress.XtraGrid.Columns.GridColumn colDob;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmail;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalary;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalaries;
+        private DevExpress.XtraGrid.Columns.GridColumn colWorkTime;
+        private DevExpress.XtraGrid.Columns.GridColumn colVacationTime;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdNum;
+        private DevExpress.XtraGrid.Columns.GridColumn colPassportNum;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoj;
+        private DevExpress.XtraGrid.Columns.GridColumn colDateEndId;
+        private DevExpress.XtraGrid.Columns.GridColumn colDateEndPassport;
+        private DevExpress.XtraGrid.Columns.GridColumn colDetails;
     }
 }
