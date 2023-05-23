@@ -67,22 +67,18 @@ namespace EMS.AddPages
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.txtDob = new DevExpress.XtraEditors.DateTimeOffsetEdit();
-            this.txtDoj = new DevExpress.XtraEditors.DateTimeOffsetEdit();
-            this.txtDateEndId = new DevExpress.XtraEditors.DateTimeOffsetEdit();
-            this.txtDateEndPassport = new DevExpress.XtraEditors.DateTimeOffsetEdit();
             this.txtDetails = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonAddAndClose = new DevExpress.XtraEditors.SimpleButton();
             this.buttonAdd = new DevExpress.XtraEditors.SimpleButton();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtVacationTime = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDob.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoj.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDateEndId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDateEndPassport.Properties)).BeginInit();
+            this.txtDob = new System.Windows.Forms.DateTimePicker();
+            this.txtDoj = new System.Windows.Forms.DateTimePicker();
+            this.txtDateEndId = new System.Windows.Forms.DateTimePicker();
+            this.txtDateEndPassport = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -507,62 +503,6 @@ namespace EMS.AddPages
             this.label29.TabIndex = 0;
             this.label29.Text = "التفاصيل";
             // 
-            // txtDob
-            // 
-            this.txtDob.EditValue = null;
-            this.txtDob.Location = new System.Drawing.Point(323, 260);
-            this.txtDob.Name = "txtDob";
-            this.txtDob.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDob.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDob.Properties.Appearance.Options.UseBackColor = true;
-            this.txtDob.Properties.Appearance.Options.UseFont = true;
-            this.txtDob.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDob.Size = new System.Drawing.Size(217, 28);
-            this.txtDob.TabIndex = 4;
-            // 
-            // txtDoj
-            // 
-            this.txtDoj.EditValue = null;
-            this.txtDoj.Location = new System.Drawing.Point(10, 330);
-            this.txtDoj.Name = "txtDoj";
-            this.txtDoj.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDoj.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoj.Properties.Appearance.Options.UseBackColor = true;
-            this.txtDoj.Properties.Appearance.Options.UseFont = true;
-            this.txtDoj.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDoj.Size = new System.Drawing.Size(217, 28);
-            this.txtDoj.TabIndex = 13;
-            // 
-            // txtDateEndId
-            // 
-            this.txtDateEndId.EditValue = null;
-            this.txtDateEndId.Location = new System.Drawing.Point(10, 395);
-            this.txtDateEndId.Name = "txtDateEndId";
-            this.txtDateEndId.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDateEndId.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateEndId.Properties.Appearance.Options.UseBackColor = true;
-            this.txtDateEndId.Properties.Appearance.Options.UseFont = true;
-            this.txtDateEndId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDateEndId.Size = new System.Drawing.Size(217, 28);
-            this.txtDateEndId.TabIndex = 14;
-            // 
-            // txtDateEndPassport
-            // 
-            this.txtDateEndPassport.EditValue = null;
-            this.txtDateEndPassport.Location = new System.Drawing.Point(10, 468);
-            this.txtDateEndPassport.Name = "txtDateEndPassport";
-            this.txtDateEndPassport.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDateEndPassport.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateEndPassport.Properties.Appearance.Options.UseBackColor = true;
-            this.txtDateEndPassport.Properties.Appearance.Options.UseFont = true;
-            this.txtDateEndPassport.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDateEndPassport.Size = new System.Drawing.Size(217, 28);
-            this.txtDateEndPassport.TabIndex = 15;
-            // 
             // txtDetails
             // 
             this.txtDetails.BackColor = System.Drawing.SystemColors.Control;
@@ -597,6 +537,7 @@ namespace EMS.AddPages
             this.buttonAddAndClose.Size = new System.Drawing.Size(130, 68);
             this.buttonAddAndClose.TabIndex = 18;
             this.buttonAddAndClose.Text = "اضافة + غلق";
+            this.buttonAddAndClose.Click += new System.EventHandler(this.buttonAddAndClose_Click);
             // 
             // buttonAdd
             // 
@@ -610,6 +551,7 @@ namespace EMS.AddPages
             this.buttonAdd.Size = new System.Drawing.Size(130, 68);
             this.buttonAdd.TabIndex = 17;
             this.buttonAdd.Text = "اضافة";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label30
             // 
@@ -634,15 +576,15 @@ namespace EMS.AddPages
             this.label31.TabIndex = 0;
             this.label31.Text = "*";
             // 
-            // textBox1
+            // txtVacationTime
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(10, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 33);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVacationTime.BackColor = System.Drawing.SystemColors.Control;
+            this.txtVacationTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtVacationTime.Location = new System.Drawing.Point(10, 112);
+            this.txtVacationTime.Name = "txtVacationTime";
+            this.txtVacationTime.Size = new System.Drawing.Size(217, 33);
+            this.txtVacationTime.TabIndex = 10;
+            this.txtVacationTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label26
             // 
@@ -656,6 +598,46 @@ namespace EMS.AddPages
             this.label26.TabIndex = 0;
             this.label26.Text = "*";
             // 
+            // txtDob
+            // 
+            this.txtDob.CalendarMonthBackground = System.Drawing.SystemColors.Control;
+            this.txtDob.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtDob.Location = new System.Drawing.Point(323, 259);
+            this.txtDob.Name = "txtDob";
+            this.txtDob.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDob.Size = new System.Drawing.Size(217, 29);
+            this.txtDob.TabIndex = 4;
+            // 
+            // txtDoj
+            // 
+            this.txtDoj.CalendarMonthBackground = System.Drawing.SystemColors.Control;
+            this.txtDoj.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtDoj.Location = new System.Drawing.Point(14, 322);
+            this.txtDoj.Name = "txtDoj";
+            this.txtDoj.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDoj.Size = new System.Drawing.Size(217, 29);
+            this.txtDoj.TabIndex = 13;
+            // 
+            // txtDateEndId
+            // 
+            this.txtDateEndId.CalendarMonthBackground = System.Drawing.SystemColors.Control;
+            this.txtDateEndId.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtDateEndId.Location = new System.Drawing.Point(10, 396);
+            this.txtDateEndId.Name = "txtDateEndId";
+            this.txtDateEndId.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDateEndId.Size = new System.Drawing.Size(217, 29);
+            this.txtDateEndId.TabIndex = 14;
+            // 
+            // txtDateEndPassport
+            // 
+            this.txtDateEndPassport.CalendarMonthBackground = System.Drawing.SystemColors.Control;
+            this.txtDateEndPassport.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtDateEndPassport.Location = new System.Drawing.Point(10, 468);
+            this.txtDateEndPassport.Name = "txtDateEndPassport";
+            this.txtDateEndPassport.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDateEndPassport.Size = new System.Drawing.Size(217, 29);
+            this.txtDateEndPassport.TabIndex = 15;
+            // 
             // AddEmployeePage
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -664,12 +646,12 @@ namespace EMS.AddPages
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 743);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtDetails);
             this.Controls.Add(this.txtDateEndPassport);
             this.Controls.Add(this.txtDateEndId);
             this.Controls.Add(this.txtDoj);
             this.Controls.Add(this.txtDob);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtDetails);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label24);
@@ -677,7 +659,7 @@ namespace EMS.AddPages
             this.Controls.Add(this.label22);
             this.Controls.Add(this.txtIdNum);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtVacationTime);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.txtWorkTime);
             this.Controls.Add(this.label18);
@@ -721,10 +703,6 @@ namespace EMS.AddPages
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اضافة / تعديل موظف";
             this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.txtDob.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoj.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDateEndId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDateEndPassport.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -734,54 +712,54 @@ namespace EMS.AddPages
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtJobId;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtJobName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtSalaries;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtWorkTime;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txtIdNum;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtPassportNum;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private DevExpress.XtraEditors.DateTimeOffsetEdit txtDob;
-        private DevExpress.XtraEditors.DateTimeOffsetEdit txtDoj;
-        private DevExpress.XtraEditors.DateTimeOffsetEdit txtDateEndId;
-        private DevExpress.XtraEditors.DateTimeOffsetEdit txtDateEndPassport;
-        private System.Windows.Forms.RichTextBox txtDetails;
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.SimpleButton buttonAddAndClose;
-        private DevExpress.XtraEditors.SimpleButton buttonAdd;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label26;
+        public System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtJobId;
+        public System.Windows.Forms.TextBox txtJobName;
+        public System.Windows.Forms.TextBox txtPhone;
+        public System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.TextBox txtSalary;
+        public System.Windows.Forms.TextBox txtSalaries;
+        public System.Windows.Forms.TextBox txtWorkTime;
+        public System.Windows.Forms.TextBox txtIdNum;
+        public System.Windows.Forms.TextBox txtPassportNum;
+        public System.Windows.Forms.RichTextBox txtDetails;
+        public DevExpress.XtraEditors.SimpleButton buttonAddAndClose;
+        public DevExpress.XtraEditors.SimpleButton buttonAdd;
+        public System.Windows.Forms.TextBox txtVacationTime;
+        public System.Windows.Forms.DateTimePicker txtDob;
+        public System.Windows.Forms.DateTimePicker txtDoj;
+        public System.Windows.Forms.DateTimePicker txtDateEndId;
+        public System.Windows.Forms.DateTimePicker txtDateEndPassport;
     }
 }

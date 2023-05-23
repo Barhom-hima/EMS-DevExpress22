@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using EMS.AddPages;
 
 namespace EMS.Pages
 {
@@ -33,7 +34,11 @@ namespace EMS.Pages
         // button Add
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-
+            AddEmployeePage addPage = new AddEmployeePage();
+            addPage.id = 0;
+            addPage.buttonAdd.Text = "اضافة";
+            addPage.buttonAddAndClose.Text = "اضافة + غلق";
+            addPage.Show();
         }
 
         // button Edit
@@ -51,7 +56,7 @@ namespace EMS.Pages
         // button Refresh
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
-
+            LoadData();
         }
 
         // button Print
