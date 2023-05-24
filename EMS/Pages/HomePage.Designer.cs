@@ -152,6 +152,7 @@ namespace EMS.Pages
             this.buttonVacations.Size = new System.Drawing.Size(122, 70);
             this.buttonVacations.TabIndex = 0;
             this.buttonVacations.Text = "الإجازات";
+            this.buttonVacations.Click += new System.EventHandler(this.buttonVacations_Click);
             // 
             // buttonProjects
             // 

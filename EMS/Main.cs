@@ -36,7 +36,8 @@ namespace EMS
         // Load Vacations Page
         private void buttonVacations_Click(object sender, EventArgs e)
         {
-
+            VacationsPage page = new VacationsPage();
+            LoadPage(page);
         }
 
         // Load Salary Page

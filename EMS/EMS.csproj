@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPages\AddVacationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPages\AddVacationPage.Designer.cs">
+      <DependentUpon>AddVacationPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddPages\AddEmployeePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MEMS.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\VacationsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\VacationsPage.Designer.cs">
+      <DependentUpon>VacationsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EmployeesPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,11 +121,20 @@
     <Compile Include="TB_Employees.cs">
       <DependentUpon>MEMS.tt</DependentUpon>
     </Compile>
+    <Compile Include="TB_Vacations.cs">
+      <DependentUpon>MEMS.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddPages\AddVacationPage.resx">
+      <DependentUpon>AddVacationPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddPages\AddEmployeePage.resx">
       <DependentUpon>AddEmployeePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\VacationsPage.resx">
+      <DependentUpon>VacationsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\EmployeesPage.resx">
       <DependentUpon>EmployeesPage.cs</DependentUpon>

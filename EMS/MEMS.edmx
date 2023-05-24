@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBEMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBEMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="TB_Employees">
           <Key>
             <PropertyRef Name="Id" />
@@ -27,11 +27,22 @@
           <Property Name="DateEndPassport" Type="datetime" />
           <Property Name="Details" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="TB_Vacations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpName" Type="nvarchar(max)" />
+          <Property Name="AboutVacation" Type="nvarchar(max)" />
+          <Property Name="VacationAmount" Type="nvarchar(max)" />
+          <Property Name="VacationStartDate" Type="datetime" />
+          <Property Name="VacationEndDate" Type="datetime" />
+        </EntityType>
         <EntityContainer Name="DBEMSModelStoreContainer">
           <EntitySet Name="TB_Employees" EntityType="Self.TB_Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Vacations" EntityType="Self.TB_Vacations" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBEMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -59,7 +70,19 @@
         </EntityType>
         <EntityContainer Name="DBEMSEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TB_Employees" EntityType="Self.TB_Employees" />
+          <EntitySet Name="TB_Vacations" EntityType="DBEMSModel.TB_Vacations" />
         </EntityContainer>
+        <EntityType Name="TB_Vacations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AboutVacation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VacationAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VacationStartDate" Type="DateTime" Precision="3" />
+          <Property Name="VacationEndDate" Type="DateTime" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -86,6 +109,18 @@
                 <ScalarProperty Name="DateEndId" ColumnName="DateEndId" />
                 <ScalarProperty Name="DateEndPassport" ColumnName="DateEndPassport" />
                 <ScalarProperty Name="Details" ColumnName="Details" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Vacations">
+            <EntityTypeMapping TypeName="DBEMSModel.TB_Vacations">
+              <MappingFragment StoreEntitySet="TB_Vacations">
+                <ScalarProperty Name="VacationEndDate" ColumnName="VacationEndDate" />
+                <ScalarProperty Name="VacationStartDate" ColumnName="VacationStartDate" />
+                <ScalarProperty Name="VacationAmount" ColumnName="VacationAmount" />
+                <ScalarProperty Name="AboutVacation" ColumnName="AboutVacation" />
+                <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
