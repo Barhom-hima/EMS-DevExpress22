@@ -79,6 +79,9 @@ namespace EMS.AddPages
             this.txtDoj = new System.Windows.Forms.DateTimePicker();
             this.txtDateEndId = new System.Windows.Forms.DateTimePicker();
             this.txtDateEndPassport = new System.Windows.Forms.DateTimePicker();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtContractStatus = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -366,7 +369,7 @@ namespace EMS.AddPages
             this.txtWorkTime.Location = new System.Drawing.Point(10, 43);
             this.txtWorkTime.Name = "txtWorkTime";
             this.txtWorkTime.Size = new System.Drawing.Size(217, 33);
-            this.txtWorkTime.TabIndex = 9;
+            this.txtWorkTime.TabIndex = 10;
             this.txtWorkTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label19
@@ -399,7 +402,7 @@ namespace EMS.AddPages
             this.txtIdNum.Location = new System.Drawing.Point(10, 182);
             this.txtIdNum.Name = "txtIdNum";
             this.txtIdNum.Size = new System.Drawing.Size(217, 33);
-            this.txtIdNum.TabIndex = 11;
+            this.txtIdNum.TabIndex = 12;
             this.txtIdNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label21
@@ -432,7 +435,7 @@ namespace EMS.AddPages
             this.txtPassportNum.Location = new System.Drawing.Point(10, 252);
             this.txtPassportNum.Name = "txtPassportNum";
             this.txtPassportNum.Size = new System.Drawing.Size(217, 33);
-            this.txtPassportNum.TabIndex = 12;
+            this.txtPassportNum.TabIndex = 13;
             this.txtPassportNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label23
@@ -511,7 +514,7 @@ namespace EMS.AddPages
             this.txtDetails.Name = "txtDetails";
             this.txtDetails.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDetails.Size = new System.Drawing.Size(215, 96);
-            this.txtDetails.TabIndex = 16;
+            this.txtDetails.TabIndex = 17;
             this.txtDetails.Text = "";
             // 
             // panel1
@@ -535,7 +538,7 @@ namespace EMS.AddPages
             this.buttonAddAndClose.Location = new System.Drawing.Point(10, 6);
             this.buttonAddAndClose.Name = "buttonAddAndClose";
             this.buttonAddAndClose.Size = new System.Drawing.Size(130, 68);
-            this.buttonAddAndClose.TabIndex = 18;
+            this.buttonAddAndClose.TabIndex = 19;
             this.buttonAddAndClose.Text = "اضافة + غلق";
             this.buttonAddAndClose.Click += new System.EventHandler(this.buttonAddAndClose_Click);
             // 
@@ -549,7 +552,7 @@ namespace EMS.AddPages
             this.buttonAdd.Location = new System.Drawing.Point(420, 6);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(130, 68);
-            this.buttonAdd.TabIndex = 17;
+            this.buttonAdd.TabIndex = 18;
             this.buttonAdd.Text = "اضافة";
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
@@ -583,7 +586,7 @@ namespace EMS.AddPages
             this.txtVacationTime.Location = new System.Drawing.Point(10, 112);
             this.txtVacationTime.Name = "txtVacationTime";
             this.txtVacationTime.Size = new System.Drawing.Size(217, 33);
-            this.txtVacationTime.TabIndex = 10;
+            this.txtVacationTime.TabIndex = 11;
             this.txtVacationTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label26
@@ -616,7 +619,7 @@ namespace EMS.AddPages
             this.txtDoj.Name = "txtDoj";
             this.txtDoj.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDoj.Size = new System.Drawing.Size(217, 29);
-            this.txtDoj.TabIndex = 13;
+            this.txtDoj.TabIndex = 14;
             // 
             // txtDateEndId
             // 
@@ -626,7 +629,7 @@ namespace EMS.AddPages
             this.txtDateEndId.Name = "txtDateEndId";
             this.txtDateEndId.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDateEndId.Size = new System.Drawing.Size(217, 29);
-            this.txtDateEndId.TabIndex = 14;
+            this.txtDateEndId.TabIndex = 15;
             // 
             // txtDateEndPassport
             // 
@@ -636,7 +639,40 @@ namespace EMS.AddPages
             this.txtDateEndPassport.Name = "txtDateEndPassport";
             this.txtDateEndPassport.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDateEndPassport.Size = new System.Drawing.Size(217, 29);
-            this.txtDateEndPassport.TabIndex = 15;
+            this.txtDateEndPassport.TabIndex = 16;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label32.Location = new System.Drawing.Point(391, 578);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(149, 25);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "مدة العقد ( سنة )";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label33.ForeColor = System.Drawing.Color.Red;
+            this.label33.Location = new System.Drawing.Point(370, 578);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(20, 25);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "*";
+            // 
+            // txtContractStatus
+            // 
+            this.txtContractStatus.BackColor = System.Drawing.SystemColors.Control;
+            this.txtContractStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContractStatus.Location = new System.Drawing.Point(323, 606);
+            this.txtContractStatus.Name = "txtContractStatus";
+            this.txtContractStatus.Size = new System.Drawing.Size(217, 33);
+            this.txtContractStatus.TabIndex = 9;
+            this.txtContractStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AddEmployeePage
             // 
@@ -663,7 +699,9 @@ namespace EMS.AddPages
             this.Controls.Add(this.label31);
             this.Controls.Add(this.txtWorkTime);
             this.Controls.Add(this.label18);
+            this.Controls.Add(this.txtContractStatus);
             this.Controls.Add(this.txtSalaries);
+            this.Controls.Add(this.label33);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.txtSalary);
@@ -679,6 +717,7 @@ namespace EMS.AddPages
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label17);
+            this.Controls.Add(this.label32);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label13);
@@ -761,5 +800,8 @@ namespace EMS.AddPages
         public System.Windows.Forms.DateTimePicker txtDoj;
         public System.Windows.Forms.DateTimePicker txtDateEndId;
         public System.Windows.Forms.DateTimePicker txtDateEndPassport;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        public System.Windows.Forms.TextBox txtContractStatus;
     }
 }

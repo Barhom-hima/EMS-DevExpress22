@@ -53,6 +53,7 @@ namespace EMS.Pages
             this.colDateEndId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDateEndPassport = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDetails = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -362,6 +363,7 @@ namespace EMS.Pages
             this.colPhone,
             this.colEmail,
             this.colSalary,
+            this.colContractStatus,
             this.colSalaries,
             this.colWorkTime,
             this.colVacationTime,
@@ -447,7 +449,7 @@ namespace EMS.Pages
             this.colSalaries.Name = "colSalaries";
             this.colSalaries.OptionsColumn.AllowEdit = false;
             this.colSalaries.Visible = true;
-            this.colSalaries.VisibleIndex = 7;
+            this.colSalaries.VisibleIndex = 8;
             // 
             // colWorkTime
             // 
@@ -456,7 +458,7 @@ namespace EMS.Pages
             this.colWorkTime.Name = "colWorkTime";
             this.colWorkTime.OptionsColumn.AllowEdit = false;
             this.colWorkTime.Visible = true;
-            this.colWorkTime.VisibleIndex = 8;
+            this.colWorkTime.VisibleIndex = 9;
             // 
             // colVacationTime
             // 
@@ -465,7 +467,7 @@ namespace EMS.Pages
             this.colVacationTime.Name = "colVacationTime";
             this.colVacationTime.OptionsColumn.AllowEdit = false;
             this.colVacationTime.Visible = true;
-            this.colVacationTime.VisibleIndex = 9;
+            this.colVacationTime.VisibleIndex = 10;
             // 
             // colIdNum
             // 
@@ -474,7 +476,7 @@ namespace EMS.Pages
             this.colIdNum.Name = "colIdNum";
             this.colIdNum.OptionsColumn.AllowEdit = false;
             this.colIdNum.Visible = true;
-            this.colIdNum.VisibleIndex = 10;
+            this.colIdNum.VisibleIndex = 11;
             // 
             // colPassportNum
             // 
@@ -483,7 +485,7 @@ namespace EMS.Pages
             this.colPassportNum.Name = "colPassportNum";
             this.colPassportNum.OptionsColumn.AllowEdit = false;
             this.colPassportNum.Visible = true;
-            this.colPassportNum.VisibleIndex = 11;
+            this.colPassportNum.VisibleIndex = 12;
             // 
             // colDoj
             // 
@@ -492,7 +494,7 @@ namespace EMS.Pages
             this.colDoj.Name = "colDoj";
             this.colDoj.OptionsColumn.AllowEdit = false;
             this.colDoj.Visible = true;
-            this.colDoj.VisibleIndex = 12;
+            this.colDoj.VisibleIndex = 13;
             // 
             // colDateEndId
             // 
@@ -501,7 +503,7 @@ namespace EMS.Pages
             this.colDateEndId.Name = "colDateEndId";
             this.colDateEndId.OptionsColumn.AllowEdit = false;
             this.colDateEndId.Visible = true;
-            this.colDateEndId.VisibleIndex = 13;
+            this.colDateEndId.VisibleIndex = 14;
             // 
             // colDateEndPassport
             // 
@@ -510,7 +512,7 @@ namespace EMS.Pages
             this.colDateEndPassport.Name = "colDateEndPassport";
             this.colDateEndPassport.OptionsColumn.AllowEdit = false;
             this.colDateEndPassport.Visible = true;
-            this.colDateEndPassport.VisibleIndex = 14;
+            this.colDateEndPassport.VisibleIndex = 15;
             // 
             // colDetails
             // 
@@ -519,7 +521,16 @@ namespace EMS.Pages
             this.colDetails.Name = "colDetails";
             this.colDetails.OptionsColumn.AllowEdit = false;
             this.colDetails.Visible = true;
-            this.colDetails.VisibleIndex = 15;
+            this.colDetails.VisibleIndex = 16;
+            // 
+            // colContractStatus
+            // 
+            this.colContractStatus.Caption = "مدة العقد";
+            this.colContractStatus.FieldName = "ContractStatus";
+            this.colContractStatus.Name = "colContractStatus";
+            this.colContractStatus.OptionsColumn.AllowEdit = false;
+            this.colContractStatus.Visible = true;
+            this.colContractStatus.VisibleIndex = 7;
             // 
             // EmployeesPage
             // 
@@ -567,5 +578,6 @@ namespace EMS.Pages
         private DevExpress.XtraGrid.Columns.GridColumn colDateEndId;
         private DevExpress.XtraGrid.Columns.GridColumn colDateEndPassport;
         private DevExpress.XtraGrid.Columns.GridColumn colDetails;
+        private DevExpress.XtraGrid.Columns.GridColumn colContractStatus;
     }
 }

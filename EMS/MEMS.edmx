@@ -26,6 +26,7 @@
           <Property Name="DateEndId" Type="datetime" />
           <Property Name="DateEndPassport" Type="datetime" />
           <Property Name="Details" Type="nvarchar(max)" />
+          <Property Name="ContractStatus" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="TB_Vacations">
           <Key>
@@ -67,6 +68,7 @@
           <Property Name="DateEndId" Type="DateTime" Precision="3" />
           <Property Name="DateEndPassport" Type="DateTime" Precision="3" />
           <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContractStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="DBEMSEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TB_Employees" EntityType="Self.TB_Employees" />
@@ -92,6 +94,7 @@
           <EntitySetMapping Name="TB_Employees">
             <EntityTypeMapping TypeName="DBEMSModel.TB_Employees">
               <MappingFragment StoreEntitySet="TB_Employees">
+                <ScalarProperty Name="ContractStatus" ColumnName="ContractStatus" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="JobId" ColumnName="JobId" />

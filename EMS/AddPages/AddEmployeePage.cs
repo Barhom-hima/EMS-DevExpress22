@@ -78,6 +78,7 @@ namespace EMS.AddPages
                     Email = txtEmail.Text,
                     Salary = txtSalary.Text,
                     Salaries = txtSalaries.Text,
+                    ContractStatus = txtContractStatus.Text,
                     WorkTime = txtWorkTime.Text,
                     VacationTime = txtVacationTime.Text,
                     IdNum = txtIdNum.Text,
@@ -115,6 +116,7 @@ namespace EMS.AddPages
                     Email = txtEmail.Text,
                     Salary = txtSalary.Text,
                     Salaries = txtSalaries.Text,
+                    ContractStatus = txtContractStatus.Text,
                     WorkTime = txtWorkTime.Text,
                     VacationTime = txtVacationTime.Text,
                     IdNum = txtIdNum.Text,
@@ -129,8 +131,6 @@ namespace EMS.AddPages
 
                 MessageBox.Show("تم تعديل بيانات الموظف بنجاح", "نجاح",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                ClearData();
             }
             catch (Exception ex)
             {
@@ -161,6 +161,7 @@ namespace EMS.AddPages
             txtEmail.Text = "";
             txtSalary.Text = "";
             txtSalaries.Text = "";
+            txtContractStatus.Text = "";
             txtWorkTime.Text = "";
             txtVacationTime.Text = "";
             txtIdNum.Text = "";
@@ -183,6 +184,7 @@ namespace EMS.AddPages
             txtEmail.Size = new System.Drawing.Size(217, 33);
             txtSalary.Size = new System.Drawing.Size(217, 33);
             txtSalaries.Size = new System.Drawing.Size(217, 33);
+            txtContractStatus.Size = new System.Drawing.Size(217, 33);
             txtWorkTime.Size = new System.Drawing.Size(217, 33);
             txtVacationTime.Size = new System.Drawing.Size(217, 33);
             txtIdNum.Size = new System.Drawing.Size(217, 33);
@@ -215,6 +217,9 @@ namespace EMS.AddPages
 
             // txtSalaries
             txtSalaries.Location = new System.Drawing.Point(323, 542);
+
+            // txtContractStatus
+            txtContractStatus.Location = new System.Drawing.Point(323, 606);
 
             // txtWorkTime
             txtWorkTime.Location = new System.Drawing.Point(10, 43);
