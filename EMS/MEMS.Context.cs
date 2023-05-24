@@ -29,5 +29,6 @@ namespace EMS
         public virtual DbSet<TB_Vacations> TB_Vacations { get; set; }
         public virtual DbSet<TB_Salaries> TB_Salaries { get; set; }
         public virtual DbSet<TB_Projects> TB_Projects { get; set; }
+        public virtual DbSet<TB_Tasks> TB_Tasks { get; set; }
     }
 }

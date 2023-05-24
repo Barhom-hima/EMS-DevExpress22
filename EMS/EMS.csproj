@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPages\AddTaskPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPages\AddTaskPage.Designer.cs">
+      <DependentUpon>AddTaskPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddPages\AddProjectPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MEMS.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TasksPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\TasksPage.Designer.cs">
+      <DependentUpon>TasksPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProjectsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,9 +163,15 @@
     <Compile Include="TB_Salaries.cs">
       <DependentUpon>MEMS.tt</DependentUpon>
     </Compile>
+    <Compile Include="TB_Tasks.cs">
+      <DependentUpon>MEMS.tt</DependentUpon>
+    </Compile>
     <Compile Include="TB_Vacations.cs">
       <DependentUpon>MEMS.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddPages\AddTaskPage.resx">
+      <DependentUpon>AddTaskPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddPages\AddProjectPage.resx">
       <DependentUpon>AddProjectPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\TasksPage.resx">
+      <DependentUpon>TasksPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ProjectsPage.resx">
       <DependentUpon>ProjectsPage.cs</DependentUpon>

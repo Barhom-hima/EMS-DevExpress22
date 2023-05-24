@@ -1,7 +1,7 @@
 ﻿
 namespace EMS.AddPages
 {
-    partial class AddProjectPage
+    partial class AddTaskPage
     {
         /// <summary>
         /// Required designer variable.
@@ -42,10 +42,7 @@ namespace EMS.AddPages
             this.buttonAdd = new DevExpress.XtraEditors.SimpleButton();
             this.txtStartDate = new System.Windows.Forms.DateTimePicker();
             this.txtAdminName = new System.Windows.Forms.ComboBox();
-            this.txtProjectStatus = new System.Windows.Forms.ComboBox();
-            this.txtCost = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtTaskStatus = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -56,7 +53,7 @@ namespace EMS.AddPages
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtProjectName = new System.Windows.Forms.TextBox();
+            this.txtTaskName = new System.Windows.Forms.TextBox();
             this.txtRequireds = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -96,19 +93,19 @@ namespace EMS.AddPages
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(421, 161);
+            this.label3.Location = new System.Drawing.Point(431, 161);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 25);
+            this.label3.Size = new System.Drawing.Size(102, 25);
             this.label3.TabIndex = 0;
-            this.label3.Text = "حالة المشروع";
+            this.label3.Text = "حالة المهمة";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(397, 161);
+            this.label4.Location = new System.Drawing.Point(407, 161);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 25);
@@ -131,7 +128,7 @@ namespace EMS.AddPages
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(423, 231);
+            this.label6.Location = new System.Drawing.Point(414, 231);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 25);
@@ -142,19 +139,19 @@ namespace EMS.AddPages
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(100, 84);
+            this.label7.Location = new System.Drawing.Point(110, 15);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 25);
+            this.label7.Size = new System.Drawing.Size(137, 25);
             this.label7.TabIndex = 0;
-            this.label7.Text = "تاريخ بدء المشروع";
+            this.label7.Text = "تاريخ بدء المهمة";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(76, 84);
+            this.label8.Location = new System.Drawing.Point(86, 19);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(20, 25);
@@ -167,7 +164,7 @@ namespace EMS.AddPages
             this.panel1.Controls.Add(this.buttonAddAndClose);
             this.panel1.Controls.Add(this.buttonAdd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 368);
+            this.panel1.Location = new System.Drawing.Point(0, 331);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(929, 81);
             this.panel1.TabIndex = 16;
@@ -204,7 +201,7 @@ namespace EMS.AddPages
             // 
             this.txtStartDate.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.txtStartDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txtStartDate.Location = new System.Drawing.Point(30, 119);
+            this.txtStartDate.Location = new System.Drawing.Point(30, 47);
             this.txtStartDate.Name = "txtStartDate";
             this.txtStartDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtStartDate.Size = new System.Drawing.Size(217, 29);
@@ -221,53 +218,20 @@ namespace EMS.AddPages
             this.txtAdminName.Size = new System.Drawing.Size(217, 33);
             this.txtAdminName.TabIndex = 2;
             // 
-            // txtProjectStatus
+            // txtTaskStatus
             // 
-            this.txtProjectStatus.BackColor = System.Drawing.SystemColors.Control;
-            this.txtProjectStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtProjectStatus.FormattingEnabled = true;
-            this.txtProjectStatus.Items.AddRange(new object[] {
+            this.txtTaskStatus.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTaskStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtTaskStatus.FormattingEnabled = true;
+            this.txtTaskStatus.Items.AddRange(new object[] {
             "قيد التنفيذ",
             "مكتمل",
             "مؤجلة"});
-            this.txtProjectStatus.Location = new System.Drawing.Point(316, 189);
-            this.txtProjectStatus.Name = "txtProjectStatus";
-            this.txtProjectStatus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtProjectStatus.Size = new System.Drawing.Size(217, 33);
-            this.txtProjectStatus.TabIndex = 3;
-            // 
-            // txtCost
-            // 
-            this.txtCost.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCost.Location = new System.Drawing.Point(30, 43);
-            this.txtCost.Name = "txtCost";
-            this.txtCost.Size = new System.Drawing.Size(217, 33);
-            this.txtCost.TabIndex = 5;
-            this.txtCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(182, 15);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 25);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "التكلفة";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(158, 15);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "*";
+            this.txtTaskStatus.Location = new System.Drawing.Point(316, 189);
+            this.txtTaskStatus.Name = "txtTaskStatus";
+            this.txtTaskStatus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtTaskStatus.Size = new System.Drawing.Size(217, 33);
+            this.txtTaskStatus.TabIndex = 3;
             // 
             // panel2
             // 
@@ -275,7 +239,7 @@ namespace EMS.AddPages
             this.panel2.Controls.Add(this.gridControl1);
             this.panel2.Location = new System.Drawing.Point(557, 42);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(360, 310);
+            this.panel2.Size = new System.Drawing.Size(360, 250);
             this.panel2.TabIndex = 18;
             // 
             // gridControl1
@@ -287,7 +251,7 @@ namespace EMS.AddPages
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(360, 310);
+            this.gridControl1.Size = new System.Drawing.Size(360, 250);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -551,34 +515,34 @@ namespace EMS.AddPages
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(423, 15);
+            this.label12.Location = new System.Drawing.Point(432, 15);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 25);
+            this.label12.Size = new System.Drawing.Size(102, 25);
             this.label12.TabIndex = 0;
-            this.label12.Text = "اسم المشروع";
+            this.label12.Text = "اسم المهمة";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(399, 15);
+            this.label13.Location = new System.Drawing.Point(408, 15);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(20, 25);
             this.label13.TabIndex = 0;
             this.label13.Text = "*";
             // 
-            // txtProjectName
+            // txtTaskName
             // 
-            this.txtProjectName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtProjectName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProjectName.Location = new System.Drawing.Point(317, 43);
-            this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.Size = new System.Drawing.Size(217, 33);
-            this.txtProjectName.TabIndex = 1;
-            this.txtProjectName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTaskName.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTaskName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTaskName.Location = new System.Drawing.Point(317, 43);
+            this.txtTaskName.Name = "txtTaskName";
+            this.txtTaskName.Size = new System.Drawing.Size(217, 33);
+            this.txtTaskName.TabIndex = 1;
+            this.txtTaskName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtRequireds
             // 
@@ -594,19 +558,19 @@ namespace EMS.AddPages
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(83, 161);
+            this.label14.Location = new System.Drawing.Point(94, 89);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(164, 25);
+            this.label14.Size = new System.Drawing.Size(153, 25);
             this.label14.TabIndex = 0;
-            this.label14.Text = "تاريخ انتهاء المشروع";
+            this.label14.Text = "تاريخ انتهاء المهمة";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(65, 161);
+            this.label15.Location = new System.Drawing.Point(70, 96);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(20, 25);
@@ -617,7 +581,7 @@ namespace EMS.AddPages
             // 
             this.txtEndDate.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.txtEndDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txtEndDate.Location = new System.Drawing.Point(30, 196);
+            this.txtEndDate.Location = new System.Drawing.Point(30, 124);
             this.txtEndDate.Name = "txtEndDate";
             this.txtEndDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtEndDate.Size = new System.Drawing.Size(217, 29);
@@ -627,7 +591,7 @@ namespace EMS.AddPages
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(166, 231);
+            this.label16.Location = new System.Drawing.Point(166, 165);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(82, 25);
@@ -638,27 +602,26 @@ namespace EMS.AddPages
             // 
             this.txtDetails.BackColor = System.Drawing.SystemColors.Control;
             this.txtDetails.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDetails.Location = new System.Drawing.Point(30, 256);
+            this.txtDetails.Location = new System.Drawing.Point(30, 190);
             this.txtDetails.Name = "txtDetails";
             this.txtDetails.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDetails.Size = new System.Drawing.Size(218, 96);
             this.txtDetails.TabIndex = 8;
             this.txtDetails.Text = "";
             // 
-            // AddProjectPage
+            // AddTaskPage
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 449);
+            this.ClientSize = new System.Drawing.Size(929, 412);
             this.Controls.Add(this.txtDetails);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtRequireds);
-            this.Controls.Add(this.txtProjectName);
-            this.Controls.Add(this.txtCost);
-            this.Controls.Add(this.txtProjectStatus);
+            this.Controls.Add(this.txtTaskName);
+            this.Controls.Add(this.txtTaskStatus);
             this.Controls.Add(this.txtAdminName);
             this.Controls.Add(this.txtEndDate);
             this.Controls.Add(this.txtStartDate);
@@ -674,19 +637,17 @@ namespace EMS.AddPages
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.ShowIcon = false;
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaximizeBox = false;
-            this.Name = "AddProjectPage";
+            this.Name = "AddTaskPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "اضافة / تعديل مشروع";
+            this.Text = "اضافة / تعديل مهمة";
             this.TopMost = true;
             this.Activated += new System.EventHandler(this.AddVacationPage_Activated);
             this.panel1.ResumeLayout(false);
@@ -713,10 +674,7 @@ namespace EMS.AddPages
         public DevExpress.XtraEditors.SimpleButton buttonAdd;
         public System.Windows.Forms.DateTimePicker txtStartDate;
         public System.Windows.Forms.ComboBox txtAdminName;
-        public System.Windows.Forms.ComboBox txtProjectStatus;
-        public System.Windows.Forms.TextBox txtCost;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.ComboBox txtTaskStatus;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -727,7 +685,7 @@ namespace EMS.AddPages
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.TextBox txtProjectName;
+        public System.Windows.Forms.TextBox txtTaskName;
         public System.Windows.Forms.TextBox txtRequireds;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;

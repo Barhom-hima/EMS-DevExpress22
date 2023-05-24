@@ -139,6 +139,7 @@ namespace EMS.Pages
             this.buttonTasks.Size = new System.Drawing.Size(122, 70);
             this.buttonTasks.TabIndex = 0;
             this.buttonTasks.Text = "المهام";
+            this.buttonTasks.Click += new System.EventHandler(this.buttonTasks_Click);
             // 
             // buttonVacations
             // 

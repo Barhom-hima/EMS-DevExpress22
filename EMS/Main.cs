@@ -57,7 +57,8 @@ namespace EMS
         // Load Task Page
         private void buttonTasks_Click(object sender, EventArgs e)
         {
-
+            TasksPage page = new TasksPage();
+            LoadPage(page);
         }
 
         // Load Users Page

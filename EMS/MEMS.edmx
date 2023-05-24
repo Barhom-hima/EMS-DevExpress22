@@ -53,6 +53,19 @@
           <Property Name="Salaries" Type="nvarchar(max)" />
           <Property Name="CashingDate" Type="datetime" />
         </EntityType>
+        <EntityType Name="TB_Tasks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TaskName" Type="nvarchar(max)" />
+          <Property Name="AdminName" Type="nvarchar(max)" />
+          <Property Name="TaskStatus" Type="nvarchar(max)" />
+          <Property Name="Requireds" Type="nvarchar(max)" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="Details" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="TB_Vacations">
           <Key>
             <PropertyRef Name="Id" />
@@ -68,6 +81,7 @@
           <EntitySet Name="TB_Employees" EntityType="Self.TB_Employees" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Projects" EntityType="Self.TB_Projects" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Salaries" EntityType="Self.TB_Salaries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Tasks" EntityType="Self.TB_Tasks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Vacations" EntityType="Self.TB_Vacations" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -102,6 +116,7 @@
           <EntitySet Name="TB_Vacations" EntityType="DBEMSModel.TB_Vacations" />
           <EntitySet Name="TB_Salaries" EntityType="DBEMSModel.TB_Salaries" />
           <EntitySet Name="TB_Projects" EntityType="DBEMSModel.TB_Projects" />
+          <EntitySet Name="TB_Tasks" EntityType="DBEMSModel.TB_Tasks" />
         </EntityContainer>
         <EntityType Name="TB_Vacations">
           <Key>
@@ -135,6 +150,19 @@
           <Property Name="ProjectStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Requireds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Cost" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TB_Tasks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TaskName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AdminName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TaskStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Requireds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="StartDate" Type="DateTime" Precision="3" />
           <Property Name="EndDate" Type="DateTime" Precision="3" />
           <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -204,6 +232,20 @@
                 <ScalarProperty Name="ProjectStatus" ColumnName="ProjectStatus" />
                 <ScalarProperty Name="AdminName" ColumnName="AdminName" />
                 <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Tasks">
+            <EntityTypeMapping TypeName="DBEMSModel.TB_Tasks">
+              <MappingFragment StoreEntitySet="TB_Tasks">
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Requireds" ColumnName="Requireds" />
+                <ScalarProperty Name="TaskStatus" ColumnName="TaskStatus" />
+                <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+                <ScalarProperty Name="TaskName" ColumnName="TaskName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
