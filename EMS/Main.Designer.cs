@@ -35,7 +35,7 @@ namespace EMS
             this.buttonHome = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonEmployees = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonVacations = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.buttonSalary = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.buttonSalaries = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonProjects = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonTasks = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonUsers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -68,7 +68,7 @@ namespace EMS
             this.buttonHome,
             this.buttonEmployees,
             this.buttonVacations,
-            this.buttonSalary,
+            this.buttonSalaries,
             this.buttonProjects,
             this.buttonTasks,
             this.buttonUsers});
@@ -125,20 +125,20 @@ namespace EMS
             this.buttonVacations.Text = "الإجازات";
             this.buttonVacations.Click += new System.EventHandler(this.buttonVacations_Click);
             // 
-            // buttonSalary
+            // buttonSalaries
             // 
-            this.buttonSalary.Appearance.Default.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.buttonSalary.Appearance.Default.Options.UseFont = true;
-            this.buttonSalary.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            this.buttonSalaries.Appearance.Default.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonSalaries.Appearance.Default.Options.UseFont = true;
+            this.buttonSalaries.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.buttonSalary.ImageOptions.Image = global::EMS.Properties.Resources.Salary;
-            this.buttonSalary.Name = "buttonSalary";
-            this.buttonSalary.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.buttonSalary.Text = "الرواتب";
-            this.buttonSalary.Click += new System.EventHandler(this.buttonSalary_Click);
+            this.buttonSalaries.ImageOptions.Image = global::EMS.Properties.Resources.Salary;
+            this.buttonSalaries.Name = "buttonSalaries";
+            this.buttonSalaries.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.buttonSalaries.Text = "الرواتب";
+            this.buttonSalaries.Click += new System.EventHandler(this.buttonSalary_Click);
             // 
             // buttonProjects
             // 
@@ -270,7 +270,7 @@ namespace EMS
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement buttonSalary;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement buttonSalaries;
         private DevExpress.XtraBars.Navigation.AccordionControlElement buttonUsers;
     }
 }

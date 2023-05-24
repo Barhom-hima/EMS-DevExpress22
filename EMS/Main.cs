@@ -40,10 +40,11 @@ namespace EMS
             LoadPage(page);
         }
 
-        // Load Salary Page
+        // Load Salaries Page
         private void buttonSalary_Click(object sender, EventArgs e)
         {
-
+            SalariesPage page = new SalariesPage();
+            LoadPage(page);
         }
 
         // Load Project Page
