@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using EMS.Pages;
+using EMS.AddPages;
 
 namespace EMS
 {
@@ -89,6 +90,19 @@ namespace EMS
 
             }
         }
+
+        // Logout Button
+        private void buttonLogout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            Hide();
+        }
         #endregion
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EMS.Pages;
+using EMS.AddPages;
 using System.Data.Entity.Migrations;
 
 namespace EMS.AddPages
@@ -17,7 +18,7 @@ namespace EMS.AddPages
     {
         // DataBase And Tables
         DBEMSEntities db;
-        TB_Vacations tbAdd;
+        TB_Users tbAdd;
         public VacationsPage page = new VacationsPage();
 
         // Other Var
@@ -31,7 +32,7 @@ namespace EMS.AddPages
         }
 
         // Add Function
-        private void Add()
+        private void LoginFunc()
         {
             // Check If empty values
             if(txtUsername.Text == "" && txtPassowrd.Text == "")
@@ -39,68 +40,24 @@ namespace EMS.AddPages
                 MessageBox.Show("برجى ملئ جميع الحقول التي تحتوي على علامة * ثم اعد المحاولة", "خطأ",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            // Add
+            // Login
             else
             {
-                // Check If Add or Edit
-                if(id == 0)
-                {
-                    // Add
-                    AddData();
-                    ClearData();
-                }
-                else
-                {
-                    // Edit
-                    EditData();
-                }
-
-                // Update Data
-                page.LoadData();
+                Login();
             }
         }
 
-        // Add Data
-        private void AddData()
+        private void Login()
         {
+            Main main = new Main();
             try
             {
                 db = new DBEMSEntities();
-                tbAdd = new TB_Vacations
-                {
-                    VacationAmount = txtUsername.Text,
-                };
-                db.Entry(tbAdd).State = System.Data.Entity.EntityState.Added;
-                db.SaveChanges();
+                tbAdd = db.TB_Users.Where(x => x.Username == txtUsername.Text && x.Passowrd == txtPassowrd.Text).FirstOrDefault();
 
-                MessageBox.Show("تمت اضافة موظف جديد بنجاح", "نجاح",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                page.LoadData();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        //Edit Data
-        private void EditData()
-        {
-            try
-            {
-                db = new DBEMSEntities();
-                tbAdd = new TB_Vacations
-                {
-                    Id = id,
-                    VacationAmount = txtUsername.Text
-                };
-                db.Set<TB_Vacations>().AddOrUpdate(tbAdd);
-                db.SaveChanges();
-
-                MessageBox.Show("تم تعديل بيانات الموظف بنجاح", "نجاح",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                ClearData();
+                main.txtUsername.Caption = tbAdd.FullName;
+                main.Show();
+                Hide();
             }
             catch (Exception ex)
             {
@@ -111,43 +68,50 @@ namespace EMS.AddPages
         // Button Save
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Add();
+            LoginFunc();
         }
 
         // Button Save And Close
         private void buttonAddAndClose_Click(object sender, EventArgs e)
         {
-            Add();
-            Close();
-        }
-
-        private void ClearData()
-        {
-            
+            AddUserPage addPage = new AddUserPage();
+            addPage.id = 0;
+            addPage.buttonAdd.Text = "اضافة";
+            addPage.buttonAddAndClose.Text = "اضافة + غلق";
+            addPage.Show();
         }
 
         private void FixPlace()
         {
             #region TextBoxs
             // Size
-            txtUsername.Size = new System.Drawing.Size(217, 33);
+            txtUsername.Size = new System.Drawing.Size(379, 33);
+            txtUsername.Location = new System.Drawing.Point(12, 34);
+
+            txtPassowrd.Size = new System.Drawing.Size(379, 33);
+            txtPassowrd.Location = new System.Drawing.Point(12, 113);
 
             #endregion
 
             #region Buttons
             // Button Save
-            buttonLogin.Size = new System.Drawing.Size(130, 68);
-            buttonLogin.Location = new System.Drawing.Point(420, 6);
+            buttonLogin.Size = new System.Drawing.Size(106, 68);
+            buttonLogin.Location = new System.Drawing.Point(294, 10);
 
             // Button Save And close
-            buttonSignIn.Size = new System.Drawing.Size(130, 68);
-            buttonSignIn.Location = new System.Drawing.Point(10, 6);
+            buttonSignIn.Size = new System.Drawing.Size(106, 68);
+            buttonSignIn.Location = new System.Drawing.Point(3, 10);
             #endregion
         }
 
         private void AddVacationPage_Activated(object sender, EventArgs e)
         {
             
+        }
+
+        private void LoginPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

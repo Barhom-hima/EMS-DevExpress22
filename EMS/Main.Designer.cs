@@ -30,6 +30,7 @@ namespace EMS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.buttonHome = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -40,8 +41,8 @@ namespace EMS
             this.buttonTasks = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonUsers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.buttonLogout = new DevExpress.XtraBars.BarButtonItem();
+            this.txtUsername = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
@@ -55,10 +56,10 @@ namespace EMS
             this.panelContainer.Appearance.Options.UseBackColor = true;
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.panelContainer.Location = new System.Drawing.Point(0, 31);
+            this.panelContainer.Location = new System.Drawing.Point(0, 36);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1019, 695);
+            this.panelContainer.Size = new System.Drawing.Size(1019, 690);
             this.panelContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -72,11 +73,11 @@ namespace EMS
             this.buttonProjects,
             this.buttonTasks,
             this.buttonUsers});
-            this.accordionControl1.Location = new System.Drawing.Point(1019, 31);
+            this.accordionControl1.Location = new System.Drawing.Point(1019, 36);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(250, 695);
+            this.accordionControl1.Size = new System.Drawing.Size(250, 690);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -189,32 +190,34 @@ namespace EMS
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barButtonItem1,
-            this.barStaticItem1,
+            this.buttonLogout,
+            this.txtUsername,
             this.barStaticItem2});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1269, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1269, 36);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
-            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
-            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barStaticItem1);
-            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barStaticItem2);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.buttonLogout);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.txtUsername);
             // 
-            // barButtonItem1
+            // buttonLogout
             // 
-            this.barButtonItem1.Caption = "تسجيل الخروج";
-            this.barButtonItem1.Id = 0;
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.buttonLogout.Caption = "تسجيل الخروج";
+            this.buttonLogout.Id = 0;
+            this.buttonLogout.ItemAppearance.Disabled.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogout.ItemAppearance.Disabled.Options.UseFont = true;
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonLogout_ItemClick);
             // 
-            // barStaticItem1
+            // txtUsername
             // 
-            this.barStaticItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStaticItem1.Caption = "إبراهيم";
-            this.barStaticItem1.Id = 1;
-            this.barStaticItem1.Name = "barStaticItem1";
+            this.txtUsername.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.txtUsername.Caption = "إبراهيم";
+            this.txtUsername.Id = 1;
+            this.txtUsername.Name = "txtUsername";
             // 
             // barStaticItem2
             // 
@@ -227,8 +230,8 @@ namespace EMS
             // 
             this.fluentFormDefaultManager1.Form = this;
             this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barButtonItem1,
-            this.barStaticItem1,
+            this.buttonLogout,
+            this.txtUsername,
             this.barStaticItem2});
             this.fluentFormDefaultManager1.MaxItemId = 3;
             // 
@@ -244,12 +247,14 @@ namespace EMS
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Main.IconOptions.Image")));
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.Name = "Main";
             this.NavigationControl = this.accordionControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EMS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
@@ -267,11 +272,11 @@ namespace EMS
         private DevExpress.XtraBars.Navigation.AccordionControlElement buttonVacations;
         private DevExpress.XtraBars.Navigation.AccordionControlElement buttonProjects;
         private DevExpress.XtraBars.Navigation.AccordionControlElement buttonTasks;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarButtonItem buttonLogout;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
         private DevExpress.XtraBars.Navigation.AccordionControlElement buttonSalaries;
         private DevExpress.XtraBars.Navigation.AccordionControlElement buttonUsers;
+        public DevExpress.XtraBars.BarStaticItem txtUsername;
     }
 }
 

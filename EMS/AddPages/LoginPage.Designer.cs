@@ -29,15 +29,16 @@ namespace EMS.AddPages
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonSignIn = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonLogin = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassowrd = new System.Windows.Forms.TextBox();
-            this.buttonSignIn = new DevExpress.XtraEditors.SimpleButton();
-            this.buttonLogin = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +72,7 @@ namespace EMS.AddPages
             this.txtUsername.Location = new System.Drawing.Point(12, 34);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(379, 33);
-            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TabIndex = 1;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
@@ -84,6 +85,34 @@ namespace EMS.AddPages
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(403, 81);
             this.panel1.TabIndex = 16;
+            // 
+            // buttonSignIn
+            // 
+            this.buttonSignIn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSignIn.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonSignIn.Appearance.Options.UseFont = true;
+            this.buttonSignIn.ImageOptions.Image = global::EMS.Properties.Resources.Sign_in;
+            this.buttonSignIn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.buttonSignIn.Location = new System.Drawing.Point(3, 10);
+            this.buttonSignIn.Name = "buttonSignIn";
+            this.buttonSignIn.Size = new System.Drawing.Size(98, 68);
+            this.buttonSignIn.TabIndex = 4;
+            this.buttonSignIn.Text = "انشاء حساب";
+            this.buttonSignIn.Click += new System.EventHandler(this.buttonAddAndClose_Click);
+            // 
+            // buttonLogin
+            // 
+            this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonLogin.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonLogin.Appearance.Options.UseFont = true;
+            this.buttonLogin.ImageOptions.Image = global::EMS.Properties.Resources.Login;
+            this.buttonLogin.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.buttonLogin.Location = new System.Drawing.Point(294, 10);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(106, 68);
+            this.buttonLogin.TabIndex = 3;
+            this.buttonLogin.Text = "تسجيل الدخول";
+            this.buttonLogin.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label1
             // 
@@ -115,36 +144,8 @@ namespace EMS.AddPages
             this.txtPassowrd.Location = new System.Drawing.Point(12, 113);
             this.txtPassowrd.Name = "txtPassowrd";
             this.txtPassowrd.Size = new System.Drawing.Size(379, 33);
-            this.txtPassowrd.TabIndex = 3;
+            this.txtPassowrd.TabIndex = 2;
             this.txtPassowrd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // buttonSignIn
-            // 
-            this.buttonSignIn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSignIn.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.buttonSignIn.Appearance.Options.UseFont = true;
-            this.buttonSignIn.ImageOptions.Image = global::EMS.Properties.Resources.Sign_in;
-            this.buttonSignIn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonSignIn.Location = new System.Drawing.Point(3, 10);
-            this.buttonSignIn.Name = "buttonSignIn";
-            this.buttonSignIn.Size = new System.Drawing.Size(98, 68);
-            this.buttonSignIn.TabIndex = 7;
-            this.buttonSignIn.Text = "انشاء حساب";
-            this.buttonSignIn.Click += new System.EventHandler(this.buttonAddAndClose_Click);
-            // 
-            // buttonLogin
-            // 
-            this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonLogin.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.buttonLogin.Appearance.Options.UseFont = true;
-            this.buttonLogin.ImageOptions.Image = global::EMS.Properties.Resources.Login;
-            this.buttonLogin.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonLogin.Location = new System.Drawing.Point(294, 10);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(106, 68);
-            this.buttonLogin.TabIndex = 6;
-            this.buttonLogin.Text = "تسجيل الدخول";
-            this.buttonLogin.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // LoginPage
             // 
@@ -163,6 +164,7 @@ namespace EMS.AddPages
             this.Controls.Add(this.label5);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("LoginPage.IconOptions.Image")));
             this.IconOptions.ShowIcon = false;
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaximizeBox = false;
@@ -171,6 +173,7 @@ namespace EMS.AddPages
             this.Text = "تسجيل الدخول";
             this.TopMost = true;
             this.Activated += new System.EventHandler(this.AddVacationPage_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginPage_FormClosed);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
