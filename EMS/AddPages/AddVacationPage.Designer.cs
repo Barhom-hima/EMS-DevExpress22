@@ -253,7 +253,7 @@ namespace EMS.AddPages
             this.txtVacationEndDate.Name = "txtVacationEndDate";
             this.txtVacationEndDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtVacationEndDate.Size = new System.Drawing.Size(217, 29);
-            this.txtVacationEndDate.TabIndex = 4;
+            this.txtVacationEndDate.TabIndex = 5;
             // 
             // AddVacationPage
             // 

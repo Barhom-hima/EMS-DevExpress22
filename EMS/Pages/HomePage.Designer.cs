@@ -166,6 +166,7 @@ namespace EMS.Pages
             this.buttonProjects.Size = new System.Drawing.Size(122, 70);
             this.buttonProjects.TabIndex = 0;
             this.buttonProjects.Text = "المشاريع";
+            this.buttonProjects.Click += new System.EventHandler(this.buttonProjects_Click);
             // 
             // buttonSalary
             // 

@@ -1,14 +1,14 @@
 ﻿
-namespace EMS.AddPages
+namespace EMS.Pages
 {
-    partial class AddSalaryPage
+    partial class ProjectsPage
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -21,278 +21,138 @@ namespace EMS.AddPages
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonAddAndClose = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonPrint = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonRefresh = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonEdit = new DevExpress.XtraEditors.SimpleButton();
             this.buttonAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.txtCashingDate = new System.Windows.Forms.DateTimePicker();
-            this.txtEmpName = new System.Windows.Forms.ComboBox();
-            this.txtMainSalary = new System.Windows.Forms.ComboBox();
-            this.txtContractStatus = new System.Windows.Forms.ComboBox();
-            this.txtSalaries = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSalary = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSalaries = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label11 = new System.Windows.Forms.Label();
+            this.colProjectName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAdminName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProjectStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRequireds = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCost = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStartDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEndDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDetails = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(424, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "اسم الموظف";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(400, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "*";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(414, 84);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "الراتب الأساسي";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(400, 84);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "*";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(444, 168);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 25);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "مدة العقد";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(420, 168);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 25);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "*";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(100, 84);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(147, 25);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "تاريخ صرف الراتب";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(76, 84);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(20, 25);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "*";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.buttonAddAndClose);
+            this.panel1.Controls.Add(this.buttonPrint);
+            this.panel1.Controls.Add(this.buttonRefresh);
+            this.panel1.Controls.Add(this.buttonDelete);
+            this.panel1.Controls.Add(this.buttonEdit);
             this.panel1.Controls.Add(this.buttonAdd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 262);
+            this.panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.panel1.Location = new System.Drawing.Point(0, 588);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(929, 81);
-            this.panel1.TabIndex = 16;
+            this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.panel1.Size = new System.Drawing.Size(1239, 86);
+            this.panel1.TabIndex = 0;
             // 
-            // buttonAddAndClose
+            // buttonPrint
             // 
-            this.buttonAddAndClose.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonAddAndClose.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.buttonAddAndClose.Appearance.Options.UseFont = true;
-            this.buttonAddAndClose.ImageOptions.Image = global::EMS.Properties.Resources.SaveClose;
-            this.buttonAddAndClose.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonAddAndClose.Location = new System.Drawing.Point(12, 6);
-            this.buttonAddAndClose.Name = "buttonAddAndClose";
-            this.buttonAddAndClose.Size = new System.Drawing.Size(130, 68);
-            this.buttonAddAndClose.TabIndex = 7;
-            this.buttonAddAndClose.Text = "اضافة + غلق";
-            this.buttonAddAndClose.Click += new System.EventHandler(this.buttonAddAndClose_Click);
+            this.buttonPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonPrint.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonPrint.Appearance.Options.UseFont = true;
+            this.buttonPrint.ImageOptions.Image = global::EMS.Properties.Resources.Print;
+            this.buttonPrint.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.buttonPrint.Location = new System.Drawing.Point(237, 11);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(150, 68);
+            this.buttonPrint.TabIndex = 0;
+            this.buttonPrint.Text = "طباعة";
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRefresh.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonRefresh.Appearance.Options.UseFont = true;
+            this.buttonRefresh.ImageOptions.Image = global::EMS.Properties.Resources.Refresh;
+            this.buttonRefresh.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.buttonRefresh.Location = new System.Drawing.Point(391, 11);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(150, 68);
+            this.buttonRefresh.TabIndex = 0;
+            this.buttonRefresh.Text = "تحديث";
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonDelete.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonDelete.Appearance.Options.UseFont = true;
+            this.buttonDelete.ImageOptions.Image = global::EMS.Properties.Resources.DeleteEmployee;
+            this.buttonDelete.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.buttonDelete.Location = new System.Drawing.Point(545, 11);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(150, 68);
+            this.buttonDelete.TabIndex = 0;
+            this.buttonDelete.Text = "حذف";
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonEdit.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonEdit.Appearance.Options.UseFont = true;
+            this.buttonEdit.ImageOptions.Image = global::EMS.Properties.Resources.EditEmployee;
+            this.buttonEdit.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.buttonEdit.Location = new System.Drawing.Point(700, 11);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(150, 68);
+            this.buttonEdit.TabIndex = 0;
+            this.buttonEdit.Text = "تعديل";
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonAdd
             // 
             this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAdd.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.buttonAdd.Appearance.Options.UseFont = true;
-            this.buttonAdd.ImageOptions.Image = global::EMS.Properties.Resources.Save;
+            this.buttonAdd.ImageOptions.Image = global::EMS.Properties.Resources.AddEmployee;
             this.buttonAdd.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonAdd.Location = new System.Drawing.Point(787, 6);
+            this.buttonAdd.Location = new System.Drawing.Point(854, 11);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(130, 68);
-            this.buttonAdd.TabIndex = 6;
+            this.buttonAdd.Size = new System.Drawing.Size(150, 68);
+            this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "اضافة";
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // txtCashingDate
-            // 
-            this.txtCashingDate.CalendarMonthBackground = System.Drawing.SystemColors.Control;
-            this.txtCashingDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txtCashingDate.Location = new System.Drawing.Point(30, 119);
-            this.txtCashingDate.Name = "txtCashingDate";
-            this.txtCashingDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashingDate.Size = new System.Drawing.Size(217, 29);
-            this.txtCashingDate.TabIndex = 5;
-            // 
-            // txtEmpName
-            // 
-            this.txtEmpName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtEmpName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtEmpName.FormattingEnabled = true;
-            this.txtEmpName.Location = new System.Drawing.Point(323, 43);
-            this.txtEmpName.Name = "txtEmpName";
-            this.txtEmpName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtEmpName.Size = new System.Drawing.Size(217, 33);
-            this.txtEmpName.TabIndex = 1;
-            // 
-            // txtMainSalary
-            // 
-            this.txtMainSalary.BackColor = System.Drawing.SystemColors.Control;
-            this.txtMainSalary.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtMainSalary.FormattingEnabled = true;
-            this.txtMainSalary.Location = new System.Drawing.Point(323, 115);
-            this.txtMainSalary.Name = "txtMainSalary";
-            this.txtMainSalary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtMainSalary.Size = new System.Drawing.Size(217, 33);
-            this.txtMainSalary.TabIndex = 2;
-            // 
-            // txtContractStatus
-            // 
-            this.txtContractStatus.BackColor = System.Drawing.SystemColors.Control;
-            this.txtContractStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtContractStatus.FormattingEnabled = true;
-            this.txtContractStatus.Location = new System.Drawing.Point(318, 196);
-            this.txtContractStatus.Name = "txtContractStatus";
-            this.txtContractStatus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtContractStatus.Size = new System.Drawing.Size(217, 33);
-            this.txtContractStatus.TabIndex = 3;
-            // 
-            // txtSalaries
-            // 
-            this.txtSalaries.BackColor = System.Drawing.SystemColors.Control;
-            this.txtSalaries.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSalaries.Location = new System.Drawing.Point(30, 43);
-            this.txtSalaries.Name = "txtSalaries";
-            this.txtSalaries.Size = new System.Drawing.Size(217, 33);
-            this.txtSalaries.TabIndex = 4;
-            this.txtSalaries.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(173, 15);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 25);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "المكافأة";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(149, 15);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "*";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.gridControl1);
-            this.panel2.Location = new System.Drawing.Point(557, 42);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(360, 214);
-            this.panel2.TabIndex = 18;
-            // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(EMS.TB_Employees);
+            this.gridControl1.DataSource = typeof(EMS.TB_Projects);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Font = new System.Drawing.Font("PT Simple Bold Ruled", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(360, 214);
-            this.gridControl1.TabIndex = 2;
+            this.gridControl1.Size = new System.Drawing.Size(1239, 588);
+            this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.ColumnFilterButton.Options.UseFont = true;
             this.gridView1.Appearance.ColumnFilterButton.Options.UseTextOptions = true;
             this.gridView1.Appearance.ColumnFilterButton.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -487,136 +347,129 @@ namespace EMS.AddPages
             this.gridView1.AppearancePrint.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.AppearancePrint.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colName,
-            this.colSalary,
-            this.colSalaries,
-            this.colContractStatus});
+            this.colProjectName,
+            this.colAdminName,
+            this.colProjectStatus,
+            this.colRequireds,
+            this.colCost,
+            this.colStartDate,
+            this.colEndDate,
+            this.colDetails});
             this.gridView1.DetailHeight = 315;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsPrint.EnableAppearanceEvenRow = true;
             this.gridView1.OptionsPrint.EnableAppearanceOddRow = true;
             // 
-            // colName
+            // colProjectName
             // 
-            this.colName.Caption = "اسم الموظف";
-            this.colName.FieldName = "Name";
-            this.colName.Name = "colName";
-            this.colName.OptionsColumn.AllowEdit = false;
-            this.colName.Visible = true;
-            this.colName.VisibleIndex = 0;
+            this.colProjectName.Caption = "اسم المشروع";
+            this.colProjectName.FieldName = "ProjectName";
+            this.colProjectName.Name = "colProjectName";
+            this.colProjectName.OptionsColumn.AllowEdit = false;
+            this.colProjectName.Visible = true;
+            this.colProjectName.VisibleIndex = 0;
             // 
-            // colSalary
+            // colAdminName
             // 
-            this.colSalary.Caption = "الراتب الاساسي";
-            this.colSalary.FieldName = "Salary";
-            this.colSalary.Name = "colSalary";
-            this.colSalary.OptionsColumn.AllowEdit = false;
-            this.colSalary.Visible = true;
-            this.colSalary.VisibleIndex = 1;
+            this.colAdminName.Caption = "اسم المسؤول";
+            this.colAdminName.FieldName = "AdminName";
+            this.colAdminName.Name = "colAdminName";
+            this.colAdminName.OptionsColumn.AllowEdit = false;
+            this.colAdminName.Visible = true;
+            this.colAdminName.VisibleIndex = 1;
             // 
-            // colSalaries
+            // colProjectStatus
             // 
-            this.colSalaries.Caption = "المرتب";
-            this.colSalaries.FieldName = "Salaries";
-            this.colSalaries.Name = "colSalaries";
-            this.colSalaries.OptionsColumn.AllowEdit = false;
-            this.colSalaries.Visible = true;
-            this.colSalaries.VisibleIndex = 3;
+            this.colProjectStatus.Caption = "حالة المشروع";
+            this.colProjectStatus.FieldName = "ProjectStatus";
+            this.colProjectStatus.Name = "colProjectStatus";
+            this.colProjectStatus.OptionsColumn.AllowEdit = false;
+            this.colProjectStatus.Visible = true;
+            this.colProjectStatus.VisibleIndex = 2;
             // 
-            // colContractStatus
+            // colRequireds
             // 
-            this.colContractStatus.Caption = "مدة العقد";
-            this.colContractStatus.FieldName = "ContractStatus";
-            this.colContractStatus.Name = "colContractStatus";
-            this.colContractStatus.OptionsColumn.AllowEdit = false;
-            this.colContractStatus.Visible = true;
-            this.colContractStatus.VisibleIndex = 2;
+            this.colRequireds.Caption = "المتطلبات";
+            this.colRequireds.FieldName = "Requireds";
+            this.colRequireds.Name = "colRequireds";
+            this.colRequireds.OptionsColumn.AllowEdit = false;
+            this.colRequireds.Visible = true;
+            this.colRequireds.VisibleIndex = 3;
             // 
-            // label11
+            // colCost
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(654, 9);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(165, 25);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "معلومات الموظفين";
+            this.colCost.Caption = "التكلفة";
+            this.colCost.FieldName = "Cost";
+            this.colCost.Name = "colCost";
+            this.colCost.OptionsColumn.AllowEdit = false;
+            this.colCost.Visible = true;
+            this.colCost.VisibleIndex = 4;
             // 
-            // AddSalaryPage
+            // colStartDate
+            // 
+            this.colStartDate.Caption = "تاريخ بدء المشروع";
+            this.colStartDate.FieldName = "StartDate";
+            this.colStartDate.Name = "colStartDate";
+            this.colStartDate.OptionsColumn.AllowEdit = false;
+            this.colStartDate.Visible = true;
+            this.colStartDate.VisibleIndex = 5;
+            // 
+            // colEndDate
+            // 
+            this.colEndDate.Caption = "تاريخ انتهاء المشروع";
+            this.colEndDate.FieldName = "EndDate";
+            this.colEndDate.Name = "colEndDate";
+            this.colEndDate.OptionsColumn.AllowEdit = false;
+            this.colEndDate.Visible = true;
+            this.colEndDate.VisibleIndex = 6;
+            // 
+            // colDetails
+            // 
+            this.colDetails.Caption = "التفاصيل";
+            this.colDetails.FieldName = "Details";
+            this.colDetails.Name = "colDetails";
+            this.colDetails.OptionsColumn.AllowEdit = false;
+            this.colDetails.Visible = true;
+            this.colDetails.VisibleIndex = 7;
+            // 
+            // ProjectsPage
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 343);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.txtSalaries);
-            this.Controls.Add(this.txtContractStatus);
-            this.Controls.Add(this.txtMainSalary);
-            this.Controls.Add(this.txtEmpName);
-            this.Controls.Add(this.txtCashingDate);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.IconOptions.ShowIcon = false;
-            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.MaximizeBox = false;
-            this.Name = "AddSalaryPage";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "اضافة / تعديل راتب";
-            this.TopMost = true;
-            this.Activated += new System.EventHandler(this.AddVacationPage_Activated);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "ProjectsPage";
+            this.Size = new System.Drawing.Size(1239, 674);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
-        public DevExpress.XtraEditors.SimpleButton buttonAddAndClose;
-        public DevExpress.XtraEditors.SimpleButton buttonAdd;
-        public System.Windows.Forms.DateTimePicker txtCashingDate;
-        public System.Windows.Forms.ComboBox txtEmpName;
-        public System.Windows.Forms.ComboBox txtMainSalary;
-        public System.Windows.Forms.ComboBox txtContractStatus;
-        public System.Windows.Forms.TextBox txtSalaries;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colName;
-        private DevExpress.XtraGrid.Columns.GridColumn colSalary;
-        private DevExpress.XtraGrid.Columns.GridColumn colContractStatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colSalaries;
-        private System.Windows.Forms.Label label11;
+        private DevExpress.XtraEditors.SimpleButton buttonAdd;
+        private DevExpress.XtraEditors.SimpleButton buttonRefresh;
+        private DevExpress.XtraEditors.SimpleButton buttonDelete;
+        private DevExpress.XtraEditors.SimpleButton buttonEdit;
+        private DevExpress.XtraEditors.SimpleButton buttonPrint;
+        private DevExpress.XtraGrid.Columns.GridColumn colProjectName;
+        private DevExpress.XtraGrid.Columns.GridColumn colAdminName;
+        private DevExpress.XtraGrid.Columns.GridColumn colProjectStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colRequireds;
+        private DevExpress.XtraGrid.Columns.GridColumn colCost;
+        private DevExpress.XtraGrid.Columns.GridColumn colStartDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colEndDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colDetails;
     }
 }

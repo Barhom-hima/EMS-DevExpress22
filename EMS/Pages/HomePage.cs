@@ -51,5 +51,14 @@ namespace EMS.Pages
             addPage.buttonAddAndClose.Text = "اضافة + غلق";
             addPage.Show();
         }
+
+        private void buttonProjects_Click(object sender, EventArgs e)
+        {
+            AddProjectPage addPage = new AddProjectPage();
+            addPage.id = 0;
+            addPage.buttonAdd.Text = "اضافة";
+            addPage.buttonAddAndClose.Text = "اضافة + غلق";
+            addPage.Show();
+        }
     }
 }

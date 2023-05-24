@@ -50,7 +50,8 @@ namespace EMS
         // Load Project Page
         private void buttonProjects_Click(object sender, EventArgs e)
         {
-
+            ProjectsPage page = new ProjectsPage();
+            LoadPage(page);
         }
 
         // Load Task Page

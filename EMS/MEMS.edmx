@@ -28,6 +28,20 @@
           <Property Name="Details" Type="nvarchar(max)" />
           <Property Name="ContractStatus" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="TB_Projects">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProjectName" Type="nvarchar(max)" />
+          <Property Name="AdminName" Type="nvarchar(max)" />
+          <Property Name="ProjectStatus" Type="nvarchar(max)" />
+          <Property Name="Requireds" Type="nvarchar(max)" />
+          <Property Name="Cost" Type="nvarchar(max)" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="Details" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="TB_Salaries">
           <Key>
             <PropertyRef Name="Id" />
@@ -52,6 +66,7 @@
         </EntityType>
         <EntityContainer Name="DBEMSModelStoreContainer">
           <EntitySet Name="TB_Employees" EntityType="Self.TB_Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Projects" EntityType="Self.TB_Projects" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Salaries" EntityType="Self.TB_Salaries" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Vacations" EntityType="Self.TB_Vacations" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -86,6 +101,7 @@
           <EntitySet Name="TB_Employees" EntityType="Self.TB_Employees" />
           <EntitySet Name="TB_Vacations" EntityType="DBEMSModel.TB_Vacations" />
           <EntitySet Name="TB_Salaries" EntityType="DBEMSModel.TB_Salaries" />
+          <EntitySet Name="TB_Projects" EntityType="DBEMSModel.TB_Projects" />
         </EntityContainer>
         <EntityType Name="TB_Vacations">
           <Key>
@@ -108,6 +124,20 @@
           <Property Name="ContractStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Salaries" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CashingDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_Projects">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AdminName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Requireds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Cost" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -159,6 +189,21 @@
                 <ScalarProperty Name="ContractStatus" ColumnName="ContractStatus" />
                 <ScalarProperty Name="MainSalary" ColumnName="MainSalary" />
                 <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Projects">
+            <EntityTypeMapping TypeName="DBEMSModel.TB_Projects">
+              <MappingFragment StoreEntitySet="TB_Projects">
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Requireds" ColumnName="Requireds" />
+                <ScalarProperty Name="ProjectStatus" ColumnName="ProjectStatus" />
+                <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
