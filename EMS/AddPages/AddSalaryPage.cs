@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EMS.Pages;
 using System.Data.Entity.Migrations;
+using System.Data.Entity;
 
 namespace EMS.AddPages
 {
@@ -17,8 +18,8 @@ namespace EMS.AddPages
     {
         // DataBase And Tables
         DBEMSEntities db;
-        TB_Vacations tbAdd;
-        public VacationsPage page = new VacationsPage();
+        TB_Salaries tbAdd;
+        public SalariesPage page = new SalariesPage();
 
         // Other Var
         public int id;
@@ -28,13 +29,19 @@ namespace EMS.AddPages
             InitializeComponent();
 
             FixPlace();
+
+            EMS.DBEMSEntities dbContext = new EMS.DBEMSEntities();
+            dbContext.TB_Employees.LoadAsync().ContinueWith(loadTask =>
+            {
+                gridControl1.DataSource = dbContext.TB_Employees.Local.ToBindingList();
+            }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
         // Add Function
         private void Add()
         {
             // Check If empty values
-            if(txtSalaries.Text == "" && txtVacationAmount.Text == "")
+            if (txtSalaries.Text == "")
             {
                 MessageBox.Show("برجى ملئ جميع الحقول التي تحتوي على علامة * ثم اعد المحاولة", "خطأ",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -43,7 +50,7 @@ namespace EMS.AddPages
             else
             {
                 // Check If Add or Edit
-                if(id == 0)
+                if (id == 0)
                 {
                     // Add
                     AddData();
@@ -66,13 +73,13 @@ namespace EMS.AddPages
             try
             {
                 db = new DBEMSEntities();
-                tbAdd = new TB_Vacations
+                tbAdd = new TB_Salaries
                 {
                     EmpName = txtEmpName.Text,
-                    AboutVacation = txtSalaries.Text,
-                    VacationAmount = txtVacationAmount.Text,
-                    VacationStartDate = txtCashingDate.Value,
-                    VacationEndDate = txtVacationEndDate.Value
+                    MainSalary = txtMainSalary.Text,
+                    ContractStatus = txtContractStatus.Text,
+                    Salaries = txtSalaries.Text,
+                    CashingDate = txtCashingDate.Value
                 };
                 db.Entry(tbAdd).State = System.Data.Entity.EntityState.Added;
                 db.SaveChanges();
@@ -93,16 +100,16 @@ namespace EMS.AddPages
             try
             {
                 db = new DBEMSEntities();
-                tbAdd = new TB_Vacations
+                tbAdd = new TB_Salaries
                 {
                     Id = id,
                     EmpName = txtEmpName.Text,
-                    AboutVacation = txtSalaries.Text,
-                    VacationAmount = txtVacationAmount.Text,
-                    VacationStartDate = txtCashingDate.Value,
-                    VacationEndDate = txtVacationEndDate.Value
+                    MainSalary = txtMainSalary.Text,
+                    ContractStatus = txtContractStatus.Text,
+                    Salaries = txtSalaries.Text,
+                    CashingDate = txtCashingDate.Value
                 };
-                db.Set<TB_Vacations>().AddOrUpdate(tbAdd);
+                db.Set<TB_Salaries>().AddOrUpdate(tbAdd);
                 db.SaveChanges();
 
                 MessageBox.Show("تم تعديل بيانات الموظف بنجاح", "نجاح",
@@ -132,9 +139,7 @@ namespace EMS.AddPages
         private void ClearData()
         {
             txtSalaries.Text = "";
-            txtVacationAmount.Text = "";
             txtCashingDate.Value = DateTime.Now;
-            txtVacationEndDate.Value = DateTime.Now;
         }
 
         private void FixPlace()
@@ -142,31 +147,32 @@ namespace EMS.AddPages
             #region TextBoxs
             // Size
             txtEmpName.Size = new System.Drawing.Size(217, 33);
+            txtMainSalary.Size = new System.Drawing.Size(217, 33);
+            txtContractStatus.Size = new System.Drawing.Size(217, 33);
             txtSalaries.Size = new System.Drawing.Size(217, 33);
-            txtVacationAmount.Size = new System.Drawing.Size(217, 33);
             txtCashingDate.Size = new System.Drawing.Size(217, 29);
 
             // txtEmpName
             txtEmpName.Location = new System.Drawing.Point(323, 43);
 
-            // txtAboutVacation
-            txtSalaries.Location = new System.Drawing.Point(323, 112);
+            // txtMainSalary
+            txtMainSalary.Location = new System.Drawing.Point(323, 115);
 
-            // txtVacationAmount
-            txtVacationAmount.Location = new System.Drawing.Point(323, 196);
+            // txtEmpName
+            txtContractStatus.Location = new System.Drawing.Point(318, 196);
+
+            // txtAboutVacation
+            txtSalaries.Location = new System.Drawing.Point(30, 43);
 
             // txtVacationStartDate
-            txtCashingDate.Location = new System.Drawing.Point(33, 50);
-
-            // txtVacationEndtDate
-            txtVacationEndDate.Location = new System.Drawing.Point(33, 119);
+            txtCashingDate.Location = new System.Drawing.Point(30, 119);
 
             #endregion
 
             #region Buttons
             // Button Save
             buttonAdd.Size = new System.Drawing.Size(130, 68);
-            buttonAdd.Location = new System.Drawing.Point(420, 6);
+            buttonAdd.Location = new System.Drawing.Point(787, 6);
 
             // Button Save And close
             buttonAddAndClose.Size = new System.Drawing.Size(130, 68);
@@ -179,6 +185,10 @@ namespace EMS.AddPages
             db = new DBEMSEntities();
 
             txtEmpName.DataSource = db.TB_Employees.Select(x => x.Name).ToList();
+
+            txtMainSalary.DataSource = db.TB_Employees.Select(x => x.Salary).ToList();
+
+            txtContractStatus.DataSource = db.TB_Employees.Select(x => x.ContractStatus).ToList();
         }
     }
 }

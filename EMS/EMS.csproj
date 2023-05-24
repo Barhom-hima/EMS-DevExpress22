@@ -133,6 +133,9 @@
     <Compile Include="TB_Employees.cs">
       <DependentUpon>MEMS.tt</DependentUpon>
     </Compile>
+    <Compile Include="TB_Salaries.cs">
+      <DependentUpon>MEMS.tt</DependentUpon>
+    </Compile>
     <Compile Include="TB_Vacations.cs">
       <DependentUpon>MEMS.tt</DependentUpon>
     </Compile>

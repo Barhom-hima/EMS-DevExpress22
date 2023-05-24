@@ -37,6 +37,11 @@ namespace EMS.Pages
             this.buttonAdd = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colEmpName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMainSalary = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalaries = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCashingDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -130,7 +135,7 @@ namespace EMS.Pages
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(EMS.TB_Vacations);
+            this.gridControl1.DataSource = typeof(EMS.TB_Salaries);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Font = new System.Drawing.Font("PT Simple Bold Ruled", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
@@ -338,11 +343,62 @@ namespace EMS.Pages
             this.gridView1.AppearancePrint.Row.Options.UseTextOptions = true;
             this.gridView1.AppearancePrint.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.AppearancePrint.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colEmpName,
+            this.colMainSalary,
+            this.colContractStatus,
+            this.colSalaries,
+            this.colCashingDate});
             this.gridView1.DetailHeight = 315;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsPrint.EnableAppearanceEvenRow = true;
             this.gridView1.OptionsPrint.EnableAppearanceOddRow = true;
+            // 
+            // colEmpName
+            // 
+            this.colEmpName.Caption = "اسم الموظف";
+            this.colEmpName.FieldName = "EmpName";
+            this.colEmpName.Name = "colEmpName";
+            this.colEmpName.OptionsColumn.AllowEdit = false;
+            this.colEmpName.Visible = true;
+            this.colEmpName.VisibleIndex = 0;
+            // 
+            // colMainSalary
+            // 
+            this.colMainSalary.Caption = "الراتب الاساسي";
+            this.colMainSalary.FieldName = "MainSalary";
+            this.colMainSalary.Name = "colMainSalary";
+            this.colMainSalary.OptionsColumn.AllowEdit = false;
+            this.colMainSalary.Visible = true;
+            this.colMainSalary.VisibleIndex = 1;
+            // 
+            // colContractStatus
+            // 
+            this.colContractStatus.Caption = "مدة العقد";
+            this.colContractStatus.FieldName = "ContractStatus";
+            this.colContractStatus.Name = "colContractStatus";
+            this.colContractStatus.OptionsColumn.AllowEdit = false;
+            this.colContractStatus.Visible = true;
+            this.colContractStatus.VisibleIndex = 2;
+            // 
+            // colSalaries
+            // 
+            this.colSalaries.Caption = "المكافأة";
+            this.colSalaries.FieldName = "Salaries";
+            this.colSalaries.Name = "colSalaries";
+            this.colSalaries.OptionsColumn.AllowEdit = false;
+            this.colSalaries.Visible = true;
+            this.colSalaries.VisibleIndex = 3;
+            // 
+            // colCashingDate
+            // 
+            this.colCashingDate.Caption = "تاريخ صرف الراتب";
+            this.colCashingDate.FieldName = "CashingDate";
+            this.colCashingDate.Name = "colCashingDate";
+            this.colCashingDate.OptionsColumn.AllowEdit = false;
+            this.colCashingDate.Visible = true;
+            this.colCashingDate.VisibleIndex = 4;
             // 
             // SalariesPage
             // 
@@ -374,5 +430,10 @@ namespace EMS.Pages
         private DevExpress.XtraEditors.SimpleButton buttonDelete;
         private DevExpress.XtraEditors.SimpleButton buttonEdit;
         private DevExpress.XtraEditors.SimpleButton buttonPrint;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmpName;
+        private DevExpress.XtraGrid.Columns.GridColumn colMainSalary;
+        private DevExpress.XtraGrid.Columns.GridColumn colContractStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalaries;
+        private DevExpress.XtraGrid.Columns.GridColumn colCashingDate;
     }
 }

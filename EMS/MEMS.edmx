@@ -28,6 +28,17 @@
           <Property Name="Details" Type="nvarchar(max)" />
           <Property Name="ContractStatus" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="TB_Salaries">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpName" Type="nvarchar(max)" />
+          <Property Name="MainSalary" Type="nvarchar(max)" />
+          <Property Name="ContractStatus" Type="nvarchar(max)" />
+          <Property Name="Salaries" Type="nvarchar(max)" />
+          <Property Name="CashingDate" Type="datetime" />
+        </EntityType>
         <EntityType Name="TB_Vacations">
           <Key>
             <PropertyRef Name="Id" />
@@ -41,6 +52,7 @@
         </EntityType>
         <EntityContainer Name="DBEMSModelStoreContainer">
           <EntitySet Name="TB_Employees" EntityType="Self.TB_Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Salaries" EntityType="Self.TB_Salaries" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Vacations" EntityType="Self.TB_Vacations" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -73,6 +85,7 @@
         <EntityContainer Name="DBEMSEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TB_Employees" EntityType="Self.TB_Employees" />
           <EntitySet Name="TB_Vacations" EntityType="DBEMSModel.TB_Vacations" />
+          <EntitySet Name="TB_Salaries" EntityType="DBEMSModel.TB_Salaries" />
         </EntityContainer>
         <EntityType Name="TB_Vacations">
           <Key>
@@ -84,6 +97,17 @@
           <Property Name="VacationAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="VacationStartDate" Type="DateTime" Precision="3" />
           <Property Name="VacationEndDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_Salaries">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MainSalary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContractStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Salaries" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CashingDate" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -122,6 +146,18 @@
                 <ScalarProperty Name="VacationStartDate" ColumnName="VacationStartDate" />
                 <ScalarProperty Name="VacationAmount" ColumnName="VacationAmount" />
                 <ScalarProperty Name="AboutVacation" ColumnName="AboutVacation" />
+                <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Salaries">
+            <EntityTypeMapping TypeName="DBEMSModel.TB_Salaries">
+              <MappingFragment StoreEntitySet="TB_Salaries">
+                <ScalarProperty Name="CashingDate" ColumnName="CashingDate" />
+                <ScalarProperty Name="Salaries" ColumnName="Salaries" />
+                <ScalarProperty Name="ContractStatus" ColumnName="ContractStatus" />
+                <ScalarProperty Name="MainSalary" ColumnName="MainSalary" />
                 <ScalarProperty Name="EmpName" ColumnName="EmpName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

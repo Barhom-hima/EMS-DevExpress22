@@ -179,6 +179,7 @@ namespace EMS.Pages
             this.buttonSalary.Size = new System.Drawing.Size(122, 70);
             this.buttonSalary.TabIndex = 0;
             this.buttonSalary.Text = "الرواتب";
+            this.buttonSalary.Click += new System.EventHandler(this.buttonSalary_Click);
             // 
             // timer1
             // 

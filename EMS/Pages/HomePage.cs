@@ -42,5 +42,14 @@ namespace EMS.Pages
             addPage.buttonAddAndClose.Text = "اضافة + غلق";
             addPage.Show();
         }
+
+        private void buttonSalary_Click(object sender, EventArgs e)
+        {
+            AddSalaryPage addPage = new AddSalaryPage();
+            addPage.id = 0;
+            addPage.buttonAdd.Text = "اضافة";
+            addPage.buttonAddAndClose.Text = "اضافة + غلق";
+            addPage.Show();
+        }
     }
 }

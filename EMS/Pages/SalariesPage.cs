@@ -17,7 +17,7 @@ namespace EMS.Pages
     {
         // DataBase And Tables
         DBEMSEntities db;
-        TB_Vacations tbAdd;
+        TB_Salaries tbAdd;
 
         // Other Var
         int id;
@@ -31,9 +31,9 @@ namespace EMS.Pages
         public void LoadData()
         {
             EMS.DBEMSEntities dbContext = new EMS.DBEMSEntities();
-            dbContext.TB_Vacations.LoadAsync().ContinueWith(loadTask =>
+            dbContext.TB_Salaries.LoadAsync().ContinueWith(loadTask =>
             {
-                gridControl1.DataSource = dbContext.TB_Vacations.Local.ToBindingList();
+                gridControl1.DataSource = dbContext.TB_Salaries.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
@@ -41,7 +41,7 @@ namespace EMS.Pages
         // button Add
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            AddVacationPage addPage = new AddVacationPage();
+            AddSalaryPage addPage = new AddSalaryPage();
             addPage.id = 0;
             addPage.buttonAdd.Text = "اضافة";
             addPage.buttonAddAndClose.Text = "اضافة + غلق";
@@ -57,19 +57,18 @@ namespace EMS.Pages
                 id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
                 if (id > 0)
                 {
-                    AddVacationPage addPage = new AddVacationPage();
+                    AddSalaryPage addPage = new AddSalaryPage();
                     db = new DBEMSEntities();
-                    tbAdd = db.TB_Vacations.Where(x => x.Id == id).FirstOrDefault();
+                    tbAdd = db.TB_Salaries.Where(x => x.Id == id).FirstOrDefault();
 
                     addPage.id = id;
                     addPage.buttonAdd.Text = "تعديل";
                     addPage.buttonAddAndClose.Text = "تعديل + غلق";
                     addPage.txtEmpName.Text = tbAdd.EmpName;
-                    addPage.txtAboutVacation.Text = tbAdd.AboutVacation;
-                    addPage.txtVacationAmount.Text = tbAdd.VacationAmount;
-                    addPage.txtVacationStartDate.Value = tbAdd.VacationStartDate.Value;
-                    addPage.txtVacationEndDate.Value = tbAdd.VacationEndDate.Value;
-
+                    addPage.txtMainSalary.Text = tbAdd.MainSalary;
+                    addPage.txtContractStatus.Text = tbAdd.ContractStatus;
+                    addPage.txtSalaries.Text = tbAdd.Salaries;
+                    addPage.txtCashingDate.Value = tbAdd.CashingDate.Value;
                     addPage.page = this;
                     addPage.Show();
                 }
@@ -97,9 +96,9 @@ namespace EMS.Pages
                     id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
                     if (id > 0)
                     {
-                        AddVacationPage addPage = new AddVacationPage();
+                        AddSalaryPage addPage = new AddSalaryPage();
                         db = new DBEMSEntities();
-                        tbAdd = db.TB_Vacations.Where(x => x.Id == id).FirstOrDefault();
+                        tbAdd = db.TB_Salaries.Where(x => x.Id == id).FirstOrDefault();
                         db.Entry(tbAdd).State = EntityState.Deleted;
                         db.SaveChanges();
                         LoadData();

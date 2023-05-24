@@ -47,7 +47,18 @@ namespace EMS.AddPages
             this.txtSalaries = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalary = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalaries = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -103,16 +114,16 @@ namespace EMS.AddPages
             this.label5.Location = new System.Drawing.Point(444, 168);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 25);
+            this.label5.Size = new System.Drawing.Size(90, 25);
             this.label5.TabIndex = 0;
-            this.label5.Text = "حالة العقد";
+            this.label5.Text = "مدة العقد";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(412, 168);
+            this.label6.Location = new System.Drawing.Point(420, 168);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 25);
@@ -150,7 +161,7 @@ namespace EMS.AddPages
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 262);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(562, 81);
+            this.panel1.Size = new System.Drawing.Size(929, 81);
             this.panel1.TabIndex = 16;
             // 
             // buttonAddAndClose
@@ -160,7 +171,7 @@ namespace EMS.AddPages
             this.buttonAddAndClose.Appearance.Options.UseFont = true;
             this.buttonAddAndClose.ImageOptions.Image = global::EMS.Properties.Resources.SaveClose;
             this.buttonAddAndClose.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonAddAndClose.Location = new System.Drawing.Point(10, 6);
+            this.buttonAddAndClose.Location = new System.Drawing.Point(12, 6);
             this.buttonAddAndClose.Name = "buttonAddAndClose";
             this.buttonAddAndClose.Size = new System.Drawing.Size(130, 68);
             this.buttonAddAndClose.TabIndex = 7;
@@ -174,7 +185,7 @@ namespace EMS.AddPages
             this.buttonAdd.Appearance.Options.UseFont = true;
             this.buttonAdd.ImageOptions.Image = global::EMS.Properties.Resources.Save;
             this.buttonAdd.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonAdd.Location = new System.Drawing.Point(420, 6);
+            this.buttonAdd.Location = new System.Drawing.Point(787, 6);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(130, 68);
             this.buttonAdd.TabIndex = 6;
@@ -257,6 +268,283 @@ namespace EMS.AddPages
             this.label10.TabIndex = 0;
             this.label10.Text = "*";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.gridControl1);
+            this.panel2.Location = new System.Drawing.Point(557, 42);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(360, 214);
+            this.panel2.TabIndex = 18;
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = typeof(EMS.TB_Employees);
+            this.gridControl1.Font = new System.Drawing.Font("PT Simple Bold Ruled", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.gridControl1.Size = new System.Drawing.Size(360, 214);
+            this.gridControl1.TabIndex = 2;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseFont = true;
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseTextOptions = true;
+            this.gridView1.Appearance.ColumnFilterButton.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.ColumnFilterButton.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.ColumnFilterButtonActive.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseFont = true;
+            this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseTextOptions = true;
+            this.gridView1.Appearance.ColumnFilterButtonActive.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.ColumnFilterButtonActive.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.CustomizationFormHint.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.CustomizationFormHint.Options.UseFont = true;
+            this.gridView1.Appearance.CustomizationFormHint.Options.UseTextOptions = true;
+            this.gridView1.Appearance.CustomizationFormHint.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.CustomizationFormHint.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.DetailTip.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.DetailTip.Options.UseFont = true;
+            this.gridView1.Appearance.DetailTip.Options.UseTextOptions = true;
+            this.gridView1.Appearance.DetailTip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.DetailTip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.Empty.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.Empty.Options.UseFont = true;
+            this.gridView1.Appearance.Empty.Options.UseTextOptions = true;
+            this.gridView1.Appearance.Empty.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.Empty.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.EvenRow.Options.UseFont = true;
+            this.gridView1.Appearance.EvenRow.Options.UseTextOptions = true;
+            this.gridView1.Appearance.EvenRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.EvenRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.FilterCloseButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FilterCloseButton.Options.UseFont = true;
+            this.gridView1.Appearance.FilterCloseButton.Options.UseTextOptions = true;
+            this.gridView1.Appearance.FilterCloseButton.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.FilterCloseButton.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.FilterPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FilterPanel.Options.UseFont = true;
+            this.gridView1.Appearance.FilterPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.FilterPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.FilterPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.FixedLine.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FixedLine.Options.UseFont = true;
+            this.gridView1.Appearance.FixedLine.Options.UseTextOptions = true;
+            this.gridView1.Appearance.FixedLine.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.FixedLine.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.FocusedCell.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FocusedCell.Options.UseFont = true;
+            this.gridView1.Appearance.FocusedCell.Options.UseTextOptions = true;
+            this.gridView1.Appearance.FocusedCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.FocusedCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FocusedRow.Options.UseFont = true;
+            this.gridView1.Appearance.FocusedRow.Options.UseTextOptions = true;
+            this.gridView1.Appearance.FocusedRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.FocusedRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.FooterPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.FooterPanel.Options.UseFont = true;
+            this.gridView1.Appearance.FooterPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.FooterPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.FooterPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.GroupButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.GroupButton.Options.UseFont = true;
+            this.gridView1.Appearance.GroupButton.Options.UseTextOptions = true;
+            this.gridView1.Appearance.GroupButton.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.GroupButton.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.GroupFooter.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.GroupFooter.Options.UseFont = true;
+            this.gridView1.Appearance.GroupFooter.Options.UseTextOptions = true;
+            this.gridView1.Appearance.GroupFooter.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.GroupFooter.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.GroupPanel.Options.UseFont = true;
+            this.gridView1.Appearance.GroupPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.GroupPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.GroupPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.GroupRow.Options.UseFont = true;
+            this.gridView1.Appearance.GroupRow.Options.UseTextOptions = true;
+            this.gridView1.Appearance.GroupRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.GroupRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.HideSelectionRow.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HideSelectionRow.Options.UseFont = true;
+            this.gridView1.Appearance.HideSelectionRow.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HideSelectionRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.HideSelectionRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.HorzLine.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HorzLine.Options.UseFont = true;
+            this.gridView1.Appearance.HorzLine.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HorzLine.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.HorzLine.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.HotTrackedRow.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HotTrackedRow.Options.UseFont = true;
+            this.gridView1.Appearance.HotTrackedRow.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HotTrackedRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.HotTrackedRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.OddRow.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.OddRow.Options.UseFont = true;
+            this.gridView1.Appearance.OddRow.Options.UseTextOptions = true;
+            this.gridView1.Appearance.OddRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.OddRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.Preview.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.Preview.Options.UseFont = true;
+            this.gridView1.Appearance.Preview.Options.UseTextOptions = true;
+            this.gridView1.Appearance.Preview.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.Preview.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.Row.Options.UseFont = true;
+            this.gridView1.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.RowSeparator.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.RowSeparator.Options.UseFont = true;
+            this.gridView1.Appearance.RowSeparator.Options.UseTextOptions = true;
+            this.gridView1.Appearance.RowSeparator.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.RowSeparator.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.SelectedRow.Options.UseFont = true;
+            this.gridView1.Appearance.SelectedRow.Options.UseTextOptions = true;
+            this.gridView1.Appearance.SelectedRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.SelectedRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.TopNewRow.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.TopNewRow.Options.UseFont = true;
+            this.gridView1.Appearance.TopNewRow.Options.UseTextOptions = true;
+            this.gridView1.Appearance.TopNewRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.TopNewRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.VertLine.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.VertLine.Options.UseFont = true;
+            this.gridView1.Appearance.VertLine.Options.UseTextOptions = true;
+            this.gridView1.Appearance.VertLine.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.VertLine.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
+            this.gridView1.Appearance.ViewCaption.Options.UseTextOptions = true;
+            this.gridView1.Appearance.ViewCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.ViewCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.AppearancePrint.EvenRow.BackColor = System.Drawing.Color.White;
+            this.gridView1.AppearancePrint.EvenRow.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.AppearancePrint.EvenRow.Options.UseBackColor = true;
+            this.gridView1.AppearancePrint.EvenRow.Options.UseFont = true;
+            this.gridView1.AppearancePrint.EvenRow.Options.UseTextOptions = true;
+            this.gridView1.AppearancePrint.EvenRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.AppearancePrint.EvenRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.AppearancePrint.FilterPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.AppearancePrint.FilterPanel.Options.UseFont = true;
+            this.gridView1.AppearancePrint.FilterPanel.Options.UseTextOptions = true;
+            this.gridView1.AppearancePrint.FilterPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.AppearancePrint.FilterPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.AppearancePrint.FooterPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.AppearancePrint.FooterPanel.Options.UseFont = true;
+            this.gridView1.AppearancePrint.FooterPanel.Options.UseTextOptions = true;
+            this.gridView1.AppearancePrint.FooterPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.AppearancePrint.FooterPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.AppearancePrint.GroupFooter.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.AppearancePrint.GroupFooter.Options.UseFont = true;
+            this.gridView1.AppearancePrint.GroupFooter.Options.UseTextOptions = true;
+            this.gridView1.AppearancePrint.GroupFooter.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.AppearancePrint.GroupFooter.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.AppearancePrint.GroupRow.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.AppearancePrint.GroupRow.Options.UseFont = true;
+            this.gridView1.AppearancePrint.GroupRow.Options.UseTextOptions = true;
+            this.gridView1.AppearancePrint.GroupRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.AppearancePrint.GroupRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.AppearancePrint.HeaderPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.AppearancePrint.HeaderPanel.Options.UseFont = true;
+            this.gridView1.AppearancePrint.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.AppearancePrint.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.AppearancePrint.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.AppearancePrint.Lines.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.AppearancePrint.Lines.Options.UseFont = true;
+            this.gridView1.AppearancePrint.Lines.Options.UseTextOptions = true;
+            this.gridView1.AppearancePrint.Lines.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.AppearancePrint.Lines.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.AppearancePrint.OddRow.BackColor = System.Drawing.Color.White;
+            this.gridView1.AppearancePrint.OddRow.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.AppearancePrint.OddRow.Options.UseBackColor = true;
+            this.gridView1.AppearancePrint.OddRow.Options.UseFont = true;
+            this.gridView1.AppearancePrint.OddRow.Options.UseTextOptions = true;
+            this.gridView1.AppearancePrint.OddRow.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.AppearancePrint.OddRow.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.AppearancePrint.Preview.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.AppearancePrint.Preview.Options.UseFont = true;
+            this.gridView1.AppearancePrint.Preview.Options.UseTextOptions = true;
+            this.gridView1.AppearancePrint.Preview.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.AppearancePrint.Preview.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.AppearancePrint.Row.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.gridView1.AppearancePrint.Row.Options.UseFont = true;
+            this.gridView1.AppearancePrint.Row.Options.UseTextOptions = true;
+            this.gridView1.AppearancePrint.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.AppearancePrint.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colName,
+            this.colSalary,
+            this.colSalaries,
+            this.colContractStatus});
+            this.gridView1.DetailHeight = 315;
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsPrint.EnableAppearanceEvenRow = true;
+            this.gridView1.OptionsPrint.EnableAppearanceOddRow = true;
+            // 
+            // colName
+            // 
+            this.colName.Caption = "اسم الموظف";
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.OptionsColumn.AllowEdit = false;
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 0;
+            // 
+            // colSalary
+            // 
+            this.colSalary.Caption = "الراتب الاساسي";
+            this.colSalary.FieldName = "Salary";
+            this.colSalary.Name = "colSalary";
+            this.colSalary.OptionsColumn.AllowEdit = false;
+            this.colSalary.Visible = true;
+            this.colSalary.VisibleIndex = 1;
+            // 
+            // colContractStatus
+            // 
+            this.colContractStatus.Caption = "مدة العقد";
+            this.colContractStatus.FieldName = "ContractStatus";
+            this.colContractStatus.Name = "colContractStatus";
+            this.colContractStatus.OptionsColumn.AllowEdit = false;
+            this.colContractStatus.Visible = true;
+            this.colContractStatus.VisibleIndex = 2;
+            // 
+            // colSalaries
+            // 
+            this.colSalaries.Caption = "المرتب";
+            this.colSalaries.FieldName = "Salaries";
+            this.colSalaries.Name = "colSalaries";
+            this.colSalaries.OptionsColumn.AllowEdit = false;
+            this.colSalaries.Visible = true;
+            this.colSalaries.VisibleIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(654, 9);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(165, 25);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "معلومات الموظفين";
+            // 
             // AddSalaryPage
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -264,7 +552,8 @@ namespace EMS.AddPages
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 343);
+            this.ClientSize = new System.Drawing.Size(929, 343);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtSalaries);
             this.Controls.Add(this.txtContractStatus);
             this.Controls.Add(this.txtMainSalary);
@@ -275,6 +564,7 @@ namespace EMS.AddPages
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label10);
@@ -292,6 +582,9 @@ namespace EMS.AddPages
             this.TopMost = true;
             this.Activated += new System.EventHandler(this.AddVacationPage_Activated);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +610,13 @@ namespace EMS.AddPages
         public System.Windows.Forms.TextBox txtSalaries;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalary;
+        private DevExpress.XtraGrid.Columns.GridColumn colContractStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalaries;
+        private System.Windows.Forms.Label label11;
     }
 }
