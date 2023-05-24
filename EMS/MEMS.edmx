@@ -66,6 +66,16 @@
           <Property Name="EndDate" Type="datetime" />
           <Property Name="Details" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="TB_Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar(max)" />
+          <Property Name="Username" Type="nvarchar(max)" />
+          <Property Name="Passowrd" Type="nvarchar(max)" />
+          <Property Name="DateAdd" Type="datetime" />
+        </EntityType>
         <EntityType Name="TB_Vacations">
           <Key>
             <PropertyRef Name="Id" />
@@ -82,6 +92,7 @@
           <EntitySet Name="TB_Projects" EntityType="Self.TB_Projects" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Salaries" EntityType="Self.TB_Salaries" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Tasks" EntityType="Self.TB_Tasks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Users" EntityType="Self.TB_Users" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Vacations" EntityType="Self.TB_Vacations" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -117,6 +128,7 @@
           <EntitySet Name="TB_Salaries" EntityType="DBEMSModel.TB_Salaries" />
           <EntitySet Name="TB_Projects" EntityType="DBEMSModel.TB_Projects" />
           <EntitySet Name="TB_Tasks" EntityType="DBEMSModel.TB_Tasks" />
+          <EntitySet Name="TB_Users" EntityType="DBEMSModel.TB_Users" />
         </EntityContainer>
         <EntityType Name="TB_Vacations">
           <Key>
@@ -166,6 +178,16 @@
           <Property Name="StartDate" Type="DateTime" Precision="3" />
           <Property Name="EndDate" Type="DateTime" Precision="3" />
           <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TB_Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Passowrd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateAdd" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -246,6 +268,17 @@
                 <ScalarProperty Name="TaskStatus" ColumnName="TaskStatus" />
                 <ScalarProperty Name="AdminName" ColumnName="AdminName" />
                 <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Users">
+            <EntityTypeMapping TypeName="DBEMSModel.TB_Users">
+              <MappingFragment StoreEntitySet="TB_Users">
+                <ScalarProperty Name="DateAdd" ColumnName="DateAdd" />
+                <ScalarProperty Name="Passowrd" ColumnName="Passowrd" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

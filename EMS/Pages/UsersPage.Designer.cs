@@ -1,7 +1,7 @@
 ﻿
 namespace EMS.Pages
 {
-    partial class TasksPage
+    partial class UsersPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,6 +37,10 @@ namespace EMS.Pages
             this.buttonAdd = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUsername = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPassowrd = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDateAdd = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -130,7 +134,7 @@ namespace EMS.Pages
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(EMS.TB_Tasks);
+            this.gridControl1.DataSource = typeof(EMS.TB_Users);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Font = new System.Drawing.Font("PT Simple Bold Ruled", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
@@ -338,13 +342,54 @@ namespace EMS.Pages
             this.gridView1.AppearancePrint.Row.Options.UseTextOptions = true;
             this.gridView1.AppearancePrint.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.AppearancePrint.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colFullName,
+            this.colUsername,
+            this.colPassowrd,
+            this.colDateAdd});
             this.gridView1.DetailHeight = 315;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsPrint.EnableAppearanceEvenRow = true;
             this.gridView1.OptionsPrint.EnableAppearanceOddRow = true;
             // 
-            // TasksPage
+            // colFullName
+            // 
+            this.colFullName.Caption = "الاسم الكامل";
+            this.colFullName.FieldName = "FullName";
+            this.colFullName.Name = "colFullName";
+            this.colFullName.OptionsColumn.AllowEdit = false;
+            this.colFullName.Visible = true;
+            this.colFullName.VisibleIndex = 0;
+            // 
+            // colUsername
+            // 
+            this.colUsername.Caption = "اسم المستخدم";
+            this.colUsername.FieldName = "Username";
+            this.colUsername.Name = "colUsername";
+            this.colUsername.OptionsColumn.AllowEdit = false;
+            this.colUsername.Visible = true;
+            this.colUsername.VisibleIndex = 1;
+            // 
+            // colPassowrd
+            // 
+            this.colPassowrd.Caption = "كلمة المرور";
+            this.colPassowrd.FieldName = "Passowrd";
+            this.colPassowrd.Name = "colPassowrd";
+            this.colPassowrd.OptionsColumn.AllowEdit = false;
+            this.colPassowrd.Visible = true;
+            this.colPassowrd.VisibleIndex = 2;
+            // 
+            // colDateAdd
+            // 
+            this.colDateAdd.Caption = "تاريخ الاضافة";
+            this.colDateAdd.FieldName = "DateAdd";
+            this.colDateAdd.Name = "colDateAdd";
+            this.colDateAdd.OptionsColumn.AllowEdit = false;
+            this.colDateAdd.Visible = true;
+            this.colDateAdd.VisibleIndex = 3;
+            // 
+            // UsersPage
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -355,7 +400,7 @@ namespace EMS.Pages
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "TasksPage";
+            this.Name = "UsersPage";
             this.Size = new System.Drawing.Size(1239, 674);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -374,5 +419,9 @@ namespace EMS.Pages
         private DevExpress.XtraEditors.SimpleButton buttonDelete;
         private DevExpress.XtraEditors.SimpleButton buttonEdit;
         private DevExpress.XtraEditors.SimpleButton buttonPrint;
+        private DevExpress.XtraGrid.Columns.GridColumn colFullName;
+        private DevExpress.XtraGrid.Columns.GridColumn colUsername;
+        private DevExpress.XtraGrid.Columns.GridColumn colPassowrd;
+        private DevExpress.XtraGrid.Columns.GridColumn colDateAdd;
     }
 }

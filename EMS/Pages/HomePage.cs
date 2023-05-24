@@ -69,5 +69,14 @@ namespace EMS.Pages
             addPage.buttonAddAndClose.Text = "اضافة + غلق";
             addPage.Show();
         }
+
+        private void buttonUsers_Click(object sender, EventArgs e)
+        {
+            AddUserPage addPage = new AddUserPage();
+            addPage.id = 0;
+            addPage.buttonAdd.Text = "اضافة";
+            addPage.buttonAddAndClose.Text = "اضافة + غلق";
+            addPage.Show();
+        }
     }
 }

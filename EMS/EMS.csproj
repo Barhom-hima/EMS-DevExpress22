@@ -83,6 +83,18 @@
     <Compile Include="AddPages\AddSalaryPage.Designer.cs">
       <DependentUpon>AddSalaryPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddPages\LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPages\LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPages\AddUserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPages\AddUserPage.Designer.cs">
+      <DependentUpon>AddUserPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddPages\AddVacationPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MEMS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UsersPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\UsersPage.Designer.cs">
+      <DependentUpon>UsersPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\TasksPage.cs">
       <SubType>UserControl</SubType>
@@ -166,6 +184,9 @@
     <Compile Include="TB_Tasks.cs">
       <DependentUpon>MEMS.tt</DependentUpon>
     </Compile>
+    <Compile Include="TB_Users.cs">
+      <DependentUpon>MEMS.tt</DependentUpon>
+    </Compile>
     <Compile Include="TB_Vacations.cs">
       <DependentUpon>MEMS.tt</DependentUpon>
     </Compile>
@@ -178,6 +199,12 @@
     <EmbeddedResource Include="AddPages\AddSalaryPage.resx">
       <DependentUpon>AddSalaryPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddPages\LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPages\AddUserPage.resx">
+      <DependentUpon>AddUserPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddPages\AddVacationPage.resx">
       <DependentUpon>AddVacationPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\UsersPage.resx">
+      <DependentUpon>UsersPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\TasksPage.resx">
       <DependentUpon>TasksPage.cs</DependentUpon>
@@ -246,6 +276,8 @@
       <DependentUpon>MEMS.edmx</DependentUpon>
       <LastGenOutput>MEMS.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8_login_32px_1.png" />
+    <None Include="Resources\icons8_login_32px.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Add_Male_User_Group_32px_5.png" />

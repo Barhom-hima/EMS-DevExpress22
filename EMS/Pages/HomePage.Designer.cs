@@ -126,6 +126,7 @@ namespace EMS.Pages
             this.buttonUsers.Size = new System.Drawing.Size(122, 70);
             this.buttonUsers.TabIndex = 0;
             this.buttonUsers.Text = "المستحدمين";
+            this.buttonUsers.Click += new System.EventHandler(this.buttonUsers_Click);
             // 
             // buttonTasks
             // 

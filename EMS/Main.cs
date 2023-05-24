@@ -64,7 +64,8 @@ namespace EMS
         // Load Users Page
         private void buttonUsers_Click(object sender, EventArgs e)
         {
-
+            UsersPage page = new UsersPage();
+            LoadPage(page);
         }
 
         // Load Home Page
