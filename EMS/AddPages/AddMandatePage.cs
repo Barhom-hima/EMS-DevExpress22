@@ -18,7 +18,7 @@ namespace EMS.AddPages
     {
         // DataBase And Tables
         DBEMSEntities db;
-        TB_Projects tbAdd;
+        TB_Mandate tbAdd;
         public MandatesPage page = new MandatesPage();
 
         // Other Var
@@ -74,13 +74,16 @@ namespace EMS.AddPages
             try
             {
                 db = new DBEMSEntities();
-                tbAdd = new TB_Projects
+                tbAdd = new TB_Mandate
                 {
-                    ProjectName = txtMandatesEmp.Text,
-                    AdminName = txtManedateAdmin.Text,
-                    Requireds = txtMandareDestination.Text,
-                    Cost = txtMandateTime.Text,
-                    StartDate = txtMandateDate.Value,
+                    ManedateAdmin = txtManedateAdmin.Text,
+                    MandatesEmp = txtMandatesEmp.Text,
+                    AboutMandate = txtAboutMandate.Text,
+                    MandareDestination = txtMandareDestination.Text,
+                    MandateTime = txtMandateTime.Text,
+                    MandateDate = txtMandateDate.Value,
+                    MandateReward = txtMandateReward.Text,
+                    MandateResult = txtMandateResult.Text,
                     Details = txtDetails.Text
                 };
                 db.Entry(tbAdd).State = System.Data.Entity.EntityState.Added;
@@ -102,17 +105,20 @@ namespace EMS.AddPages
             try
             {
                 db = new DBEMSEntities();
-                tbAdd = new TB_Projects
+                tbAdd = new TB_Mandate
                 {
                     Id = id,
-                    ProjectName = txtMandatesEmp.Text,
-                    AdminName = txtManedateAdmin.Text,
-                    Requireds = txtMandareDestination.Text,
-                    Cost = txtMandateTime.Text,
-                    StartDate = txtMandateDate.Value,
+                    ManedateAdmin = txtManedateAdmin.Text,
+                    MandatesEmp = txtMandatesEmp.Text,
+                    AboutMandate = txtAboutMandate.Text,
+                    MandareDestination = txtMandareDestination.Text,
+                    MandateTime = txtMandateTime.Text,
+                    MandateDate = txtMandateDate.Value,
+                    MandateReward = txtMandateReward.Text,
+                    MandateResult = txtMandateResult.Text,
                     Details = txtDetails.Text
                 };
-                db.Set<TB_Projects>().AddOrUpdate(tbAdd);
+                db.Set<TB_Mandate>().AddOrUpdate(tbAdd);
                 db.SaveChanges();
 
                 MessageBox.Show("تم تعديل بيانات الموظف بنجاح", "نجاح",

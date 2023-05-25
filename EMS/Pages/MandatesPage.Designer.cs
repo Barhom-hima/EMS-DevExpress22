@@ -37,6 +37,15 @@ namespace EMS.Pages
             this.buttonAdd = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colManedateAdmin = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMandatesEmp = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAboutMandate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMandareDestination = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMandateTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMandateDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMandateReward = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMandateResult = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDetails = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -130,7 +139,7 @@ namespace EMS.Pages
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(EMS.TB_Projects);
+            this.gridControl1.DataSource = typeof(EMS.TB_Mandate);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Font = new System.Drawing.Font("PT Simple Bold Ruled", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
@@ -338,11 +347,102 @@ namespace EMS.Pages
             this.gridView1.AppearancePrint.Row.Options.UseTextOptions = true;
             this.gridView1.AppearancePrint.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.AppearancePrint.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colManedateAdmin,
+            this.colMandatesEmp,
+            this.colAboutMandate,
+            this.colMandareDestination,
+            this.colMandateTime,
+            this.colMandateDate,
+            this.colMandateReward,
+            this.colMandateResult,
+            this.colDetails});
             this.gridView1.DetailHeight = 315;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsPrint.EnableAppearanceEvenRow = true;
             this.gridView1.OptionsPrint.EnableAppearanceOddRow = true;
+            // 
+            // colManedateAdmin
+            // 
+            this.colManedateAdmin.Caption = "مسؤول الإنتداب";
+            this.colManedateAdmin.FieldName = "ManedateAdmin";
+            this.colManedateAdmin.Name = "colManedateAdmin";
+            this.colManedateAdmin.OptionsColumn.AllowEdit = false;
+            this.colManedateAdmin.Visible = true;
+            this.colManedateAdmin.VisibleIndex = 0;
+            // 
+            // colMandatesEmp
+            // 
+            this.colMandatesEmp.Caption = "المنتدبين";
+            this.colMandatesEmp.FieldName = "MandatesEmp";
+            this.colMandatesEmp.Name = "colMandatesEmp";
+            this.colMandatesEmp.OptionsColumn.AllowEdit = false;
+            this.colMandatesEmp.Visible = true;
+            this.colMandatesEmp.VisibleIndex = 1;
+            // 
+            // colAboutMandate
+            // 
+            this.colAboutMandate.Caption = "سبب الإنتداب";
+            this.colAboutMandate.FieldName = "AboutMandate";
+            this.colAboutMandate.Name = "colAboutMandate";
+            this.colAboutMandate.OptionsColumn.AllowEdit = false;
+            this.colAboutMandate.Visible = true;
+            this.colAboutMandate.VisibleIndex = 2;
+            // 
+            // colMandareDestination
+            // 
+            this.colMandareDestination.Caption = "وجهة الإنتداب";
+            this.colMandareDestination.FieldName = "MandareDestination";
+            this.colMandareDestination.Name = "colMandareDestination";
+            this.colMandareDestination.OptionsColumn.AllowEdit = false;
+            this.colMandareDestination.Visible = true;
+            this.colMandareDestination.VisibleIndex = 3;
+            // 
+            // colMandateTime
+            // 
+            this.colMandateTime.Caption = "مدة الإنتداب";
+            this.colMandateTime.FieldName = "MandateTime";
+            this.colMandateTime.Name = "colMandateTime";
+            this.colMandateTime.OptionsColumn.AllowEdit = false;
+            this.colMandateTime.Visible = true;
+            this.colMandateTime.VisibleIndex = 4;
+            // 
+            // colMandateDate
+            // 
+            this.colMandateDate.Caption = "تاريخ الإنتداب";
+            this.colMandateDate.FieldName = "MandateDate";
+            this.colMandateDate.Name = "colMandateDate";
+            this.colMandateDate.OptionsColumn.AllowEdit = false;
+            this.colMandateDate.Visible = true;
+            this.colMandateDate.VisibleIndex = 5;
+            // 
+            // colMandateReward
+            // 
+            this.colMandateReward.Caption = "مكافأة الإنتداب";
+            this.colMandateReward.FieldName = "MandateReward";
+            this.colMandateReward.Name = "colMandateReward";
+            this.colMandateReward.OptionsColumn.AllowEdit = false;
+            this.colMandateReward.Visible = true;
+            this.colMandateReward.VisibleIndex = 6;
+            // 
+            // colMandateResult
+            // 
+            this.colMandateResult.Caption = "نتيجة الإنتداب";
+            this.colMandateResult.FieldName = "MandateResult";
+            this.colMandateResult.Name = "colMandateResult";
+            this.colMandateResult.OptionsColumn.AllowEdit = false;
+            this.colMandateResult.Visible = true;
+            this.colMandateResult.VisibleIndex = 7;
+            // 
+            // colDetails
+            // 
+            this.colDetails.Caption = "التفاصيل";
+            this.colDetails.FieldName = "Details";
+            this.colDetails.Name = "colDetails";
+            this.colDetails.OptionsColumn.AllowEdit = false;
+            this.colDetails.Visible = true;
+            this.colDetails.VisibleIndex = 8;
             // 
             // MandatesPage
             // 
@@ -374,5 +474,14 @@ namespace EMS.Pages
         private DevExpress.XtraEditors.SimpleButton buttonDelete;
         private DevExpress.XtraEditors.SimpleButton buttonEdit;
         private DevExpress.XtraEditors.SimpleButton buttonPrint;
+        private DevExpress.XtraGrid.Columns.GridColumn colManedateAdmin;
+        private DevExpress.XtraGrid.Columns.GridColumn colMandatesEmp;
+        private DevExpress.XtraGrid.Columns.GridColumn colAboutMandate;
+        private DevExpress.XtraGrid.Columns.GridColumn colMandareDestination;
+        private DevExpress.XtraGrid.Columns.GridColumn colMandateTime;
+        private DevExpress.XtraGrid.Columns.GridColumn colMandateDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colMandateReward;
+        private DevExpress.XtraGrid.Columns.GridColumn colMandateResult;
+        private DevExpress.XtraGrid.Columns.GridColumn colDetails;
     }
 }

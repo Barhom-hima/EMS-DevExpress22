@@ -28,6 +28,21 @@
           <Property Name="Details" Type="nvarchar(max)" />
           <Property Name="ContractStatus" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="TB_Mandate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ManedateAdmin" Type="nvarchar(max)" />
+          <Property Name="MandatesEmp" Type="nvarchar(max)" />
+          <Property Name="AboutMandate" Type="nvarchar(max)" />
+          <Property Name="MandareDestination" Type="nvarchar(max)" />
+          <Property Name="MandateTime" Type="nvarchar(max)" />
+          <Property Name="MandateDate" Type="datetime" />
+          <Property Name="MandateReward" Type="nvarchar(max)" />
+          <Property Name="MandateResult" Type="nvarchar(max)" />
+          <Property Name="Details" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="TB_Projects">
           <Key>
             <PropertyRef Name="Id" />
@@ -89,6 +104,7 @@
         </EntityType>
         <EntityContainer Name="DBEMSModelStoreContainer">
           <EntitySet Name="TB_Employees" EntityType="Self.TB_Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Mandate" EntityType="Self.TB_Mandate" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Projects" EntityType="Self.TB_Projects" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Salaries" EntityType="Self.TB_Salaries" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Tasks" EntityType="Self.TB_Tasks" Schema="dbo" store:Type="Tables" />
@@ -129,6 +145,7 @@
           <EntitySet Name="TB_Projects" EntityType="DBEMSModel.TB_Projects" />
           <EntitySet Name="TB_Tasks" EntityType="DBEMSModel.TB_Tasks" />
           <EntitySet Name="TB_Users" EntityType="DBEMSModel.TB_Users" />
+          <EntitySet Name="TB_Mandate" EntityType="DBEMSModel.TB_Mandate" />
         </EntityContainer>
         <EntityType Name="TB_Vacations">
           <Key>
@@ -188,6 +205,21 @@
           <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Passowrd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="DateAdd" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_Mandate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ManedateAdmin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MandatesEmp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AboutMandate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MandareDestination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MandateTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MandateDate" Type="DateTime" Precision="3" />
+          <Property Name="MandateReward" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MandateResult" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -279,6 +311,22 @@
                 <ScalarProperty Name="Passowrd" ColumnName="Passowrd" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Mandate">
+            <EntityTypeMapping TypeName="DBEMSModel.TB_Mandate">
+              <MappingFragment StoreEntitySet="TB_Mandate">
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="MandateResult" ColumnName="MandateResult" />
+                <ScalarProperty Name="MandateReward" ColumnName="MandateReward" />
+                <ScalarProperty Name="MandateDate" ColumnName="MandateDate" />
+                <ScalarProperty Name="MandateTime" ColumnName="MandateTime" />
+                <ScalarProperty Name="MandareDestination" ColumnName="MandareDestination" />
+                <ScalarProperty Name="AboutMandate" ColumnName="AboutMandate" />
+                <ScalarProperty Name="MandatesEmp" ColumnName="MandatesEmp" />
+                <ScalarProperty Name="ManedateAdmin" ColumnName="ManedateAdmin" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

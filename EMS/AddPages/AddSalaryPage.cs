@@ -148,9 +148,12 @@ namespace EMS.AddPages
             // Size
             txtEmpName.Size = new System.Drawing.Size(217, 33);
             txtMainSalary.Size = new System.Drawing.Size(217, 33);
+            txtCashingDate.Size = new System.Drawing.Size(217, 33);
             txtContractStatus.Size = new System.Drawing.Size(217, 33);
+            txtCommission.Size = new System.Drawing.Size(217, 33);
             txtCommissionInMonth.Size = new System.Drawing.Size(217, 33);
-            txtCashingDate.Size = new System.Drawing.Size(217, 29);
+            txtCommissionInYear.Size = new System.Drawing.Size(217, 33);
+            txtCommissionEndWork.Size = new System.Drawing.Size(217, 33);
 
             // txtEmpName
             txtEmpName.Location = new System.Drawing.Point(323, 43);

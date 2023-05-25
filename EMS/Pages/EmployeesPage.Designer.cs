@@ -44,6 +44,7 @@ namespace EMS.Pages
             this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSalary = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSalaries = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWorkTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVacationTime = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,7 +54,6 @@ namespace EMS.Pages
             this.colDateEndId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDateEndPassport = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDetails = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -442,9 +442,18 @@ namespace EMS.Pages
             this.colSalary.Visible = true;
             this.colSalary.VisibleIndex = 6;
             // 
+            // colContractStatus
+            // 
+            this.colContractStatus.Caption = "مدة العقد";
+            this.colContractStatus.FieldName = "ContractStatus";
+            this.colContractStatus.Name = "colContractStatus";
+            this.colContractStatus.OptionsColumn.AllowEdit = false;
+            this.colContractStatus.Visible = true;
+            this.colContractStatus.VisibleIndex = 7;
+            // 
             // colSalaries
             // 
-            this.colSalaries.Caption = "المرتبات";
+            this.colSalaries.Caption = "المرتبة";
             this.colSalaries.FieldName = "Salaries";
             this.colSalaries.Name = "colSalaries";
             this.colSalaries.OptionsColumn.AllowEdit = false;
@@ -522,15 +531,6 @@ namespace EMS.Pages
             this.colDetails.OptionsColumn.AllowEdit = false;
             this.colDetails.Visible = true;
             this.colDetails.VisibleIndex = 16;
-            // 
-            // colContractStatus
-            // 
-            this.colContractStatus.Caption = "مدة العقد";
-            this.colContractStatus.FieldName = "ContractStatus";
-            this.colContractStatus.Name = "colContractStatus";
-            this.colContractStatus.OptionsColumn.AllowEdit = false;
-            this.colContractStatus.Visible = true;
-            this.colContractStatus.VisibleIndex = 7;
             // 
             // EmployeesPage
             // 

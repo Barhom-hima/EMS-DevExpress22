@@ -485,7 +485,7 @@ namespace EMS.AddPages
             // 
             // colSalaries
             // 
-            this.colSalaries.Caption = "المرتب";
+            this.colSalaries.Caption = "المرتبة";
             this.colSalaries.FieldName = "Salaries";
             this.colSalaries.Name = "colSalaries";
             this.colSalaries.OptionsColumn.AllowEdit = false;

@@ -17,7 +17,7 @@ namespace EMS.Pages
     {
         // DataBase And Tables
         DBEMSEntities db;
-        TB_Projects tbAdd;
+        TB_Mandate tbAdd;
 
         // Other Var
         int id;
@@ -31,9 +31,9 @@ namespace EMS.Pages
         public void LoadData()
         {
             EMS.DBEMSEntities dbContext = new EMS.DBEMSEntities();
-            dbContext.TB_Projects.LoadAsync().ContinueWith(loadTask =>
+            dbContext.TB_Mandate.LoadAsync().ContinueWith(loadTask =>
             {
-                gridControl1.DataSource = dbContext.TB_Projects.Local.ToBindingList();
+                gridControl1.DataSource = dbContext.TB_Mandate.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
@@ -59,16 +59,19 @@ namespace EMS.Pages
                 {
                     AddMandatePage addPage = new AddMandatePage();
                     db = new DBEMSEntities();
-                    tbAdd = db.TB_Projects.Where(x => x.Id == id).FirstOrDefault();
+                    tbAdd = db.TB_Mandate.Where(x => x.Id == id).FirstOrDefault();
 
                     addPage.id = id;
                     addPage.buttonAdd.Text = "تعديل";
                     addPage.buttonAddAndClose.Text = "تعديل + غلق";
-                    addPage.txtMandatesEmp.Text = tbAdd.ProjectName;
-                    addPage.txtManedateAdmin.Text = tbAdd.AdminName;
-                    addPage.txtMandareDestination.Text = tbAdd.Requireds;
-                    addPage.txtMandateTime.Text = tbAdd.Cost;
-                    addPage.txtMandateDate.Value = tbAdd.StartDate.Value;
+                    addPage.txtManedateAdmin.Text = tbAdd.ManedateAdmin;
+                    addPage.txtMandatesEmp.Text = tbAdd.MandatesEmp;
+                    addPage.txtAboutMandate.Text = tbAdd.AboutMandate;
+                    addPage.txtMandareDestination.Text = tbAdd.MandareDestination;
+                    addPage.txtMandateTime.Text = tbAdd.MandateTime;
+                    addPage.txtMandateDate.Value = tbAdd.MandateDate.Value;
+                    addPage.txtMandateReward.Text = tbAdd.MandateReward;
+                    addPage.txtMandateResult.Text = tbAdd.MandateResult;
                     addPage.txtDetails.Text = tbAdd.Details;
                     addPage.page = this;
                     addPage.Show();
@@ -99,7 +102,7 @@ namespace EMS.Pages
                     {
                         AddMandatePage addPage = new AddMandatePage();
                         db = new DBEMSEntities();
-                        tbAdd = db.TB_Projects.Where(x => x.Id == id).FirstOrDefault();
+                        tbAdd = db.TB_Mandate.Where(x => x.Id == id).FirstOrDefault();
                         db.Entry(tbAdd).State = EntityState.Deleted;
                         db.SaveChanges();
                         LoadData();

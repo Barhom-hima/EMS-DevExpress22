@@ -35,7 +35,7 @@ namespace EMS.AddPages
         {
             // Check If empty values
             if(txtName.Text == "" && txtGender.Text == "" && txtPhone.Text == "" && txtIdNum.Text == "" && txtPassportNum.Text == ""
-                && txtSalary.Text == "" && txtJobName.Text == "" && txtContractStatus.Text == "" && txtWorkTime.Text == "" && txtWorkTimeInWeak.Text == ""
+                && txtJobName.Text == "" && txtContractStatus.Text == "" && txtWorkTime.Text == "" && txtWorkTimeInWeak.Text == ""
                 && txtSalary.Text == "" && txtVacationTime.Text == "")
             {
                 MessageBox.Show("برجى ملئ جميع الحقول التي تحتوي على علامة * ثم اعد المحاولة", "خطأ",
