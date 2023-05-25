@@ -51,7 +51,8 @@ namespace EMS
         // Load Mandate Page
         private void buttonMandate_Click(object sender, EventArgs e)
         {
-
+            MandatesPage page = new MandatesPage();
+            LoadPage(page);
         }
 
         // Load Project Page

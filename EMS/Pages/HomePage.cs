@@ -45,7 +45,11 @@ namespace EMS.Pages
 
         private void buttonMandate_Click(object sender, EventArgs e)
         {
-
+            AddMandatePage addPage = new AddMandatePage();
+            addPage.id = 0;
+            addPage.buttonAdd.Text = "اضافة";
+            addPage.buttonAddAndClose.Text = "اضافة + غلق";
+            addPage.Show();
         }
 
         private void buttonVacations_Click(object sender, EventArgs e)

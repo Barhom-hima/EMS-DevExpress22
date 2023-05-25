@@ -1,7 +1,7 @@
 ﻿
 namespace EMS.Pages
 {
-    partial class TasksPage
+    partial class MandatesPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,13 +37,6 @@ namespace EMS.Pages
             this.buttonAdd = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colTaskName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAdminName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTaskStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRequireds = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colStartDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEndDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDetails = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -137,7 +130,7 @@ namespace EMS.Pages
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(EMS.TB_Tasks);
+            this.gridControl1.DataSource = typeof(EMS.TB_Projects);
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Font = new System.Drawing.Font("PT Simple Bold Ruled", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
@@ -345,84 +338,13 @@ namespace EMS.Pages
             this.gridView1.AppearancePrint.Row.Options.UseTextOptions = true;
             this.gridView1.AppearancePrint.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.AppearancePrint.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colTaskName,
-            this.colAdminName,
-            this.colTaskStatus,
-            this.colRequireds,
-            this.colStartDate,
-            this.colEndDate,
-            this.colDetails});
             this.gridView1.DetailHeight = 315;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsPrint.EnableAppearanceEvenRow = true;
             this.gridView1.OptionsPrint.EnableAppearanceOddRow = true;
             // 
-            // colTaskName
-            // 
-            this.colTaskName.Caption = "اسم المهمة";
-            this.colTaskName.FieldName = "TaskName";
-            this.colTaskName.Name = "colTaskName";
-            this.colTaskName.OptionsColumn.AllowEdit = false;
-            this.colTaskName.Visible = true;
-            this.colTaskName.VisibleIndex = 0;
-            // 
-            // colAdminName
-            // 
-            this.colAdminName.Caption = "اسم المسؤول";
-            this.colAdminName.FieldName = "AdminName";
-            this.colAdminName.Name = "colAdminName";
-            this.colAdminName.OptionsColumn.AllowEdit = false;
-            this.colAdminName.Visible = true;
-            this.colAdminName.VisibleIndex = 1;
-            // 
-            // colTaskStatus
-            // 
-            this.colTaskStatus.Caption = "حالة المهمة";
-            this.colTaskStatus.FieldName = "TaskStatus";
-            this.colTaskStatus.Name = "colTaskStatus";
-            this.colTaskStatus.OptionsColumn.AllowEdit = false;
-            this.colTaskStatus.Visible = true;
-            this.colTaskStatus.VisibleIndex = 2;
-            // 
-            // colRequireds
-            // 
-            this.colRequireds.Caption = "المتطلبات";
-            this.colRequireds.FieldName = "Requireds";
-            this.colRequireds.Name = "colRequireds";
-            this.colRequireds.OptionsColumn.AllowEdit = false;
-            this.colRequireds.Visible = true;
-            this.colRequireds.VisibleIndex = 3;
-            // 
-            // colStartDate
-            // 
-            this.colStartDate.Caption = "تاريخ بدء المهمة";
-            this.colStartDate.FieldName = "StartDate";
-            this.colStartDate.Name = "colStartDate";
-            this.colStartDate.OptionsColumn.AllowEdit = false;
-            this.colStartDate.Visible = true;
-            this.colStartDate.VisibleIndex = 4;
-            // 
-            // colEndDate
-            // 
-            this.colEndDate.Caption = "تاريخ انتهاء المهمة";
-            this.colEndDate.FieldName = "EndDate";
-            this.colEndDate.Name = "colEndDate";
-            this.colEndDate.OptionsColumn.AllowEdit = false;
-            this.colEndDate.Visible = true;
-            this.colEndDate.VisibleIndex = 5;
-            // 
-            // colDetails
-            // 
-            this.colDetails.Caption = "التفاصيل";
-            this.colDetails.FieldName = "Details";
-            this.colDetails.Name = "colDetails";
-            this.colDetails.OptionsColumn.AllowEdit = false;
-            this.colDetails.Visible = true;
-            this.colDetails.VisibleIndex = 6;
-            // 
-            // TasksPage
+            // MandatesPage
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -433,7 +355,7 @@ namespace EMS.Pages
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "TasksPage";
+            this.Name = "MandatesPage";
             this.Size = new System.Drawing.Size(1239, 674);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -452,12 +374,5 @@ namespace EMS.Pages
         private DevExpress.XtraEditors.SimpleButton buttonDelete;
         private DevExpress.XtraEditors.SimpleButton buttonEdit;
         private DevExpress.XtraEditors.SimpleButton buttonPrint;
-        private DevExpress.XtraGrid.Columns.GridColumn colTaskName;
-        private DevExpress.XtraGrid.Columns.GridColumn colAdminName;
-        private DevExpress.XtraGrid.Columns.GridColumn colTaskStatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colRequireds;
-        private DevExpress.XtraGrid.Columns.GridColumn colStartDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colEndDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colDetails;
     }
 }
