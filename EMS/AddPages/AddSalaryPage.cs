@@ -77,9 +77,12 @@ namespace EMS.AddPages
                 {
                     EmpName = txtEmpName.Text,
                     MainSalary = txtMainSalary.Text,
+                    CashingDate = txtCashingDate.Value,
                     ContractStatus = txtContractStatus.Text,
-                    Salaries = txtCommissionInMonth.Text,
-                    CashingDate = txtCashingDate.Value
+                    Commission = txtCommission.Text,
+                    RewardInMonth = txtCommissionInMonth.Text,
+                    RewardInYear = txtCommissionInYear.Text,
+                    RewardEndWork = txtCommissionEndWork.Text
                 };
                 db.Entry(tbAdd).State = System.Data.Entity.EntityState.Added;
                 db.SaveChanges();
@@ -105,9 +108,12 @@ namespace EMS.AddPages
                     Id = id,
                     EmpName = txtEmpName.Text,
                     MainSalary = txtMainSalary.Text,
+                    CashingDate = txtCashingDate.Value,
                     ContractStatus = txtContractStatus.Text,
-                    Salaries = txtCommissionInMonth.Text,
-                    CashingDate = txtCashingDate.Value
+                    Commission = txtCommission.Text,
+                    RewardInMonth = txtCommissionInMonth.Text,
+                    RewardInYear = txtCommissionInYear.Text,
+                    RewardEndWork = txtCommissionEndWork.Text
                 };
                 db.Set<TB_Salaries>().AddOrUpdate(tbAdd);
                 db.SaveChanges();

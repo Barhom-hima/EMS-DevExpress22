@@ -18,7 +18,10 @@ namespace EMS
         public string EmpName { get; set; }
         public string MainSalary { get; set; }
         public string ContractStatus { get; set; }
-        public string Salaries { get; set; }
+        public string Commission { get; set; }
         public Nullable<System.DateTime> CashingDate { get; set; }
+        public string RewardInMonth { get; set; }
+        public string RewardInYear { get; set; }
+        public string RewardEndWork { get; set; }
     }
 }

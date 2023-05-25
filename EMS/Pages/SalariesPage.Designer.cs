@@ -38,10 +38,13 @@ namespace EMS.Pages
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colEmpName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMainSalary = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSalaries = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCashingDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCommission = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRewardInMonth = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRewardInYear = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRewardEndWork = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMainSalary = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -346,9 +349,12 @@ namespace EMS.Pages
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colEmpName,
             this.colMainSalary,
+            this.colCashingDate,
             this.colContractStatus,
-            this.colSalaries,
-            this.colCashingDate});
+            this.colCommission,
+            this.colRewardInMonth,
+            this.colRewardInYear,
+            this.colRewardEndWork});
             this.gridView1.DetailHeight = 315;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
@@ -362,34 +368,7 @@ namespace EMS.Pages
             this.colEmpName.Name = "colEmpName";
             this.colEmpName.OptionsColumn.AllowEdit = false;
             this.colEmpName.Visible = true;
-            this.colEmpName.VisibleIndex = 0;
-            // 
-            // colMainSalary
-            // 
-            this.colMainSalary.Caption = "الراتب الاساسي";
-            this.colMainSalary.FieldName = "MainSalary";
-            this.colMainSalary.Name = "colMainSalary";
-            this.colMainSalary.OptionsColumn.AllowEdit = false;
-            this.colMainSalary.Visible = true;
-            this.colMainSalary.VisibleIndex = 1;
-            // 
-            // colContractStatus
-            // 
-            this.colContractStatus.Caption = "مدة العقد";
-            this.colContractStatus.FieldName = "ContractStatus";
-            this.colContractStatus.Name = "colContractStatus";
-            this.colContractStatus.OptionsColumn.AllowEdit = false;
-            this.colContractStatus.Visible = true;
-            this.colContractStatus.VisibleIndex = 2;
-            // 
-            // colSalaries
-            // 
-            this.colSalaries.Caption = "المكافأة";
-            this.colSalaries.FieldName = "Salaries";
-            this.colSalaries.Name = "colSalaries";
-            this.colSalaries.OptionsColumn.AllowEdit = false;
-            this.colSalaries.Visible = true;
-            this.colSalaries.VisibleIndex = 3;
+            this.colEmpName.VisibleIndex = 1;
             // 
             // colCashingDate
             // 
@@ -398,7 +377,61 @@ namespace EMS.Pages
             this.colCashingDate.Name = "colCashingDate";
             this.colCashingDate.OptionsColumn.AllowEdit = false;
             this.colCashingDate.Visible = true;
-            this.colCashingDate.VisibleIndex = 4;
+            this.colCashingDate.VisibleIndex = 2;
+            // 
+            // colContractStatus
+            // 
+            this.colContractStatus.Caption = "مدة العقد";
+            this.colContractStatus.FieldName = "ContractStatus";
+            this.colContractStatus.Name = "colContractStatus";
+            this.colContractStatus.OptionsColumn.AllowEdit = false;
+            this.colContractStatus.Visible = true;
+            this.colContractStatus.VisibleIndex = 3;
+            // 
+            // colCommission
+            // 
+            this.colCommission.Caption = "العمولة";
+            this.colCommission.FieldName = "Commission";
+            this.colCommission.Name = "colCommission";
+            this.colCommission.OptionsColumn.AllowEdit = false;
+            this.colCommission.Visible = true;
+            this.colCommission.VisibleIndex = 4;
+            // 
+            // colRewardInMonth
+            // 
+            this.colRewardInMonth.Caption = "الكمافأة الشهرية";
+            this.colRewardInMonth.FieldName = "RewardInMonth";
+            this.colRewardInMonth.Name = "colRewardInMonth";
+            this.colRewardInMonth.OptionsColumn.AllowEdit = false;
+            this.colRewardInMonth.Visible = true;
+            this.colRewardInMonth.VisibleIndex = 5;
+            // 
+            // colRewardInYear
+            // 
+            this.colRewardInYear.Caption = "الكمافأة السنوية ";
+            this.colRewardInYear.FieldName = "RewardInYear";
+            this.colRewardInYear.Name = "colRewardInYear";
+            this.colRewardInYear.OptionsColumn.AllowEdit = false;
+            this.colRewardInYear.Visible = true;
+            this.colRewardInYear.VisibleIndex = 6;
+            // 
+            // colRewardEndWork
+            // 
+            this.colRewardEndWork.Caption = "مكافأة نهاية العمل";
+            this.colRewardEndWork.FieldName = "RewardEndWork";
+            this.colRewardEndWork.Name = "colRewardEndWork";
+            this.colRewardEndWork.OptionsColumn.AllowEdit = false;
+            this.colRewardEndWork.Visible = true;
+            this.colRewardEndWork.VisibleIndex = 7;
+            // 
+            // colMainSalary
+            // 
+            this.colMainSalary.Caption = "الراتب الاساسي";
+            this.colMainSalary.FieldName = "MainSalary";
+            this.colMainSalary.Name = "colMainSalary";
+            this.colMainSalary.OptionsColumn.AllowEdit = false;
+            this.colMainSalary.Visible = true;
+            this.colMainSalary.VisibleIndex = 0;
             // 
             // SalariesPage
             // 
@@ -432,8 +465,11 @@ namespace EMS.Pages
         private DevExpress.XtraEditors.SimpleButton buttonPrint;
         private DevExpress.XtraGrid.Columns.GridColumn colEmpName;
         private DevExpress.XtraGrid.Columns.GridColumn colMainSalary;
-        private DevExpress.XtraGrid.Columns.GridColumn colContractStatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colSalaries;
         private DevExpress.XtraGrid.Columns.GridColumn colCashingDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colContractStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colCommission;
+        private DevExpress.XtraGrid.Columns.GridColumn colRewardInMonth;
+        private DevExpress.XtraGrid.Columns.GridColumn colRewardInYear;
+        private DevExpress.XtraGrid.Columns.GridColumn colRewardEndWork;
     }
 }

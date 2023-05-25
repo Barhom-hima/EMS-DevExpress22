@@ -47,10 +47,6 @@ namespace EMS.AddPages
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSalary = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSalaries = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -61,6 +57,10 @@ namespace EMS.AddPages
             this.txtEndDate = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
             this.txtDetails = new System.Windows.Forms.RichTextBox();
+            this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSalary = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRank = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -456,49 +456,13 @@ namespace EMS.AddPages
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colName,
             this.colSalary,
-            this.colSalaries,
-            this.colContractStatus});
+            this.colContractStatus,
+            this.colRank});
             this.gridView1.DetailHeight = 315;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsPrint.EnableAppearanceEvenRow = true;
             this.gridView1.OptionsPrint.EnableAppearanceOddRow = true;
-            // 
-            // colName
-            // 
-            this.colName.Caption = "اسم الموظف";
-            this.colName.FieldName = "Name";
-            this.colName.Name = "colName";
-            this.colName.OptionsColumn.AllowEdit = false;
-            this.colName.Visible = true;
-            this.colName.VisibleIndex = 0;
-            // 
-            // colSalary
-            // 
-            this.colSalary.Caption = "الراتب الاساسي";
-            this.colSalary.FieldName = "Salary";
-            this.colSalary.Name = "colSalary";
-            this.colSalary.OptionsColumn.AllowEdit = false;
-            this.colSalary.Visible = true;
-            this.colSalary.VisibleIndex = 1;
-            // 
-            // colSalaries
-            // 
-            this.colSalaries.Caption = "المرتبة";
-            this.colSalaries.FieldName = "Salaries";
-            this.colSalaries.Name = "colSalaries";
-            this.colSalaries.OptionsColumn.AllowEdit = false;
-            this.colSalaries.Visible = true;
-            this.colSalaries.VisibleIndex = 3;
-            // 
-            // colContractStatus
-            // 
-            this.colContractStatus.Caption = "مدة العقد";
-            this.colContractStatus.FieldName = "ContractStatus";
-            this.colContractStatus.Name = "colContractStatus";
-            this.colContractStatus.OptionsColumn.AllowEdit = false;
-            this.colContractStatus.Visible = true;
-            this.colContractStatus.VisibleIndex = 2;
             // 
             // label11
             // 
@@ -610,6 +574,42 @@ namespace EMS.AddPages
             this.txtDetails.TabIndex = 8;
             this.txtDetails.Text = "";
             // 
+            // colName
+            // 
+            this.colName.Caption = "اسم الموظف";
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.OptionsColumn.AllowEdit = false;
+            this.colName.Visible = true;
+            this.colName.VisibleIndex = 0;
+            // 
+            // colSalary
+            // 
+            this.colSalary.Caption = "الراتب الاساسي";
+            this.colSalary.FieldName = "Salary";
+            this.colSalary.Name = "colSalary";
+            this.colSalary.OptionsColumn.AllowEdit = false;
+            this.colSalary.Visible = true;
+            this.colSalary.VisibleIndex = 1;
+            // 
+            // colContractStatus
+            // 
+            this.colContractStatus.Caption = "مدة العقد";
+            this.colContractStatus.FieldName = "ContractStatus";
+            this.colContractStatus.Name = "colContractStatus";
+            this.colContractStatus.OptionsColumn.AllowEdit = false;
+            this.colContractStatus.Visible = true;
+            this.colContractStatus.VisibleIndex = 2;
+            // 
+            // colRank
+            // 
+            this.colRank.Caption = "المرتبة";
+            this.colRank.FieldName = "Rank";
+            this.colRank.Name = "colRank";
+            this.colRank.OptionsColumn.AllowEdit = false;
+            this.colRank.Visible = true;
+            this.colRank.VisibleIndex = 3;
+            // 
             // AddTaskPage
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -680,10 +680,6 @@ namespace EMS.AddPages
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colName;
-        private DevExpress.XtraGrid.Columns.GridColumn colSalary;
-        private DevExpress.XtraGrid.Columns.GridColumn colContractStatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colSalaries;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -694,5 +690,9 @@ namespace EMS.AddPages
         public System.Windows.Forms.DateTimePicker txtEndDate;
         private System.Windows.Forms.Label label16;
         public System.Windows.Forms.RichTextBox txtDetails;
+        private DevExpress.XtraGrid.Columns.GridColumn colName;
+        private DevExpress.XtraGrid.Columns.GridColumn colSalary;
+        private DevExpress.XtraGrid.Columns.GridColumn colContractStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn colRank;
     }
 }

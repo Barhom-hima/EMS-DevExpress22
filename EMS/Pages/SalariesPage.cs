@@ -66,9 +66,12 @@ namespace EMS.Pages
                     addPage.buttonAddAndClose.Text = "تعديل + غلق";
                     addPage.txtEmpName.Text = tbAdd.EmpName;
                     addPage.txtMainSalary.Text = tbAdd.MainSalary;
-                    addPage.txtContractStatus.Text = tbAdd.ContractStatus;
-                    addPage.txtCommissionInMonth.Text = tbAdd.Salaries;
                     addPage.txtCashingDate.Value = tbAdd.CashingDate.Value;
+                    addPage.txtContractStatus.Text = tbAdd.ContractStatus;
+                    addPage.txtCommission.Text = tbAdd.Commission;
+                    addPage.txtCommissionInMonth.Text = tbAdd.RewardInMonth;
+                    addPage.txtCommissionInYear.Text = tbAdd.RewardInYear;
+                    addPage.txtCommissionEndWork.Text = tbAdd.RewardEndWork;
                     addPage.page = this;
                     addPage.Show();
                 }
