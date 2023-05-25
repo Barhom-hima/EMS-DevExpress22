@@ -49,19 +49,19 @@ namespace EMS.AddPages
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(146, 10);
+            this.label3.Location = new System.Drawing.Point(174, 10);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 25);
+            this.label3.Size = new System.Drawing.Size(55, 25);
             this.label3.TabIndex = 0;
-            this.label3.Text = "الاسم الكامل";
+            this.label3.Text = "الاسم";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(125, 10);
+            this.label4.Location = new System.Drawing.Point(151, 9);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 25);
@@ -82,12 +82,12 @@ namespace EMS.AddPages
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(147, 94);
+            this.label5.Location = new System.Drawing.Point(139, 94);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 25);
+            this.label5.Size = new System.Drawing.Size(125, 25);
             this.label5.TabIndex = 0;
-            this.label5.Text = "اسم الحساب";
+            this.label5.Text = "اسم المستخدم";
             // 
             // label6
             // 

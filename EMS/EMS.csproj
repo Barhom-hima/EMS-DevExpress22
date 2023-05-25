@@ -280,6 +280,10 @@
       <DependentUpon>MEMS.edmx</DependentUpon>
       <LastGenOutput>MEMS.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8_unhcr_32px_3.png" />
+    <None Include="Resources\icons8_unhcr_32px_1.png" />
+    <None Include="Resources\icons8_meeting_room_32px.png" />
+    <None Include="Resources\icons8_unhcr_32px.png" />
     <None Include="Resources\Icon.ico" />
     <None Include="Resources\icons8_login_32px_1.png" />
     <None Include="Resources\icons8_login_32px.png" />

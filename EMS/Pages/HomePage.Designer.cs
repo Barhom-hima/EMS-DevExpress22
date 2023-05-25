@@ -42,6 +42,7 @@ namespace EMS.Pages
             this.buttonSalary = new DevExpress.XtraEditors.SimpleButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonMandate = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +85,7 @@ namespace EMS.Pages
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.buttonMandate);
             this.groupBox1.Controls.Add(this.buttonEmployee);
             this.groupBox1.Controls.Add(this.buttonUsers);
             this.groupBox1.Controls.Add(this.buttonTasks);
@@ -106,7 +108,7 @@ namespace EMS.Pages
             this.buttonEmployee.Appearance.Options.UseFont = true;
             this.buttonEmployee.ImageOptions.Image = global::EMS.Properties.Resources.AddEmployee;
             this.buttonEmployee.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonEmployee.Location = new System.Drawing.Point(946, 32);
+            this.buttonEmployee.Location = new System.Drawing.Point(1003, 32);
             this.buttonEmployee.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.buttonEmployee.Name = "buttonEmployee";
             this.buttonEmployee.Size = new System.Drawing.Size(122, 70);
@@ -120,7 +122,7 @@ namespace EMS.Pages
             this.buttonUsers.Appearance.Options.UseFont = true;
             this.buttonUsers.ImageOptions.Image = global::EMS.Properties.Resources.Users;
             this.buttonUsers.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonUsers.Location = new System.Drawing.Point(160, 32);
+            this.buttonUsers.Location = new System.Drawing.Point(103, 32);
             this.buttonUsers.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.buttonUsers.Name = "buttonUsers";
             this.buttonUsers.Size = new System.Drawing.Size(122, 70);
@@ -134,7 +136,7 @@ namespace EMS.Pages
             this.buttonTasks.Appearance.Options.UseFont = true;
             this.buttonTasks.ImageOptions.Image = global::EMS.Properties.Resources.Tasks;
             this.buttonTasks.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonTasks.Location = new System.Drawing.Point(318, 32);
+            this.buttonTasks.Location = new System.Drawing.Point(253, 32);
             this.buttonTasks.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.buttonTasks.Name = "buttonTasks";
             this.buttonTasks.Size = new System.Drawing.Size(122, 70);
@@ -148,7 +150,7 @@ namespace EMS.Pages
             this.buttonVacations.Appearance.Options.UseFont = true;
             this.buttonVacations.ImageOptions.Image = global::EMS.Properties.Resources.Vacations;
             this.buttonVacations.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonVacations.Location = new System.Drawing.Point(790, 32);
+            this.buttonVacations.Location = new System.Drawing.Point(703, 32);
             this.buttonVacations.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.buttonVacations.Name = "buttonVacations";
             this.buttonVacations.Size = new System.Drawing.Size(122, 70);
@@ -162,7 +164,7 @@ namespace EMS.Pages
             this.buttonProjects.Appearance.Options.UseFont = true;
             this.buttonProjects.ImageOptions.Image = global::EMS.Properties.Resources.Tasks;
             this.buttonProjects.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonProjects.Location = new System.Drawing.Point(476, 32);
+            this.buttonProjects.Location = new System.Drawing.Point(403, 32);
             this.buttonProjects.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.buttonProjects.Name = "buttonProjects";
             this.buttonProjects.Size = new System.Drawing.Size(122, 70);
@@ -176,7 +178,7 @@ namespace EMS.Pages
             this.buttonSalary.Appearance.Options.UseFont = true;
             this.buttonSalary.ImageOptions.Image = global::EMS.Properties.Resources.AddEmployee;
             this.buttonSalary.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.buttonSalary.Location = new System.Drawing.Point(632, 32);
+            this.buttonSalary.Location = new System.Drawing.Point(853, 32);
             this.buttonSalary.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.buttonSalary.Name = "buttonSalary";
             this.buttonSalary.Size = new System.Drawing.Size(122, 70);
@@ -200,6 +202,20 @@ namespace EMS.Pages
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            // 
+            // buttonMandate
+            // 
+            this.buttonMandate.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.25F);
+            this.buttonMandate.Appearance.Options.UseFont = true;
+            this.buttonMandate.ImageOptions.Image = global::EMS.Properties.Resources.Mandates;
+            this.buttonMandate.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.buttonMandate.Location = new System.Drawing.Point(553, 32);
+            this.buttonMandate.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
+            this.buttonMandate.Name = "buttonMandate";
+            this.buttonMandate.Size = new System.Drawing.Size(122, 70);
+            this.buttonMandate.TabIndex = 1;
+            this.buttonMandate.Text = "الإنتداب";
+            this.buttonMandate.Click += new System.EventHandler(this.buttonMandate_Click);
             // 
             // HomePage
             // 
@@ -237,5 +253,6 @@ namespace EMS.Pages
         private DevExpress.XtraEditors.SimpleButton buttonTasks;
         private DevExpress.XtraEditors.SimpleButton buttonProjects;
         private DevExpress.XtraEditors.SimpleButton buttonUsers;
+        private DevExpress.XtraEditors.SimpleButton buttonMandate;
     }
 }

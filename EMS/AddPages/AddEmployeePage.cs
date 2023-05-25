@@ -34,9 +34,9 @@ namespace EMS.AddPages
         private void Add()
         {
             // Check If empty values
-            if(txtName.Text == "" && txtJobId.Text == "" && txtJobName.Text == "" && txtPhone.Text == "" && txtEmail.Text == ""
-                && txtSalary.Text == "" && txtSalaries.Text == "" && txtWorkTime.Text == "" && txtVacationTime.Text == "" && txtIdNum.Text == ""
-                && txtPassportNum.Text == "")
+            if(txtName.Text == "" && txtGender.Text == "" && txtPhone.Text == "" && txtIdNum.Text == "" && txtPassportNum.Text == ""
+                && txtSalary.Text == "" && txtJobName.Text == "" && txtContractStatus.Text == "" && txtWorkTime.Text == "" && txtWorkTimeInWeak.Text == ""
+                && txtSalary.Text == "" && txtVacationTime.Text == "")
             {
                 MessageBox.Show("برجى ملئ جميع الحقول التي تحتوي على علامة * ثم اعد المحاولة", "خطأ",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -77,7 +77,7 @@ namespace EMS.AddPages
                     Phone = txtPhone.Text,
                     Email = txtEmail.Text,
                     Salary = txtSalary.Text,
-                    Salaries = txtSalaries.Text,
+                    Salaries = txtRank.Text,
                     ContractStatus = txtContractStatus.Text,
                     WorkTime = txtWorkTime.Text,
                     VacationTime = txtVacationTime.Text,
@@ -115,7 +115,7 @@ namespace EMS.AddPages
                     Phone = txtPhone.Text,
                     Email = txtEmail.Text,
                     Salary = txtSalary.Text,
-                    Salaries = txtSalaries.Text,
+                    Salaries = txtRank.Text,
                     ContractStatus = txtContractStatus.Text,
                     WorkTime = txtWorkTime.Text,
                     VacationTime = txtVacationTime.Text,
@@ -154,21 +154,23 @@ namespace EMS.AddPages
         private void ClearData()
         {
             txtName.Text = "";
-            txtJobId.Text = "";
-            txtJobName.Text = "";
             txtDob.Value = DateTime.Now;
+            txtGender.Text = "";
             txtPhone.Text = "";
+            txtIdNum.Text = "";
+            txtDateEndId.Value = DateTime.Now;
+            txtPassportNum.Text = "";
+            txtDateEndPassport.Value = DateTime.Now;
             txtEmail.Text = "";
-            txtSalary.Text = "";
-            txtSalaries.Text = "";
+            txtJobName.Text = "";
+            txtJobId.Text = "";
+            txtRank.Text = "";
+            txtDoj.Value = DateTime.Now;
             txtContractStatus.Text = "";
             txtWorkTime.Text = "";
+            txtWorkTimeInWeak.Text = "";
+            txtSalary.Text = "";
             txtVacationTime.Text = "";
-            txtIdNum.Text = "";
-            txtPassportNum.Text = "";
-            txtDoj.Value = DateTime.Now;
-            txtDateEndId.Value = DateTime.Now;
-            txtDateEndPassport.Value = DateTime.Now;
             txtDetails.Text = "";
         }
 
@@ -177,83 +179,91 @@ namespace EMS.AddPages
             #region TextBoxs
             // Size
             txtName.Size = new System.Drawing.Size(217, 33);
-            txtJobId.Size = new System.Drawing.Size(217, 33);
-            txtJobName.Size = new System.Drawing.Size(217, 33);
             txtDob.Size = new System.Drawing.Size(217, 29);
+            txtGender.Size = new System.Drawing.Size(217, 29);
             txtPhone.Size = new System.Drawing.Size(217, 33);
+            txtIdNum.Size = new System.Drawing.Size(217, 33);
+            txtDateEndId.Size = new System.Drawing.Size(217, 29);
+            txtPassportNum.Size = new System.Drawing.Size(217, 33);
+            txtDateEndPassport.Size = new System.Drawing.Size(217, 29);
             txtEmail.Size = new System.Drawing.Size(217, 33);
-            txtSalary.Size = new System.Drawing.Size(217, 33);
-            txtSalaries.Size = new System.Drawing.Size(217, 33);
+            txtJobName.Size = new System.Drawing.Size(217, 33);
+            txtJobId.Size = new System.Drawing.Size(217, 33);
+            txtRank.Size = new System.Drawing.Size(217, 33);
+            txtDoj.Size = new System.Drawing.Size(217, 29);
             txtContractStatus.Size = new System.Drawing.Size(217, 33);
             txtWorkTime.Size = new System.Drawing.Size(217, 33);
+            txtWorkTimeInWeak.Size = new System.Drawing.Size(217, 33);
+            txtSalary.Size = new System.Drawing.Size(217, 33);
             txtVacationTime.Size = new System.Drawing.Size(217, 33);
-            txtIdNum.Size = new System.Drawing.Size(217, 33);
-            txtPassportNum.Size = new System.Drawing.Size(217, 33);
-            txtDoj.Size = new System.Drawing.Size(217, 29);
-            txtDateEndId.Size = new System.Drawing.Size(217, 29);
-            txtDateEndPassport.Size = new System.Drawing.Size(217, 29);
             txtDetails.Size = new System.Drawing.Size(215, 96);
 
             // txtName
-            txtName.Location = new System.Drawing.Point(323, 43);
-
-            // txtJobId
-            txtJobId.Location = new System.Drawing.Point(323, 112);
-
-            // txtJobName
-            txtJobName.Location = new System.Drawing.Point(323, 182);
+            txtName.Location = new System.Drawing.Point(11, 54);
 
             // txtDob
-            txtDob.Location = new System.Drawing.Point(323, 259);
+            txtDob.Location = new System.Drawing.Point(11, 135);
+
+            // txtGender
+            txtGender.Location = new System.Drawing.Point(11, 203);
 
             // txtPhone
-            txtPhone.Location = new System.Drawing.Point(323, 323);
-
-            // txtEmail
-            txtEmail.Location = new System.Drawing.Point(323, 396);
-
-            // txtSalary
-            txtSalary.Location = new System.Drawing.Point(323, 470);
-
-            // txtSalaries
-            txtSalaries.Location = new System.Drawing.Point(323, 542);
-
-            // txtContractStatus
-            txtContractStatus.Location = new System.Drawing.Point(323, 606);
-
-            // txtWorkTime
-            txtWorkTime.Location = new System.Drawing.Point(10, 43);
-
-            // txtVacationTime
-            txtVacationTime.Location = new System.Drawing.Point(10, 112);
+            txtPhone.Location = new System.Drawing.Point(11, 279);
 
             // txtIdNum
-            txtIdNum.Location = new System.Drawing.Point(10, 182);
-
-            // txtPassportNum
-            txtPassportNum.Location = new System.Drawing.Point(10, 252);
-
-            // txtDoj
-            txtDoj.Location = new System.Drawing.Point(10, 322);
+            txtIdNum.Location = new System.Drawing.Point(11, 357);
 
             // txtDateEndId
-            txtDateEndId.Location = new System.Drawing.Point(10, 396);
+            txtDateEndId.Location = new System.Drawing.Point(8, 431);
+
+            // txtPassportNum
+            txtPassportNum.Location = new System.Drawing.Point(11, 497);
 
             // txtDateEndPassport
-            txtDateEndPassport.Location = new System.Drawing.Point(10, 468);
+            txtDateEndPassport.Location = new System.Drawing.Point(11, 573);
+
+            // txtEmail
+            txtEmail.Location = new System.Drawing.Point(256, 54);
+
+            // txtJobName
+            txtJobName.Location = new System.Drawing.Point(256, 127);
+
+            // txtJobId
+            txtJobId.Location = new System.Drawing.Point(254, 201);
+
+            // txtRank
+            txtRank.Location = new System.Drawing.Point(254, 277);
+
+            // txtDoj
+            txtDoj.Location = new System.Drawing.Point(251, 349);
+
+            // txtContractStatus
+            txtContractStatus.Location = new System.Drawing.Point(251, 420);
+
+            // txtWorkTime
+            txtWorkTime.Location = new System.Drawing.Point(17, 55);
+
+            // txtWorkTimeInWeak
+            txtWorkTimeInWeak.Location = new System.Drawing.Point(20, 127);
+
+            // txtSalary
+            txtSalary.Location = new System.Drawing.Point(17, 193);
+
+            // txtVacationTime
+            txtVacationTime.Location = new System.Drawing.Point(15, 265);
 
             // txtDetails
-            txtDetails.Location = new System.Drawing.Point(14, 542);
+            txtDetails.Location = new System.Drawing.Point(15, 341);
             #endregion
 
             #region Buttons
-            // Button Save
+            // Button Size
             buttonAdd.Size = new System.Drawing.Size(130, 68);
-            buttonAdd.Location = new System.Drawing.Point(420, 6);
-
-            // Button Save And close
             buttonAddAndClose.Size = new System.Drawing.Size(130, 68);
-            buttonAddAndClose.Location = new System.Drawing.Point(10, 6);
+
+            // Button Location
+            buttonAdd.Location = new System.Drawing.Point(629, 6);
+            buttonAddAndClose.Location = new System.Drawing.Point(12, 6);
             #endregion
         }
     }

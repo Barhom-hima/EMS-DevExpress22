@@ -35,8 +35,9 @@ namespace EMS
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.buttonHome = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonEmployees = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.buttonVacations = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonSalaries = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.buttonVacations = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.buttonMandate = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonProjects = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonTasks = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonUsers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -68,8 +69,9 @@ namespace EMS
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.buttonHome,
             this.buttonEmployees,
-            this.buttonVacations,
             this.buttonSalaries,
+            this.buttonVacations,
+            this.buttonMandate,
             this.buttonProjects,
             this.buttonTasks,
             this.buttonUsers});
@@ -111,6 +113,21 @@ namespace EMS
             this.buttonEmployees.Text = "الموظفين";
             this.buttonEmployees.Click += new System.EventHandler(this.buttonEmployees_Click);
             // 
+            // buttonSalaries
+            // 
+            this.buttonSalaries.Appearance.Default.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonSalaries.Appearance.Default.Options.UseFont = true;
+            this.buttonSalaries.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.buttonSalaries.ImageOptions.Image = global::EMS.Properties.Resources.Salary;
+            this.buttonSalaries.Name = "buttonSalaries";
+            this.buttonSalaries.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.buttonSalaries.Text = "الرواتب";
+            this.buttonSalaries.Click += new System.EventHandler(this.buttonSalary_Click);
+            // 
             // buttonVacations
             // 
             this.buttonVacations.Appearance.Default.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
@@ -126,20 +143,20 @@ namespace EMS
             this.buttonVacations.Text = "الإجازات";
             this.buttonVacations.Click += new System.EventHandler(this.buttonVacations_Click);
             // 
-            // buttonSalaries
+            // buttonMandate
             // 
-            this.buttonSalaries.Appearance.Default.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
-            this.buttonSalaries.Appearance.Default.Options.UseFont = true;
-            this.buttonSalaries.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            this.buttonMandate.Appearance.Default.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonMandate.Appearance.Default.Options.UseFont = true;
+            this.buttonMandate.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
-            this.buttonSalaries.ImageOptions.Image = global::EMS.Properties.Resources.Salary;
-            this.buttonSalaries.Name = "buttonSalaries";
-            this.buttonSalaries.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.buttonSalaries.Text = "الرواتب";
-            this.buttonSalaries.Click += new System.EventHandler(this.buttonSalary_Click);
+            this.buttonMandate.ImageOptions.Image = global::EMS.Properties.Resources.Mandates;
+            this.buttonMandate.Name = "buttonMandate";
+            this.buttonMandate.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.buttonMandate.Text = "الإنتداب";
+            this.buttonMandate.Click += new System.EventHandler(this.buttonMandate_Click);
             // 
             // buttonProjects
             // 
@@ -215,7 +232,6 @@ namespace EMS
             // txtUsername
             // 
             this.txtUsername.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.txtUsername.Caption = "إبراهيم";
             this.txtUsername.Id = 1;
             this.txtUsername.Name = "txtUsername";
             // 
@@ -277,6 +293,7 @@ namespace EMS
         private DevExpress.XtraBars.Navigation.AccordionControlElement buttonSalaries;
         private DevExpress.XtraBars.Navigation.AccordionControlElement buttonUsers;
         public DevExpress.XtraBars.BarStaticItem txtUsername;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement buttonMandate;
     }
 }
 

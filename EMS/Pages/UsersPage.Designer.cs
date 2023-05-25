@@ -355,7 +355,7 @@ namespace EMS.Pages
             // 
             // colFullName
             // 
-            this.colFullName.Caption = "الاسم الكامل";
+            this.colFullName.Caption = "الاسم";
             this.colFullName.FieldName = "FullName";
             this.colFullName.Name = "colFullName";
             this.colFullName.OptionsColumn.AllowEdit = false;

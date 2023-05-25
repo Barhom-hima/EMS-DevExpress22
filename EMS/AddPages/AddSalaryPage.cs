@@ -41,7 +41,7 @@ namespace EMS.AddPages
         private void Add()
         {
             // Check If empty values
-            if (txtSalaries.Text == "")
+            if (txtCommissionInMonth.Text == "")
             {
                 MessageBox.Show("برجى ملئ جميع الحقول التي تحتوي على علامة * ثم اعد المحاولة", "خطأ",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -78,7 +78,7 @@ namespace EMS.AddPages
                     EmpName = txtEmpName.Text,
                     MainSalary = txtMainSalary.Text,
                     ContractStatus = txtContractStatus.Text,
-                    Salaries = txtSalaries.Text,
+                    Salaries = txtCommissionInMonth.Text,
                     CashingDate = txtCashingDate.Value
                 };
                 db.Entry(tbAdd).State = System.Data.Entity.EntityState.Added;
@@ -106,7 +106,7 @@ namespace EMS.AddPages
                     EmpName = txtEmpName.Text,
                     MainSalary = txtMainSalary.Text,
                     ContractStatus = txtContractStatus.Text,
-                    Salaries = txtSalaries.Text,
+                    Salaries = txtCommissionInMonth.Text,
                     CashingDate = txtCashingDate.Value
                 };
                 db.Set<TB_Salaries>().AddOrUpdate(tbAdd);
@@ -138,7 +138,7 @@ namespace EMS.AddPages
 
         private void ClearData()
         {
-            txtSalaries.Text = "";
+            txtCommissionInMonth.Text = "";
             txtCashingDate.Value = DateTime.Now;
         }
 
@@ -149,7 +149,7 @@ namespace EMS.AddPages
             txtEmpName.Size = new System.Drawing.Size(217, 33);
             txtMainSalary.Size = new System.Drawing.Size(217, 33);
             txtContractStatus.Size = new System.Drawing.Size(217, 33);
-            txtSalaries.Size = new System.Drawing.Size(217, 33);
+            txtCommissionInMonth.Size = new System.Drawing.Size(217, 33);
             txtCashingDate.Size = new System.Drawing.Size(217, 29);
 
             // txtEmpName
@@ -158,14 +158,23 @@ namespace EMS.AddPages
             // txtMainSalary
             txtMainSalary.Location = new System.Drawing.Point(323, 115);
 
-            // txtEmpName
-            txtContractStatus.Location = new System.Drawing.Point(318, 196);
+            // txtCashingDate
+            txtCashingDate.Location = new System.Drawing.Point(323, 199);
+
+            // txtContractStatus
+            txtContractStatus.Location = new System.Drawing.Point(323, 268);
+
+            // txtCommission
+            txtCommission.Location = new System.Drawing.Point(30, 43);
 
             // txtAboutVacation
-            txtSalaries.Location = new System.Drawing.Point(30, 43);
+            txtCommissionInMonth.Location = new System.Drawing.Point(30, 112);
 
-            // txtVacationStartDate
-            txtCashingDate.Location = new System.Drawing.Point(30, 119);
+            // txtCommissionInYear
+            txtCommissionInYear.Location = new System.Drawing.Point(30, 192);
+
+            // txtAboutVacation
+            txtCommissionEndWork.Location = new System.Drawing.Point(30, 278);
 
             #endregion
 

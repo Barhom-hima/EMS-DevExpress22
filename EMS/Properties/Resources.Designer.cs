@@ -173,6 +173,16 @@ namespace EMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Mandates {
+            get {
+                object obj = ResourceManager.GetObject("Mandates", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Notifications {
             get {
                 object obj = ResourceManager.GetObject("Notifications", resourceCulture);

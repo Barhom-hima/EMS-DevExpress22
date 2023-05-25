@@ -71,7 +71,7 @@ namespace EMS.Pages
                     addPage.txtPhone.Text = tbAdd.Phone;
                     addPage.txtEmail.Text = tbAdd.Email;
                     addPage.txtSalary.Text = tbAdd.Salary;
-                    addPage.txtSalaries.Text = tbAdd.Salaries;
+                    addPage.txtRank.Text = tbAdd.Salaries;
                     addPage.txtContractStatus.Text = tbAdd.ContractStatus;
                     addPage.txtWorkTime.Text = tbAdd.WorkTime;
                     addPage.txtVacationTime.Text = tbAdd.VacationTime;

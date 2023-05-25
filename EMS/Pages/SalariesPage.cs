@@ -67,7 +67,7 @@ namespace EMS.Pages
                     addPage.txtEmpName.Text = tbAdd.EmpName;
                     addPage.txtMainSalary.Text = tbAdd.MainSalary;
                     addPage.txtContractStatus.Text = tbAdd.ContractStatus;
-                    addPage.txtSalaries.Text = tbAdd.Salaries;
+                    addPage.txtCommissionInMonth.Text = tbAdd.Salaries;
                     addPage.txtCashingDate.Value = tbAdd.CashingDate.Value;
                     addPage.page = this;
                     addPage.Show();

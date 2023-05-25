@@ -216,7 +216,7 @@ namespace EMS.AddPages
             this.txtAdminName.BackColor = System.Drawing.SystemColors.Control;
             this.txtAdminName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtAdminName.FormattingEnabled = true;
-            this.txtAdminName.Location = new System.Drawing.Point(317, 120);
+            this.txtAdminName.Location = new System.Drawing.Point(316, 120);
             this.txtAdminName.Name = "txtAdminName";
             this.txtAdminName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAdminName.Size = new System.Drawing.Size(217, 33);
@@ -230,7 +230,7 @@ namespace EMS.AddPages
             this.txtProjectStatus.Items.AddRange(new object[] {
             "قيد التنفيذ",
             "مكتمل",
-            "مؤجلة"});
+            "مؤجل"});
             this.txtProjectStatus.Location = new System.Drawing.Point(316, 189);
             this.txtProjectStatus.Name = "txtProjectStatus";
             this.txtProjectStatus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -575,7 +575,7 @@ namespace EMS.AddPages
             // 
             this.txtProjectName.BackColor = System.Drawing.SystemColors.Control;
             this.txtProjectName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProjectName.Location = new System.Drawing.Point(317, 43);
+            this.txtProjectName.Location = new System.Drawing.Point(316, 43);
             this.txtProjectName.Name = "txtProjectName";
             this.txtProjectName.Size = new System.Drawing.Size(217, 33);
             this.txtProjectName.TabIndex = 1;

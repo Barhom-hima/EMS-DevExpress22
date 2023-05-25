@@ -34,6 +34,13 @@ namespace EMS
             LoadPage(page);
         }
 
+        // Load Salaries Page
+        private void buttonSalary_Click(object sender, EventArgs e)
+        {
+            SalariesPage page = new SalariesPage();
+            LoadPage(page);
+        }
+
         // Load Vacations Page
         private void buttonVacations_Click(object sender, EventArgs e)
         {
@@ -41,11 +48,10 @@ namespace EMS
             LoadPage(page);
         }
 
-        // Load Salaries Page
-        private void buttonSalary_Click(object sender, EventArgs e)
+        // Load Mandate Page
+        private void buttonMandate_Click(object sender, EventArgs e)
         {
-            SalariesPage page = new SalariesPage();
-            LoadPage(page);
+
         }
 
         // Load Project Page
