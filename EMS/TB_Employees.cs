@@ -32,5 +32,8 @@ namespace EMS
         public Nullable<System.DateTime> DateEndPassport { get; set; }
         public string Details { get; set; }
         public string ContractStatus { get; set; }
+        public string Gender { get; set; }
+        public string WorkTimeInWeak { get; set; }
+        public string Rank { get; set; }
     }
 }

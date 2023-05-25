@@ -27,6 +27,9 @@
           <Property Name="DateEndPassport" Type="datetime" />
           <Property Name="Details" Type="nvarchar(max)" />
           <Property Name="ContractStatus" Type="nvarchar(max)" />
+          <Property Name="Gender" Type="nvarchar(max)" />
+          <Property Name="WorkTimeInWeak" Type="nvarchar(max)" />
+          <Property Name="Rank" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="TB_Mandate">
           <Key>
@@ -115,37 +118,14 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBEMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="TB_Employees">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="JobId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="JobName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Dob" Type="DateTime" Precision="3" />
-          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Salary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Salaries" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="WorkTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="VacationTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="IdNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="PassportNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Doj" Type="DateTime" Precision="3" />
-          <Property Name="DateEndId" Type="DateTime" Precision="3" />
-          <Property Name="DateEndPassport" Type="DateTime" Precision="3" />
-          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ContractStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityContainer Name="DBEMSEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="TB_Employees" EntityType="Self.TB_Employees" />
           <EntitySet Name="TB_Vacations" EntityType="DBEMSModel.TB_Vacations" />
           <EntitySet Name="TB_Salaries" EntityType="DBEMSModel.TB_Salaries" />
           <EntitySet Name="TB_Projects" EntityType="DBEMSModel.TB_Projects" />
           <EntitySet Name="TB_Tasks" EntityType="DBEMSModel.TB_Tasks" />
           <EntitySet Name="TB_Users" EntityType="DBEMSModel.TB_Users" />
           <EntitySet Name="TB_Mandate" EntityType="DBEMSModel.TB_Mandate" />
+          <EntitySet Name="TB_Employees" EntityType="DBEMSModel.TB_Employees" />
         </EntityContainer>
         <EntityType Name="TB_Vacations">
           <Key>
@@ -221,36 +201,38 @@
           <Property Name="MandateResult" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="TB_Employees">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="JobId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="JobName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Dob" Type="DateTime" Precision="3" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Salary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Salaries" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WorkTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VacationTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IdNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PassportNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Doj" Type="DateTime" Precision="3" />
+          <Property Name="DateEndId" Type="DateTime" Precision="3" />
+          <Property Name="DateEndPassport" Type="DateTime" Precision="3" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContractStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WorkTimeInWeak" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Rank" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="DBEMSModelStoreContainer" CdmEntityContainer="DBEMSEntities">
-          <EntitySetMapping Name="TB_Employees">
-            <EntityTypeMapping TypeName="DBEMSModel.TB_Employees">
-              <MappingFragment StoreEntitySet="TB_Employees">
-                <ScalarProperty Name="ContractStatus" ColumnName="ContractStatus" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="JobId" ColumnName="JobId" />
-                <ScalarProperty Name="JobName" ColumnName="JobName" />
-                <ScalarProperty Name="Dob" ColumnName="Dob" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Salary" ColumnName="Salary" />
-                <ScalarProperty Name="Salaries" ColumnName="Salaries" />
-                <ScalarProperty Name="WorkTime" ColumnName="WorkTime" />
-                <ScalarProperty Name="VacationTime" ColumnName="VacationTime" />
-                <ScalarProperty Name="IdNum" ColumnName="IdNum" />
-                <ScalarProperty Name="PassportNum" ColumnName="PassportNum" />
-                <ScalarProperty Name="Doj" ColumnName="Doj" />
-                <ScalarProperty Name="DateEndId" ColumnName="DateEndId" />
-                <ScalarProperty Name="DateEndPassport" ColumnName="DateEndPassport" />
-                <ScalarProperty Name="Details" ColumnName="Details" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TB_Vacations">
             <EntityTypeMapping TypeName="DBEMSModel.TB_Vacations">
               <MappingFragment StoreEntitySet="TB_Vacations">
@@ -327,6 +309,33 @@
                 <ScalarProperty Name="AboutMandate" ColumnName="AboutMandate" />
                 <ScalarProperty Name="MandatesEmp" ColumnName="MandatesEmp" />
                 <ScalarProperty Name="ManedateAdmin" ColumnName="ManedateAdmin" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Employees">
+            <EntityTypeMapping TypeName="DBEMSModel.TB_Employees">
+              <MappingFragment StoreEntitySet="TB_Employees">
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="WorkTimeInWeak" ColumnName="WorkTimeInWeak" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="ContractStatus" ColumnName="ContractStatus" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="DateEndPassport" ColumnName="DateEndPassport" />
+                <ScalarProperty Name="DateEndId" ColumnName="DateEndId" />
+                <ScalarProperty Name="Doj" ColumnName="Doj" />
+                <ScalarProperty Name="PassportNum" ColumnName="PassportNum" />
+                <ScalarProperty Name="IdNum" ColumnName="IdNum" />
+                <ScalarProperty Name="VacationTime" ColumnName="VacationTime" />
+                <ScalarProperty Name="WorkTime" ColumnName="WorkTime" />
+                <ScalarProperty Name="Salaries" ColumnName="Salaries" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Dob" ColumnName="Dob" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

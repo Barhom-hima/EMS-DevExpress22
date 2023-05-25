@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a27de4b6fad6424f982953872d35fc91" Name="Diagram1">
-        <EntityTypeShape EntityType="DBEMSModel.TB_Employees" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="a27de4b6fad6424f982953872d35fc91" Name="Diagram1" ZoomLevel="98">
         <EntityTypeShape EntityType="DBEMSModel.TB_Vacations" Width="1.5" PointX="3.375" PointY="0.75" />
-        <EntityTypeShape EntityType="DBEMSModel.TB_Salaries" Width="1.5" PointX="3.375" PointY="3.75" />
-        <EntityTypeShape EntityType="DBEMSModel.TB_Projects" Width="1.5" PointX="5.375" PointY="0.75" />
-        <EntityTypeShape EntityType="DBEMSModel.TB_Tasks" Width="1.5" PointX="5.375" PointY="4.75" />
-        <EntityTypeShape EntityType="DBEMSModel.TB_Users" Width="1.5" PointX="0.75" PointY="6.75" />
-        <EntityTypeShape EntityType="DBEMSModel.TB_Mandate" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DBEMSModel.TB_Salaries" Width="1.5" PointX="3.375" PointY="3.875" />
+        <EntityTypeShape EntityType="DBEMSModel.TB_Projects" Width="1.5" PointX="5" PointY="0.75" />
+        <EntityTypeShape EntityType="DBEMSModel.TB_Tasks" Width="1.5" PointX="5" PointY="4" />
+        <EntityTypeShape EntityType="DBEMSModel.TB_Users" Width="1.5" PointX="6.625" PointY="4" />
+        <EntityTypeShape EntityType="DBEMSModel.TB_Mandate" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBEMSModel.TB_Employees" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
