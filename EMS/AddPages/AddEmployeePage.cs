@@ -18,13 +18,10 @@ namespace EMS.AddPages
         // DataBase And Tables
         DBEMSEntities db;
         TB_Employees tbAdd;
-        TB_AddCount tbAddCount;
         public EmployeesPage page = new EmployeesPage();
 
         // Other Var
         public int id;
-
-        public int addCount;
 
         public AddEmployeePage()
         {
@@ -37,7 +34,7 @@ namespace EMS.AddPages
         private void Add()
         {
             // Check If empty values
-            if(txtName.Text == "" && txtGender.Text == "" && txtPhone.Text == "" && txtIdNum.Text == "" && txtPassportNum.Text == ""
+            if (txtName.Text == "" && txtGender.Text == "" && txtPhone.Text == "" && txtIdNum.Text == "" && txtPassportNum.Text == ""
                 && txtJobName.Text == "" && txtContractStatus.Text == "" && txtWorkTime.Text == "" && txtWorkTimeInWeak.Text == ""
                 && txtSalary.Text == "" && txtVacationTime.Text == "")
             {
@@ -48,18 +45,20 @@ namespace EMS.AddPages
             else
             {
                 // Check If Add or Edit
-                if(id == 0)
+                if (id == 0)
                 {
-                    if(tbAddCount.Id < 6)
+                    tbAdd = new TB_Employees();
+                    // Check If Can Add Or Not ( For Trail Version )
+                    if (tbAdd.Id < 3)
+                    {
+                        MessageBox.Show("!!لقد انتهت صلاحيتك", "خطأ",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
                     {
                         // Add
                         AddData();
                         ClearData();
-                    }
-                    else
-                    {
-                        // Can't Add
-                        MessageBox.Show("لقد انتهت صلاحيتك", "حطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -102,15 +101,6 @@ namespace EMS.AddPages
                     Details = txtDetails.Text
                 };
                 db.Entry(tbAdd).State = System.Data.Entity.EntityState.Added;
-                db.SaveChanges();
-
-                // For Trail Version
-                db = new DBEMSEntities();
-                tbAddCount = new TB_AddCount
-                {
-                    AddCounter = addCount
-                };
-                db.Entry(tbAddCount).State = System.Data.Entity.EntityState.Added;
                 db.SaveChanges();
 
                 MessageBox.Show("تمت اضافة موظف جديد بنجاح", "نجاح",
@@ -165,7 +155,6 @@ namespace EMS.AddPages
         // Button Save
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            addCount++;
             Add();
         }
 
