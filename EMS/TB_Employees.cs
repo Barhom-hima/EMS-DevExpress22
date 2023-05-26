@@ -35,5 +35,6 @@ namespace EMS
         public string Gender { get; set; }
         public string WorkTimeInWeak { get; set; }
         public string Rank { get; set; }
+        public Nullable<int> AddCount { get; set; }
     }
 }

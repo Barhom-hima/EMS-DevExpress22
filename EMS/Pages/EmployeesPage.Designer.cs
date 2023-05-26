@@ -49,12 +49,12 @@ namespace EMS.Pages
             this.colJobName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colJobId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRank = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDoj = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWorkTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWorkTimeInWeak = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSalary = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVacationTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colContractStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDetails = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -493,6 +493,15 @@ namespace EMS.Pages
             this.colRank.Visible = true;
             this.colRank.VisibleIndex = 12;
             // 
+            // colContractStatus
+            // 
+            this.colContractStatus.Caption = "مدة العقد";
+            this.colContractStatus.FieldName = "ContractStatus";
+            this.colContractStatus.Name = "colContractStatus";
+            this.colContractStatus.OptionsColumn.AllowEdit = false;
+            this.colContractStatus.Visible = true;
+            this.colContractStatus.VisibleIndex = 11;
+            // 
             // colDoj
             // 
             this.colDoj.Caption = "تاريخ التوظيف";
@@ -537,15 +546,6 @@ namespace EMS.Pages
             this.colVacationTime.OptionsColumn.AllowEdit = false;
             this.colVacationTime.Visible = true;
             this.colVacationTime.VisibleIndex = 17;
-            // 
-            // colContractStatus
-            // 
-            this.colContractStatus.Caption = "مدة العقد";
-            this.colContractStatus.FieldName = "ContractStatus";
-            this.colContractStatus.Name = "colContractStatus";
-            this.colContractStatus.OptionsColumn.AllowEdit = false;
-            this.colContractStatus.Visible = true;
-            this.colContractStatus.VisibleIndex = 11;
             // 
             // colDetails
             // 

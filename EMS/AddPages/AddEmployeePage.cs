@@ -18,10 +18,13 @@ namespace EMS.AddPages
         // DataBase And Tables
         DBEMSEntities db;
         TB_Employees tbAdd;
+        TB_AddCount tbAddCount;
         public EmployeesPage page = new EmployeesPage();
 
         // Other Var
         public int id;
+
+        public int addCount;
 
         public AddEmployeePage()
         {
@@ -47,9 +50,17 @@ namespace EMS.AddPages
                 // Check If Add or Edit
                 if(id == 0)
                 {
-                    // Add
-                    AddData();
-                    ClearData();
+                    if(tbAddCount.Id < 6)
+                    {
+                        // Add
+                        AddData();
+                        ClearData();
+                    }
+                    else
+                    {
+                        // Can't Add
+                        MessageBox.Show("لقد انتهت صلاحيتك", "حطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
@@ -91,6 +102,15 @@ namespace EMS.AddPages
                     Details = txtDetails.Text
                 };
                 db.Entry(tbAdd).State = System.Data.Entity.EntityState.Added;
+                db.SaveChanges();
+
+                // For Trail Version
+                db = new DBEMSEntities();
+                tbAddCount = new TB_AddCount
+                {
+                    AddCounter = addCount
+                };
+                db.Entry(tbAddCount).State = System.Data.Entity.EntityState.Added;
                 db.SaveChanges();
 
                 MessageBox.Show("تمت اضافة موظف جديد بنجاح", "نجاح",
@@ -145,6 +165,7 @@ namespace EMS.AddPages
         // Button Save
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            addCount++;
             Add();
         }
 

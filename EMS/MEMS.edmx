@@ -5,6 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DBEMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TB_AddCount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AddCounter" Type="int" />
+        </EntityType>
         <EntityType Name="TB_Employees">
           <Key>
             <PropertyRef Name="Id" />
@@ -30,6 +37,7 @@
           <Property Name="Gender" Type="nvarchar(max)" />
           <Property Name="WorkTimeInWeak" Type="nvarchar(max)" />
           <Property Name="Rank" Type="nvarchar(max)" />
+          <Property Name="AddCount" Type="int" />
         </EntityType>
         <EntityType Name="TB_Mandate">
           <Key>
@@ -109,6 +117,7 @@
           <Property Name="VacationEndDate" Type="datetime" />
         </EntityType>
         <EntityContainer Name="DBEMSModelStoreContainer">
+          <EntitySet Name="TB_AddCount" EntityType="Self.TB_AddCount" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Employees" EntityType="Self.TB_Employees" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Mandate" EntityType="Self.TB_Mandate" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Projects" EntityType="Self.TB_Projects" Schema="dbo" store:Type="Tables" />
@@ -129,6 +138,7 @@
           <EntitySet Name="TB_Mandate" EntityType="DBEMSModel.TB_Mandate" />
           <EntitySet Name="TB_Employees" EntityType="DBEMSModel.TB_Employees" />
           <EntitySet Name="TB_Salaries" EntityType="DBEMSModel.TB_Salaries" />
+          <EntitySet Name="TB_AddCount" EntityType="DBEMSModel.TB_AddCount" />
         </EntityContainer>
         <EntityType Name="TB_Vacations">
           <Key>
@@ -218,6 +228,7 @@
           <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="WorkTimeInWeak" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Rank" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddCount" Type="Int32" />
         </EntityType>
         <EntityType Name="TB_Salaries">
           <Key>
@@ -232,6 +243,13 @@
           <Property Name="RewardInMonth" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="RewardInYear" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="RewardEndWork" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TB_AddCount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AddCounter" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -310,6 +328,7 @@
           <EntitySetMapping Name="TB_Employees">
             <EntityTypeMapping TypeName="DBEMSModel.TB_Employees">
               <MappingFragment StoreEntitySet="TB_Employees">
+                <ScalarProperty Name="AddCount" ColumnName="AddCount" />
                 <ScalarProperty Name="Rank" ColumnName="Rank" />
                 <ScalarProperty Name="WorkTimeInWeak" ColumnName="WorkTimeInWeak" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
@@ -345,6 +364,14 @@
                 <ScalarProperty Name="ContractStatus" ColumnName="ContractStatus" />
                 <ScalarProperty Name="MainSalary" ColumnName="MainSalary" />
                 <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_AddCount">
+            <EntityTypeMapping TypeName="DBEMSModel.TB_AddCount">
+              <MappingFragment StoreEntitySet="TB_AddCount">
+                <ScalarProperty Name="AddCounter" ColumnName="AddCounter" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
