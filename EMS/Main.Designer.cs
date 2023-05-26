@@ -41,6 +41,7 @@ namespace EMS
             this.buttonProjects = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonTasks = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.buttonUsers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.buttonAbout = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.buttonLogout = new DevExpress.XtraBars.BarButtonItem();
             this.txtUsername = new DevExpress.XtraBars.BarStaticItem();
@@ -74,7 +75,8 @@ namespace EMS
             this.buttonMandate,
             this.buttonProjects,
             this.buttonTasks,
-            this.buttonUsers});
+            this.buttonUsers,
+            this.buttonAbout});
             this.accordionControl1.Location = new System.Drawing.Point(1019, 36);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.accordionControl1.Name = "accordionControl1";
@@ -203,6 +205,21 @@ namespace EMS
             this.buttonUsers.Text = "المستخدمين";
             this.buttonUsers.Click += new System.EventHandler(this.buttonUsers_Click);
             // 
+            // buttonAbout
+            // 
+            this.buttonAbout.Appearance.Default.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.buttonAbout.Appearance.Default.Options.UseFont = true;
+            this.buttonAbout.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Right)});
+            this.buttonAbout.ImageOptions.Image = global::EMS.Properties.Resources.About;
+            this.buttonAbout.Name = "buttonAbout";
+            this.buttonAbout.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.buttonAbout.Text = "حول";
+            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
@@ -294,6 +311,7 @@ namespace EMS
         private DevExpress.XtraBars.Navigation.AccordionControlElement buttonUsers;
         public DevExpress.XtraBars.BarStaticItem txtUsername;
         private DevExpress.XtraBars.Navigation.AccordionControlElement buttonMandate;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement buttonAbout;
     }
 }
 

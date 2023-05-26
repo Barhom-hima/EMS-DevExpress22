@@ -76,6 +76,13 @@ namespace EMS
             LoadPage(page);
         }
 
+        // About Page
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            AboutPage page = new AboutPage();
+            page.Show();
+        }
+
         // Load Home Page
         private void LoadHomePage()
         {
