@@ -51,14 +51,14 @@ namespace EMS.AddPages
                     // Check If Can Add Or Not ( For Trail Version )
                     if (tbAdd.Id < 3)
                     {
-                        MessageBox.Show("!!لقد انتهت صلاحيتك", "خطأ",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
                         // Add
                         AddData();
                         ClearData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("!!لقد انتهت صلاحيتك", "خطأ",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
